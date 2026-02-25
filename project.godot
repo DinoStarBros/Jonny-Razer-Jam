@@ -18,6 +18,10 @@ config/name="Jonny-Razer-Jam"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SaveLoad="*uid://bqgw3uq8245gu"
+
 [display]
 
 window/size/viewport_width=1280

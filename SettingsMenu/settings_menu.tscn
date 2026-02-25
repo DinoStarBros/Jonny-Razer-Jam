@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://bqrd0srtdaksn"]
+
+[ext_resource type="Script" uid="uid://bwvd8mbe7g6h8" path="res://SettingsMenu/settings_menu.gd" id="1_pbt7f"]
+[ext_resource type="AudioStream" uid="uid://dp3dtsiol0r0u" path="res://Audio/gunshot.wav" id="2_02yg4"]
+[ext_resource type="AudioStream" uid="uid://dlb0mt6s5iyxk" path="res://Audio/amalgun/beam.wav" id="3_276ht"]
+
+[node name="settingsMenu" type="Control" unique_id=68845947]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pbt7f")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=735984929]
+layout_mode = 0
+offset_right = 522.0
+offset_bottom = 624.0
+
+[node name="Tabs" type="TabContainer" parent="PanelContainer" unique_id=917003247]
+layout_mode = 2
+current_tab = 1
+
+[node name="Audio" type="VBoxContainer" parent="PanelContainer/Tabs" unique_id=1785194851]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="txt" type="Label" parent="PanelContainer/Tabs/Audio" unique_id=282337801]
+layout_mode = 2
+text = "Master"
+
+[node name="master_volume" type="HSlider" parent="PanelContainer/Tabs/Audio" unique_id=1842057598]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.5
+step = 0.15
+tick_count = 11
+
+[node name="txt2" type="Label" parent="PanelContainer/Tabs/Audio" unique_id=1703235216]
+layout_mode = 2
+text = "Music"
+
+[node name="music_volume" type="HSlider" parent="PanelContainer/Tabs/Audio" unique_id=1261757886]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.5
+step = 0.15
+tick_count = 11
+
+[node name="txt3" type="Label" parent="PanelContainer/Tabs/Audio" unique_id=1046121095]
+layout_mode = 2
+text = "SFX"
+
+[node name="sfx_vol" type="HSlider" parent="PanelContainer/Tabs/Audio" unique_id=300678899]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.5
+step = 0.15
+tick_count = 11
+
+[node name="Accessiblity" type="VBoxContainer" parent="PanelContainer/Tabs" unique_id=1868874210]
+layout_mode = 2
+alignment = 1
+metadata/_tab_index = 1
+
+[node name="txt4" type="Label" parent="PanelContainer/Tabs/Accessiblity" unique_id=390217675]
+layout_mode = 2
+text = "Screen Shake:"
+
+[node name="screen_shake" type="Button" parent="PanelContainer/Tabs/Accessiblity" unique_id=1664901648]
+unique_name_in_owner = true
+layout_mode = 2
+text = "On"
+
+[node name="txt5" type="Label" parent="PanelContainer/Tabs/Accessiblity" unique_id=452928586]
+layout_mode = 2
+text = "Frame Freeze:"
+
+[node name="frame_freeze" type="Button" parent="PanelContainer/Tabs/Accessiblity" unique_id=818858285]
+unique_name_in_owner = true
+layout_mode = 2
+text = "On"
+
+[node name="Video" type="VBoxContainer" parent="PanelContainer/Tabs" unique_id=1575859939]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="text" type="Label" parent="PanelContainer/Tabs/Video" unique_id=491533930]
+layout_mode = 2
+text = "Resolution:
+Shit don't work idk why :("
+
+[node name="resOptions" type="OptionButton" parent="PanelContainer/Tabs/Video" unique_id=1117341247]
+unique_name_in_owner = true
+layout_mode = 2
+selected = 2
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Tabs/Video" unique_id=737698093]
+layout_mode = 2
+text = "GRAPHICS"
+
+[node name="buttons" type="HBoxContainer" parent="." unique_id=360431369]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 552.0
+offset_right = 57.0
+offset_bottom = 608.0
+
+[node name="save" type="Button" parent="buttons" unique_id=1270017186]
+visible = false
+layout_mode = 2
+text = "Save"
+
+[node name="load" type="Button" parent="buttons" unique_id=877350391]
+visible = false
+layout_mode = 2
+text = "Load"
+
+[node name="reset" type="Button" parent="buttons" unique_id=961413349]
+visible = false
+layout_mode = 2
+text = "Reset
+Settings"
+
+[node name="back" type="Button" parent="buttons" unique_id=1165260062]
+layout_mode = 2
+text = "Back"
+
+[node name="sfx" type="Node" parent="." unique_id=457836230]
+
+[node name="button_pressed" type="AudioStreamPlayer" parent="sfx" unique_id=797215512]
+unique_name_in_owner = true
+stream = ExtResource("2_02yg4")
+volume_db = -10.0
+pitch_scale = 2.0
+
+[node name="vol_change_sfx" type="AudioStreamPlayer" parent="sfx" unique_id=964505628]
+unique_name_in_owner = true
+stream = ExtResource("3_276ht")
+volume_db = -15.0
+
+[node name="vol_change_music" type="AudioStreamPlayer" parent="sfx" unique_id=81007157]
+unique_name_in_owner = true
+stream = ExtResource("3_276ht")
+volume_db = -15.0
+
+[node name="vol_change_master" type="AudioStreamPlayer" parent="sfx" unique_id=1434738932]
+unique_name_in_owner = true
+stream = ExtResource("3_276ht")
+volume_db = -15.0
+
+[connection signal="value_changed" from="PanelContainer/Tabs/Audio/master_volume" to="." method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="PanelContainer/Tabs/Audio/music_volume" to="." method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="PanelContainer/Tabs/Audio/sfx_vol" to="." method="_on_sfx_vol_value_changed"]
+[connection signal="pressed" from="PanelContainer/Tabs/Accessiblity/screen_shake" to="." method="_on_screen_shake_pressed"]
+[connection signal="pressed" from="PanelContainer/Tabs/Accessiblity/frame_freeze" to="." method="_on_frame_freeze_pressed"]
+[connection signal="item_selected" from="PanelContainer/Tabs/Video/resOptions" to="." method="_on_res_options_item_selected"]
+[connection signal="pressed" from="buttons/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="buttons/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="buttons/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="buttons/back" to="." method="_on_back_pressed"]
