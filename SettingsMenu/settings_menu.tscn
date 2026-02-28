@@ -147,11 +147,13 @@ pitch_scale = 2.0
 unique_name_in_owner = true
 stream = ExtResource("3_276ht")
 volume_db = -15.0
+bus = &"SFX"
 
 [node name="vol_change_music" type="AudioStreamPlayer" parent="sfx" unique_id=81007157]
 unique_name_in_owner = true
 stream = ExtResource("3_276ht")
 volume_db = -15.0
+bus = &"Music"
 
 [node name="vol_change_master" type="AudioStreamPlayer" parent="sfx" unique_id=1434738932]
 unique_name_in_owner = true

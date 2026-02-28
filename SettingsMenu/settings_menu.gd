@@ -3,7 +3,6 @@ class_name Settings
 
 func _ready()->void:
 	
-	
 	await get_tree().process_frame
 	_on_load_pressed()
 	
