@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://blemjwhstvb1w"]
+
+[ext_resource type="Script" uid="uid://cxfnqf885pwrr" path="res://Screens/prototype_1/combo_knight_like_proto.gd" id="1_37rw4"]
+[ext_resource type="Texture2D" uid="uid://b7goni8ahlqaf" path="res://icon.svg" id="2_31xcs"]
+[ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/prototype_1/line.gd" id="3_y47bw"]
+[ext_resource type="Texture2D" uid="uid://bqubavsk5td7m" path="res://Art/newsprites.png" id="3_ysdlo"]
+
+[node name="ComboKnightLikeProto" type="Node2D" unique_id=1226450776]
+script = ExtResource("1_37rw4")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=20689421]
+position = Vector2(171, 368)
+texture = ExtResource("2_31xcs")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1709075449]
+modulate = Color(0.94012475, 0.21969166, 1.92523e-07, 1)
+position = Vector2(1117, 376)
+texture = ExtResource("2_31xcs")
+
+[node name="line" type="Line2D" parent="." unique_id=2004921450]
+position = Vector2(640, 619)
+points = PackedVector2Array(-540, 0, 540, 0)
+width = 15.0
+script = ExtResource("3_y47bw")
+
+[node name="cursor" type="Sprite2D" parent="line" unique_id=1844214045]
+unique_name_in_owner = true
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("3_ysdlo")
+hframes = 3
+vframes = 3
+frame = 3
+
+[node name="sfx" type="Node" parent="." unique_id=151670877]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sfx" unique_id=1995491458]
+bus = &"SFX"

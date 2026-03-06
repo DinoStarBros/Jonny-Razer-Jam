@@ -142,6 +142,7 @@ unique_name_in_owner = true
 stream = ExtResource("2_02yg4")
 volume_db = -10.0
 pitch_scale = 2.0
+bus = &"SFX"
 
 [node name="vol_change_sfx" type="AudioStreamPlayer" parent="sfx" unique_id=964505628]
 unique_name_in_owner = true
