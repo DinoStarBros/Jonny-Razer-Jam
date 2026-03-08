@@ -6,6 +6,9 @@
 [sub_resource type="LabelSettings" id="LabelSettings_dcgbb"]
 font_size = 100
 
+[sub_resource type="LabelSettings" id="LabelSettings_n23lg"]
+font_size = 30
+
 [node name="title_screen" type="Control" unique_id=1717621720]
 layout_mode = 3
 anchors_preset = 15
@@ -66,13 +69,20 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=457562881]
+[node name="credits_panel" type="PanelContainer" parent="." unique_id=457562881]
+unique_name_in_owner = true
+visible = false
 layout_mode = 0
-offset_left = 958.0
-offset_top = 586.0
-offset_right = 1186.0
-offset_bottom = 690.0
+offset_left = 82.0
+offset_top = 137.0
+offset_right = 666.6671
+offset_bottom = 348.64038
 
-[node name="Label" type="Label" parent="PanelContainer" unique_id=549912753]
+[node name="Label" type="Label" parent="credits_panel" unique_id=549912753]
 layout_mode = 2
-text = "aaaaaaaaaaaa"
+text = "Credits:
+Godot 4.6.1.stable
+LMMS
+Kenney's UI Theme, azagaya
+"
+label_settings = SubResource("LabelSettings_n23lg")

@@ -19,7 +19,6 @@ func _reset_save_file()->void:
 	_save()
 
 
-
 var settings : SettingsData = SettingsData.new()
 func save_settings_stuff() -> void: ## Saves only the data used in the settings menu
 	SaveFileData.master_volume = settings.master_volume

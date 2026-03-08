@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bqrd0srtdaksn"]
 
+[ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_hx8jy"]
 [ext_resource type="Script" uid="uid://bwvd8mbe7g6h8" path="res://SettingsMenu/settings_menu.gd" id="1_pbt7f"]
 [ext_resource type="AudioStream" uid="uid://dp3dtsiol0r0u" path="res://Audio/gunshot.wav" id="2_02yg4"]
 [ext_resource type="AudioStream" uid="uid://dlb0mt6s5iyxk" path="res://Audio/amalgun/beam.wav" id="3_276ht"]
@@ -8,6 +9,7 @@
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
+theme = ExtResource("1_hx8jy")
 script = ExtResource("1_pbt7f")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=735984929]

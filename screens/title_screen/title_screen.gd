@@ -6,7 +6,7 @@ class_name TitleScreen
 func _ready() -> void:
 	%play.pressed.connect(_play_pressed)
 	%settings.pressed.connect(_settings_pressed)
-	%credits
+	%credits.pressed.connect(_credits_pressed)
 	%quit.pressed.connect(_quit_pressed)
 
 func _play_pressed() -> void:
@@ -18,7 +18,7 @@ func _settings_pressed() -> void:
 	pass
 
 func _credits_pressed() -> void:
-	pass
+	%credits_panel.visible = !%credits_panel.visible
 
 func _quit_pressed() -> void:
 	get_tree().quit()

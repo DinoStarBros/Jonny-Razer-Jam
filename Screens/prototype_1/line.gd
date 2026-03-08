@@ -4,7 +4,7 @@ extends Line2D
 
 var endpoints_x : Vector2 ## X is neg/left, Y is pos/right
 var cursor_move_mode : bool = true ## True = right, False = left
-var cursor_speed : float = 1100
+var cursor_speed : float = 400
 
 func _ready() -> void:
 	endpoints_x.x = points[0].x + global_position.x
@@ -24,4 +24,5 @@ func _process(delta: float) -> void:
 		if cursor.global_position.x <= endpoints_x.x:
 			cursor_move_mode = true
 	
+	cursor.global_position.x = clamp(cursor.global_position.x, endpoints_x.x, endpoints_x.y)
 	%Label.text = str(cursor.global_position.x)
