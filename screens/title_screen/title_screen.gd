@@ -6,6 +6,7 @@ class_name TitleScreen
 func _ready() -> void:
 	%play.pressed.connect(_play_pressed)
 	%settings.pressed.connect(_settings_pressed)
+	%credits
 	%quit.pressed.connect(_quit_pressed)
 
 func _play_pressed() -> void:
@@ -14,6 +15,9 @@ func _play_pressed() -> void:
 			SceneManager.change_scene("res://Screens/prototype_1/combo_knight_like_proto.tscn")
 
 func _settings_pressed() -> void:
+	pass
+
+func _credits_pressed() -> void:
 	pass
 
 func _quit_pressed() -> void:

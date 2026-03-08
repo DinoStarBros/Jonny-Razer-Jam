@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3ve8vvmwrk3x"]
 
 [ext_resource type="Script" uid="uid://d26mt5m255s86" path="res://Screens/title_screen/title_screen.gd" id="1_4rvf0"]
-[ext_resource type="Theme" uid="uid://lquu786thlce" path="res://base_theme.tres" id="1_dcgbb"]
+[ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_dcgbb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dcgbb"]
 font_size = 100
@@ -54,8 +54,25 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "SETTINGS"
 
+[node name="credits" type="Button" parent="buttons" unique_id=41749141]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Credits"
+
 [node name="quit" type="Button" parent="buttons" unique_id=477429168]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=457562881]
+layout_mode = 0
+offset_left = 958.0
+offset_top = 586.0
+offset_right = 1186.0
+offset_bottom = 690.0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=549912753]
+layout_mode = 2
+text = "aaaaaaaaaaaa"

@@ -32,6 +32,11 @@ hframes = 3
 vframes = 3
 frame = 3
 
+[node name="Label" type="Label" parent="line" unique_id=762185603]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="sfx" type="Node" parent="." unique_id=151670877]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sfx" unique_id=1995491458]
