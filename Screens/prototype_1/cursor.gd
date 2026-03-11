@@ -10,8 +10,6 @@ var combo : int = 0
 const speed_increase : int = 50
 
 func _ready() -> void:
-	#area_entered.connect(_box_entered)
-	#area_exited.connect(_box_exited)
 	pass
 
 func _process(delta: float) -> void:

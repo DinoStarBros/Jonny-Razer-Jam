@@ -18,8 +18,6 @@ func _ready() -> void:
 	
 	for n in randi_range(2,4):
 		_spawn_box(randf_range(endpoints_x.x, endpoints_x.y), 0)
-	
-
 
 func _process(delta: float) -> void:
 	pass
