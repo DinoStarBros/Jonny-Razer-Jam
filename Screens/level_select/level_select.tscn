@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dyeso24q5ge74"]
 
+[ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_37umd"]
 [ext_resource type="Script" uid="uid://3fhlu1k4ylcl" path="res://Screens/level_select/level_select.gd" id="1_swvou"]
 
 [node name="level_select" type="Control" unique_id=619495632]
@@ -9,4 +10,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_37umd")
 script = ExtResource("1_swvou")
+
+[node name="levelsV" type="VBoxContainer" parent="." unique_id=1533378547]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 97.0
+offset_right = 513.0
+offset_bottom = 207.0
+theme_override_constants/separation = 25
+
+[node name="levelsH" type="HBoxContainer" parent="levelsV" unique_id=830235627]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="l1" type="Button" parent="levelsV/levelsH" unique_id=1237886498]
+layout_mode = 2
+text = "Level 1"
+
+[node name="l2" type="Button" parent="levelsV/levelsH" unique_id=382774573]
+layout_mode = 2
+text = "Level 2"
