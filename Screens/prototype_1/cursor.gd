@@ -1,18 +1,22 @@
 extends Area2D
 class_name Cursor
 
+const speed_increase : int = 50
+const base_speed : float = 400
+const max_speed : float = 1300
+
 var current_box : Box
 var cursor_move_mode : bool = true ## True = right, False = left
-var cursor_speed : float = 400
+var cursor_speed : float = base_speed
 var endpoints_x : Vector2
 var combo : int = 0
-
-const speed_increase : int = 50
 
 func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
+	
+	cursor_speed = clamp(cursor_speed, 0, max_speed)
 	
 	_move_handle(delta)
 	
@@ -72,7 +76,7 @@ func _succesful_box_hit() -> void:
 	%hit2.play()
 
 func _failed_box_hit() -> void:
-	cursor_speed = 400
+	cursor_speed = base_speed
 	combo = 0
 	%failHit.pitch_scale = randf_range(0.8, 1.0)
 	%failHit.play()

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/prototype_1/line.gd" id="3_y47bw"]
 [ext_resource type="Texture2D" uid="uid://bqubavsk5td7m" path="res://Art/newsprites.png" id="3_ysdlo"]
 [ext_resource type="Script" uid="uid://cylaa818xeqx2" path="res://Screens/prototype_1/cursor.gd" id="4_qbdax"]
-[ext_resource type="AudioStream" uid="uid://cspd72htqero" path="res://Audio/jetslash sfx/SFX/hit.mp3" id="6_vqkvo"]
+[ext_resource type="AudioStream" uid="uid://daiixog5jq884" path="res://Audio/cardtowersfx/sword_slash.wav" id="6_d8r5s"]
 [ext_resource type="AudioStream" uid="uid://crwvnwtgketcd" path="res://Audio/cardtowersfx/enemy_hit.wav" id="7_sm7c2"]
 [ext_resource type="AudioStream" uid="uid://e7fgtf2ti3ki" path="res://Audio/41randsfx/15.wav" id="8_d8r5s"]
 [ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="9_d8r5s"]
@@ -17,7 +17,7 @@ point_count = 3
 
 [sub_resource type="Curve" id="Curve_0xpes"]
 _limits = [1.0, 4.0, 0.0, 50.0]
-_data = [Vector2(0, 4), 0.0, -0.144, 0, 0, Vector2(50, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 4), 0.0, -0.144, 0, 0, Vector2(25.097275, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8r5s"]
@@ -83,8 +83,7 @@ text = "box"
 
 [node name="hit1" type="AudioStreamPlayer" parent="sfx" unique_id=1995491458]
 unique_name_in_owner = true
-stream = ExtResource("6_vqkvo")
-volume_db = -5.0
+stream = ExtResource("6_d8r5s")
 bus = &"SFX"
 
 [node name="hit2" type="AudioStreamPlayer" parent="sfx" unique_id=45807827]
