@@ -17,10 +17,12 @@ func _ready() -> void:
 	%cursor.endpoints_x = endpoints_x
 	
 	GlobalSignals.SpawnBox.connect(_spawn_box)
+	GlobalSignals.SpawnBoxRandomX.connect(_spawn_box_rand_x)
 
 func _process(delta: float) -> void:
 	pass
 
+## Function that spawns a box, specify box scene and position x
 func _spawn_box(
 	box_scene: PackedScene,
 	pos_x: float
@@ -30,23 +32,9 @@ func _spawn_box(
 	%box_parent.add_child(box)
 	box.global_position.x = pos_x
 
-#func _spawn_box(
-	#pos_x: float,
-	#box_type: int ## 0=attack box
-	#) -> void:
-	#
-	#var box : Box = boxes_scns[box_type].instantiate()
-	#%box_parent.add_child(box)
-	#box.global_position.x = pos_x
-#
-#func _spawn_box_random_pos(box_type:int) -> void: ## For boxes that just need random position
-	#_spawn_box(randf_range(endpoints_x.x, endpoints_x.y), box_type)
-#
-#func _on_spawn_timer_timeout() -> void:
-	#
-	#var boxes_amnt : int = %box_parent.get_child_count()
-	#
-	#for n in spawn_amnt_curve.sample(boxes_amnt) + randi_range(-1, 1):
-		#_spawn_box(randf_range(endpoints_x.x, endpoints_x.y), 0)
-	#
-	#%spawnTimer.start(time_curve.sample(boxes_amnt))
+## For boxes that just need random position
+func _spawn_box_rand_x(box_scene: PackedScene) -> void:
+	
+	var box : Box = box_scene.instantiate()
+	%box_parent.add_child(box)
+	box.global_position.x = randf_range(endpoints_x.x, endpoints_x.y)

@@ -4,3 +4,7 @@
 
 [node name="BoxDecider" type="Node2D" unique_id=448822901]
 script = ExtResource("1_e6lw4")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1069496907]
+unique_name_in_owner = true
+autostart = true
