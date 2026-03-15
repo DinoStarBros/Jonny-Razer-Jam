@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EntityStats" format=3 uid="uid://bybqewewmlnq5"]
+
+[ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="1_fo8v0"]
+[ext_resource type="PackedScene" uid="uid://w75rgmrfntkc" path="res://Boxes/AttackBox/attack_box.tscn" id="1_q54s1"]
+
+[resource]
+script = ExtResource("1_fo8v0")
+max_hp = 20.0
+box_scenes = Array[PackedScene]([ExtResource("1_q54s1")])
+metadata/_custom_type_script = "uid://chqad1x7kc28f"

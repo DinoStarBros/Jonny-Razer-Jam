@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cv5ayao480vgw" path="res://entities/player/player.gd" id="1_symyc"]
 [ext_resource type="Texture2D" uid="uid://b7goni8ahlqaf" path="res://icon.svg" id="2_abrql"]
+[ext_resource type="Resource" uid="uid://bybqewewmlnq5" path="res://Stats/BasePlayerStats.tres" id="3_26q78"]
 [ext_resource type="Script" uid="uid://bydbf128pntnk" path="res://entities/player/pause.gd" id="3_bls4j"]
 [ext_resource type="PackedScene" uid="uid://bqrd0srtdaksn" path="res://SettingsMenu/settings_menu.tscn" id="3_sglur"]
+[ext_resource type="PackedScene" uid="uid://ih821u05qh4v" path="res://Components/HealthComponent/health_component.tscn" id="5_fkugw"]
+[ext_resource type="PackedScene" uid="uid://dqqmdp3hyac81" path="res://Components/BoxDecider/box_decider.tscn" id="6_qiwj3"]
+[ext_resource type="PackedScene" uid="uid://c1qobuo6afwil" path="res://Components/StatsAllocator/stats_allocator.tscn" id="7_26q78"]
 
 [sub_resource type="Animation" id="Animation_sglur"]
 length = 0.001
@@ -47,6 +51,17 @@ _data = {
 [node name="player" type="Node2D" unique_id=1225601102]
 script = ExtResource("1_symyc")
 
+[node name="StatsAllocator" parent="." unique_id=437436460 node_paths=PackedStringArray("health_component", "box_decider") instance=ExtResource("7_26q78")]
+stats = ExtResource("3_26q78")
+health_component = NodePath("../HealthComponent")
+box_decider = NodePath("../BoxDecider")
+
+[node name="HealthComponent" parent="." unique_id=971455295 node_paths=PackedStringArray("health_bar", "health_text") instance=ExtResource("5_fkugw")]
+health_bar = NodePath("../ui/healthBar")
+health_text = NodePath("../ui/healthBar/healthText")
+
+[node name="BoxDecider" parent="." unique_id=448822901 instance=ExtResource("6_qiwj3")]
+
 [node name="Icon" type="Sprite2D" parent="." unique_id=1200674643]
 scale = Vector2(0.8, 1.2)
 texture = ExtResource("2_abrql")
@@ -54,6 +69,20 @@ texture = ExtResource("2_abrql")
 [node name="anim" type="AnimationPlayer" parent="." unique_id=1529070356]
 libraries/ = SubResource("AnimationLibrary_sglur")
 autoplay = &"idle"
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=1595782103]
+
+[node name="healthBar" type="ProgressBar" parent="ui" unique_id=1601355000]
+offset_left = 143.0
+offset_top = 77.0
+offset_right = 422.0
+offset_bottom = 104.0
+show_percentage = false
+
+[node name="healthText" type="Label" parent="ui/healthBar" unique_id=1028513403]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="pause" type="CanvasLayer" parent="." unique_id=898789355]
 process_mode = 3

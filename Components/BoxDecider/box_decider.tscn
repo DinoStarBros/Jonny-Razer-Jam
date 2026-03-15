@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dqqmdp3hyac81"]
+
+[ext_resource type="Script" uid="uid://tcq44r7uosyg" path="res://Components/BoxDecider/box_decider.gd" id="1_e6lw4"]
+
+[node name="BoxDecider" type="Node2D" unique_id=448822901]
+script = ExtResource("1_e6lw4")

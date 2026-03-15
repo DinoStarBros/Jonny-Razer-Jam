@@ -22,6 +22,7 @@ func _ready()->void:
 	%sure.pressed.connect(func():
 		get_tree().paused = false
 		SceneManager.change_scene("res://Screens/level_select/level_select.tscn")
+		_on_save_pressed()
 		)
 	
 	await get_tree().process_frame

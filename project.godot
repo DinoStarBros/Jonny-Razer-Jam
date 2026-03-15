@@ -24,10 +24,12 @@ config/icon="res://icon.svg"
 SaveLoad="*uid://bqgw3uq8245gu"
 Global="*uid://dllo8yym6pqkb"
 SceneManager="*uid://j20v4cg7v8m1"
+GlobalSignals="*uid://eygacl3jtbln"
 
 [debug]
 
 gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
 
 [display]
 
@@ -40,6 +42,25 @@ window/stretch/aspect="ignore"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Art/": "red",
+"res://Audio/": "orange",
+"res://Boxes/": "yellow",
+"res://Components/": "green",
+"res://FlatUI4/": "blue",
+"res://GlobalScripts/": "purple",
+"res://SaveLoadDataStuff/": "red",
+"res://Screens/": "yellow",
+"res://SettingsMenu/": "green",
+"res://Stats/": "blue",
+"res://entities/": "teal",
+"res://musicManager/": "pink",
+"res://scenes/": "orange",
+"res://shaders/": "teal"
+}
 
 [input]
 

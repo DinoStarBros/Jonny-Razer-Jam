@@ -24,6 +24,7 @@ func _volume_handle() -> void:
 	)
 
 func _init() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_volume_handle()
 
 func _ready() -> void:
