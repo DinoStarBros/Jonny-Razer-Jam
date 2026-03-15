@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dolxx7718k6xh"]
+
+[ext_resource type="Script" uid="uid://8kfx3xqx05k3" path="res://Boxes/DefendBox/defend_box.gd" id="1_q254n"]
+[ext_resource type="Texture2D" uid="uid://dmtpa8fpy5ex6" path="res://Art/Placeholder/AbilityIcons.png" id="2_au5w6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q254n"]
+size = Vector2(68, 64)
+
+[node name="DefendBox" type="Area2D" unique_id=345010371]
+script = ExtResource("1_q254n")
+
+[node name="cs" type="CollisionShape2D" parent="." unique_id=1416066805]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_q254n")
+
+[node name="AbilityIcons" type="Sprite2D" parent="." unique_id=997797229]
+modulate = Color(0.96843964, 0.0002582696, 0.00883334, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_au5w6")
+hframes = 6
+frame = 5

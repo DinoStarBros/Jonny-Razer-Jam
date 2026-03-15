@@ -6,16 +6,6 @@
 [ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/prototype_1/line.gd" id="3_y47bw"]
 [ext_resource type="PackedScene" uid="uid://durivfa6igytm" path="res://scenes/cursor/cursor.tscn" id="4_y47bw"]
 
-[sub_resource type="Curve" id="Curve_d8r5s"]
-_limits = [0.0, 5.0, 0.0, 50.0]
-_data = [Vector2(0, 0), 0.0, 0.48300418, 0, 0, Vector2(21.863117, 5), 0.0, 0.0, 0, 0, Vector2(50, 5), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Curve" id="Curve_0xpes"]
-_limits = [1.0, 4.0, 0.0, 50.0]
-_data = [Vector2(0, 4), 0.0, -0.144, 0, 0, Vector2(25.097275, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
 [node name="ComboKnightLikeProto" type="Node2D" unique_id=1226450776]
 script = ExtResource("1_37rw4")
 metadata/_edit_vertical_guides_ = [-778.0]
@@ -39,8 +29,6 @@ points = PackedVector2Array(-450, 0, 450, 0)
 width = 80.0
 default_color = Color(0.48570347, 0.48570353, 0.48570347, 1)
 script = ExtResource("3_y47bw")
-time_curve = SubResource("Curve_d8r5s")
-spawn_amnt_curve = SubResource("Curve_0xpes")
 
 [node name="box_parent" type="Node2D" parent="line" unique_id=308884050]
 unique_name_in_owner = true

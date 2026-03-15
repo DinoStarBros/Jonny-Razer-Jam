@@ -1,8 +1,5 @@
 extends Line2D
 
-@export var time_curve : Curve
-@export var spawn_amnt_curve : Curve
-
 @onready var cursor: Area2D = %cursor
 
 var endpoints_x : Vector2 ## X is neg/left, Y is pos/right

@@ -1,5 +1,5 @@
 extends Box
-class_name AttackBox
+class_name DefendBox
 
 func _ready() -> void:
 	boxes_amount += 1
@@ -13,4 +13,4 @@ func _exit_tree() -> void:
 
 func slice() -> void:
 	%cs.disabled = true
-	%anim.play("break")
+	queue_free()

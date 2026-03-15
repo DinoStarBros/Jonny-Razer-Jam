@@ -154,15 +154,6 @@ frame = 3
 [node name="LifeTimer" type="Timer" parent="." unique_id=1235873452]
 unique_name_in_owner = true
 
-[node name="Label" type="Label" parent="." unique_id=1678325107]
-unique_name_in_owner = true
-visible = false
-offset_left = -32.0
-offset_top = -61.0
-offset_right = 8.0
-offset_bottom = -38.0
-text = "bla"
-
 [node name="anim" type="AnimationPlayer" parent="." unique_id=1652968696]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_6jbk3")
