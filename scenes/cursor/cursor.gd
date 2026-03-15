@@ -3,7 +3,7 @@ class_name Cursor
 
 const speed_increase : int = 50
 const base_speed : float = 400
-const max_speed : float = 1300
+const max_speed : float = 1000
 
 var current_box : Box
 var cursor_move_mode : bool = true ## True = right, False = left

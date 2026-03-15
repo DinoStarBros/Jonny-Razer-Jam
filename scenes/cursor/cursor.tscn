@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="6_vq56n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8r5s"]
-radius = 15.0
+radius = 18.0
 
 [node name="cursor" type="Area2D" unique_id=1348747850]
 script = ExtResource("1_e5wmr")

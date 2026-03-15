@@ -7,3 +7,8 @@ class_name EntityStats
 ## False = Chooses Boxes on a Pattern
 @export var random_or_pattern : bool 
 @export var box_scenes : Array[PackedScene]
+
+## X is min spawn amount, Y is max spawn amount
+@export var spawn_amount_range : Vector2i = Vector2i(1,2)
+## X is min spawn time, Y is max spawn time
+@export var spawn_time_range : Vector2 = Vector2(1,2)

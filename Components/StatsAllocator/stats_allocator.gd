@@ -14,3 +14,5 @@ func _ready() -> void:
 	
 	box_decider.random_or_pattern = stats.random_or_pattern
 	box_decider.box_scenes = stats.box_scenes
+	box_decider.spawn_amount_range = stats.spawn_amount_range
+	box_decider.spawn_time_range = stats.spawn_time_range
