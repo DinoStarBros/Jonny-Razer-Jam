@@ -49,6 +49,7 @@ _data = {
 script = ExtResource("1_t4fes")
 
 [node name="StatsAllocator" parent="." unique_id=437436460 node_paths=PackedStringArray("health_component", "box_decider") instance=ExtResource("3_ygu5k")]
+unique_name_in_owner = true
 stats = ExtResource("3_c0nl6")
 health_component = NodePath("../HealthComponent")
 box_decider = NodePath("../BoxDecider")

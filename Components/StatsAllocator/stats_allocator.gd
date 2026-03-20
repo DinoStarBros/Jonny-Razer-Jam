@@ -14,3 +14,4 @@ func _ready() -> void:
 	
 	health_component.stats = stats
 	box_decider.stats = stats
+	

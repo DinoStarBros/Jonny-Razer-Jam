@@ -26,3 +26,6 @@ func _physics_process(delta: float) -> void:
 	if global_position.x <= Global.endpoints_x.x:
 		queue_free()
 		GlobalSignals.DamagePlayer.emit(damage)
+	
+	if not Global.current_game_state == Global.game_states.FIGHT:
+		queue_free()

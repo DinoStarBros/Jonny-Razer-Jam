@@ -21,6 +21,10 @@ signal DamagePlayer(
 	damage: float
 )
 
+## Signal called for damaging the enemy
 signal DamageEnemy(
 	damage: float
 )
+
+## When you press the cursor but hit nothing, it'll deal damage to the player
+signal CursorMiss

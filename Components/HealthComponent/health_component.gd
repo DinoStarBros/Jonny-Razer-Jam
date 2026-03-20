@@ -27,6 +27,7 @@ func enemy_hurt(damage: float) -> void:
 		if !died:
 			Global.current_game_state = Global.game_states.WIN
 			died = true
+			enemy_dead()
 
 func _ready() -> void:
 	max_hp = stats.max_hp
@@ -44,3 +45,6 @@ func _process(delta: float) -> void:
 	if health_bar:
 		health_bar.max_value = max_hp
 		health_bar.value = hp
+
+func enemy_dead() -> void:
+	get_parent().queue_free()

@@ -12,7 +12,7 @@ var endpoints_x : Vector2
 var combo : int = 0
 
 func _ready() -> void:
-	pass
+	GlobalSignals.DamagePlayer.connect(_player_hurt)
 
 func _process(delta: float) -> void:
 	
@@ -82,6 +82,18 @@ func _succesful_box_hit() -> void:
 	%hit2.play()
 
 func _failed_box_hit() -> void:
+	cursor_speed = base_speed
+	combo = 0
+	#%hurt1.pitch_scale = randf_range(0.8, 1.0)
+	#%hurt1.play()
+	#%hurt2.pitch_scale = randf_range(0.8, 1.0)
+	#%hurt2.play()
+	
+	GlobalSignals.CursorMiss.emit()
+
+func _player_hurt(damage: float) -> void:
+	# Had to copy-paste instead of just calling
+	# _failed_box_hit() cuz it'll be infinite recursion
 	cursor_speed = base_speed
 	combo = 0
 	%hurt1.pitch_scale = randf_range(0.8, 1.0)
