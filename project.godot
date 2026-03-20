@@ -62,6 +62,10 @@ folder_colors={
 "res://shaders/": "teal"
 }
 
+[gui]
+
+theme/custom_font="uid://b37l2ofya7lsg"
+
 [input]
 
 ui_left={

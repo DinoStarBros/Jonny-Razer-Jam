@@ -77,6 +77,7 @@ libraries/ = SubResource("AnimationLibrary_sglur")
 autoplay = &"idle"
 
 [node name="ui" type="CanvasLayer" parent="." unique_id=1595782103]
+process_mode = 3
 
 [node name="healthBar" type="ProgressBar" parent="ui" unique_id=1601355000]
 offset_left = 140.0
@@ -110,6 +111,7 @@ offset_right = 52.0
 offset_bottom = 31.0
 
 [node name="deathScreen" type="CanvasLayer" parent="." unique_id=1772796247]
+process_mode = 3
 layer = 2
 script = ExtResource("9_7thud")
 
