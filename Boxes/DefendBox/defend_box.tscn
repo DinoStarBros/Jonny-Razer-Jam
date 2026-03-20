@@ -19,3 +19,10 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_au5w6")
 hframes = 6
 frame = 5
+
+[node name="Label" type="Label" parent="." unique_id=859794386]
+unique_name_in_owner = true
+offset_left = -32.0
+offset_top = -60.0
+offset_right = 8.0
+offset_bottom = -37.0

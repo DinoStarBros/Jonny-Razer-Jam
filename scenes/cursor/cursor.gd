@@ -20,14 +20,14 @@ func _process(delta: float) -> void:
 	
 	_move_handle(delta)
 	
-	%Label.text = str("Combo : ", combo)
+	#%text.text = str("Combo : ", combo)
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		var overlaps : Array = get_overlapping_areas()
 		var box_zorders_in_area : Array = []
 		for box in overlaps: if box is Box:
-			box_zorders_in_area.append(box.id)
+			box_zorders_in_area.append(box.z_index)
 		
 		if overlaps.size() > 0:
 			var biggest_box_idx : int = box_zorders_in_area.find(box_zorders_in_area.max())

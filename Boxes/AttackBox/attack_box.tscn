@@ -158,3 +158,10 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_6jbk3")
 autoplay = &"spawn"
+
+[node name="Label" type="Label" parent="." unique_id=2012781604]
+unique_name_in_owner = true
+offset_left = -24.0
+offset_top = -57.0
+offset_right = 16.0
+offset_bottom = -34.0

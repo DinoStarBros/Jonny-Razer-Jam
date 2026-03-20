@@ -5,6 +5,13 @@ class_name Box
 static var boxes_amount : int = 0
 
 var id : int = 0
+var velocity : Vector2
 
 func slice() -> void:
 	pass
+
+#func _init() -> void:
+	#global_position.x = clamp(global_position.x, Global.endpoints_x.x, Global.endpoints_x.y)
+
+func _move(delta: float) -> void:
+	global_position += velocity * delta

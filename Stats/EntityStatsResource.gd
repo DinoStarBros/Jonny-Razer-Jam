@@ -12,3 +12,6 @@ class_name EntityStats
 @export var spawn_amount_range : Vector2i = Vector2i(1,2)
 ## X is min spawn time, Y is max spawn time
 @export var spawn_time_range : Vector2 = Vector2(1,2)
+
+## How fast the box will go to the left, usually for defend boxes
+@export var box_speed_range : Vector2 = Vector2(100, 200)

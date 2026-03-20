@@ -11,6 +11,7 @@
 radius = 18.0
 
 [node name="cursor" type="Area2D" unique_id=1348747850]
+z_index = 100
 script = ExtResource("1_e5wmr")
 
 [node name="cursor_sprite" type="Sprite2D" parent="." unique_id=1094641587]

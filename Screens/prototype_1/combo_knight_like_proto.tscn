@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://cxfnqf885pwrr" path="res://Screens/prototype_1/combo_knight_like_proto.gd" id="1_37rw4"]
 [ext_resource type="PackedScene" uid="uid://0mt44wimyda" path="res://entities/player/player.tscn" id="2_qbdax"]
 [ext_resource type="PackedScene" uid="uid://bfmvl41xfvs85" path="res://entities/enemy1/enemy_1.tscn" id="3_qbdax"]
-[ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/prototype_1/line.gd" id="3_y47bw"]
-[ext_resource type="PackedScene" uid="uid://durivfa6igytm" path="res://scenes/cursor/cursor.tscn" id="4_y47bw"]
+[ext_resource type="PackedScene" uid="uid://cio8dkdlh1ofh" path="res://scenes/belt/belt.tscn" id="4_y47bw"]
 
 [node name="ComboKnightLikeProto" type="Node2D" unique_id=1226450776]
 script = ExtResource("1_37rw4")
@@ -23,19 +22,8 @@ offset_top = 218.0
 offset_right = 435.0
 offset_bottom = 241.0
 
-[node name="line" type="Line2D" parent="." unique_id=2004921450]
+[node name="belt" parent="." unique_id=1659621718 instance=ExtResource("4_y47bw")]
 position = Vector2(640, 619)
-points = PackedVector2Array(-450, 0, 450, 0)
-width = 80.0
-default_color = Color(0.48570347, 0.48570353, 0.48570347, 1)
-script = ExtResource("3_y47bw")
-
-[node name="box_parent" type="Node2D" parent="line" unique_id=308884050]
-unique_name_in_owner = true
-
-[node name="cursor" parent="line" unique_id=1348747850 instance=ExtResource("4_y47bw")]
-unique_name_in_owner = true
-position = Vector2(-454.755, 0)
 
 [node name="spawnTimer" type="Timer" parent="." unique_id=1375991194]
 unique_name_in_owner = true

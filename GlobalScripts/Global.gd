@@ -6,6 +6,7 @@ enum game_states {
 
 var current_game_state : game_states
 var boxes_amnt : int = 0
+var endpoints_x : Vector2
 
 const MAX_BOXES : int = 50 ## The maximum amount of boxes that can be on screen 
 

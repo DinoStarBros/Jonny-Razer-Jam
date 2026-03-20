@@ -8,6 +8,11 @@ var max_hp : float = 100.0
 var hp : float:
 	set(value):
 		hp = clampf(value, 0.0, max_hp)
+var stats : EntityStats
+
+func _ready() -> void:
+	max_hp = stats.max_hp
+	hp = max_hp
 
 func _process(delta: float) -> void:
 	if health_text:

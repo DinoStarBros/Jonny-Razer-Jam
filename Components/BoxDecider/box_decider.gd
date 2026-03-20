@@ -8,10 +8,17 @@ var random_or_pattern : bool
 var box_scenes : Array[PackedScene]
 var spawn_amount_range : Vector2i
 var spawn_time_range : Vector2
+var box_speed_range : Vector2
+var stats : EntityStats
 
 func _ready() -> void:
+	random_or_pattern = stats.random_or_pattern
+	box_scenes = stats.box_scenes
+	spawn_amount_range = stats.spawn_amount_range
+	spawn_time_range = stats.spawn_time_range
+	box_speed_range = stats.box_speed_range
+	
 	%SpawnTimer.timeout.connect(_spawn_timer_timeout)
-	await get_tree().process_frame
 	%SpawnTimer.start(
 		randf_range(spawn_time_range.x, spawn_time_range.y)
 		)
@@ -24,6 +31,12 @@ func _spawn_timer_timeout() -> void:
 	for n in spawn_amount:
 		## 1st param, box scene
 		## 2nd param, pos x, if it's not random x
-		GlobalSignals.SpawnBoxRandomX.emit(box_scenes[0])
+		#if box_scenes[0] is Box:
+		var box_instance : Box = box_scenes[0].instantiate()
+		if box_instance is DefendBox:
+			box_instance.velocity.x = -randf_range(box_speed_range.x, box_speed_range.y)
+			GlobalSignals.SpawnBox.emit(box_instance, Global.endpoints_x.y)
+		else:
+			GlobalSignals.SpawnBoxRandomX.emit(box_instance)
 	
 	%SpawnTimer.start(spawn_time)

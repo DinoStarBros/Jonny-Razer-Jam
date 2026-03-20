@@ -12,6 +12,7 @@ func _ready() -> void:
 	endpoints_x.x = points[0].x + global_position.x
 	endpoints_x.y = points[1].x + global_position.x
 	%cursor.endpoints_x = endpoints_x
+	Global.endpoints_x = endpoints_x
 	
 	GlobalSignals.SpawnBox.connect(_spawn_box)
 	GlobalSignals.SpawnBoxRandomX.connect(_spawn_box_rand_x)
@@ -21,17 +22,17 @@ func _process(delta: float) -> void:
 
 ## Function that spawns a box, specify box scene and position x
 func _spawn_box(
-	box_scene: PackedScene,
+	box: Box,
 	pos_x: float
 	) -> void:
 	
-	var box : Box = box_scene.instantiate()
+	#var box : Box = box_scene.instantiate()
 	%box_parent.add_child(box)
 	box.global_position.x = pos_x
 
 ## For boxes that just need random position
-func _spawn_box_rand_x(box_scene: PackedScene) -> void:
+func _spawn_box_rand_x(box: Box) -> void:
 	
-	var box : Box = box_scene.instantiate()
+	#var box : Box = box_scene.instantiate()
 	%box_parent.add_child(box)
 	box.global_position.x = randf_range(endpoints_x.x, endpoints_x.y)

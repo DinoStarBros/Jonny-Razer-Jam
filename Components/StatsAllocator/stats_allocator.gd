@@ -1,6 +1,8 @@
 extends Node
 ## Component that allocates the stats from the Stats resource to
 ## its corresponding Components
+## Also acts like a checklist for the components needed for
+## an entity
 class_name StatsAllocator
 
 @export var stats : EntityStats
@@ -9,10 +11,6 @@ class_name StatsAllocator
 @export var box_decider : BoxDecider
 
 func _ready() -> void:
-	health_component.max_hp = stats.max_hp
-	health_component.hp = stats.max_hp
 	
-	box_decider.random_or_pattern = stats.random_or_pattern
-	box_decider.box_scenes = stats.box_scenes
-	box_decider.spawn_amount_range = stats.spawn_amount_range
-	box_decider.spawn_time_range = stats.spawn_time_range
+	health_component.stats = stats
+	box_decider.stats = stats

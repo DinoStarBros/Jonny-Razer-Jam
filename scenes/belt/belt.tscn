@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cio8dkdlh1ofh"]
+
+[ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/prototype_1/line.gd" id="1_0u7u5"]
+[ext_resource type="PackedScene" uid="uid://durivfa6igytm" path="res://scenes/cursor/cursor.tscn" id="2_c5s5w"]
+
+[node name="belt" type="Line2D" unique_id=1659621718]
+points = PackedVector2Array(-450, 0, 450, 0)
+width = 80.0
+default_color = Color(0.48570347, 0.48570353, 0.48570347, 1)
+script = ExtResource("1_0u7u5")
+
+[node name="box_parent" type="Node2D" parent="." unique_id=536664715]
+unique_name_in_owner = true
+
+[node name="cursor" parent="." unique_id=1348747850 instance=ExtResource("2_c5s5w")]
+unique_name_in_owner = true
+position = Vector2(-454.755, 0)
