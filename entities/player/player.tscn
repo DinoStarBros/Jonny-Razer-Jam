@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ih821u05qh4v" path="res://Components/HealthComponent/health_component.tscn" id="5_fkugw"]
 [ext_resource type="PackedScene" uid="uid://dqqmdp3hyac81" path="res://Components/BoxDecider/box_decider.tscn" id="6_qiwj3"]
 [ext_resource type="PackedScene" uid="uid://c1qobuo6afwil" path="res://Components/StatsAllocator/stats_allocator.tscn" id="7_26q78"]
-[ext_resource type="Script" uid="uid://c2ovebnouj1i" path="res://entities/player/death_screen.gd" id="9_7thud"]
+[ext_resource type="Script" uid="uid://c2ovebnouj1i" path="res://entities/player/deathCanvas.gd" id="9_7thud"]
 [ext_resource type="AudioStream" uid="uid://e7fgtf2ti3ki" path="res://Audio/41randsfx/15.wav" id="9_wvtmh"]
 [ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="10_7thud"]
 [ext_resource type="PackedScene" uid="uid://cm14oxbcwtmbq" path="res://deathScreen/death_screen.tscn" id="10_a1qjk"]
@@ -110,19 +110,19 @@ offset_top = 31.0
 offset_right = 52.0
 offset_bottom = 31.0
 
-[node name="deathScreen" type="CanvasLayer" parent="." unique_id=1772796247]
+[node name="deathCanvas" type="CanvasLayer" parent="." unique_id=1772796247]
 process_mode = 3
 layer = 2
 script = ExtResource("9_7thud")
 
-[node name="Panel" type="Panel" parent="deathScreen" unique_id=2046507243]
+[node name="Panel" type="Panel" parent="deathCanvas" unique_id=2046507243]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="death_screen" parent="deathScreen" unique_id=894014762 instance=ExtResource("10_a1qjk")]
+[node name="death_screen" parent="deathCanvas" unique_id=894014762 instance=ExtResource("10_a1qjk")]
 
 [node name="sfx" type="Node" parent="." unique_id=373327838]
 process_mode = 3

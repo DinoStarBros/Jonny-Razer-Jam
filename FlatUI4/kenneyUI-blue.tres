@@ -230,6 +230,11 @@ cache/0/30/0/descent = 0.0
 cache/0/30/0/underline_position = 0.0
 cache/0/30/0/underline_thickness = 0.0
 cache/0/30/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
 
 [sub_resource type="AtlasTexture" id="6"]
 atlas = ExtResource("1")
@@ -363,6 +368,7 @@ texture_margin_bottom = 1.0
 region_rect = Rect2(1051, 317, 4, 100)
 
 [resource]
+default_font_size = 30
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.9, 0.9, 0.9, 0.2)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
@@ -380,7 +386,6 @@ Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 2
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_tbjau")
 Button/styles/disabled = SubResource("1")
 Button/styles/focus = SubResource("2")

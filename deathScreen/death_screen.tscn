@@ -29,6 +29,22 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=709704051]
 layout_mode = 2
-text = "OH NAHHH BRO DEAD"
+text = "You Died!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="exit" type="Button" parent="." unique_id=2120797318]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -299.0
+offset_right = 85.67981
+offset_bottom = -244.749
+grow_horizontal = 2
+grow_vertical = 0
+text = "Exit"

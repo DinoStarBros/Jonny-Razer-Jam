@@ -43,7 +43,7 @@ func load_settings_stuff() -> void: ## Loads settings variables and data
 	settings.resolution_index = SaveFileData.resolutuion_index
 
 func save_everything() -> void: ## Saves all the SaveFileData according to their current values in the game
-	pass
+	save_settings_stuff()
 
 func load_everything() -> void: ## Loads all the SaveFileData
-	pass
+	load_settings_stuff()
