@@ -3,6 +3,8 @@ extends Box
 ## Slicing them will deal damage
 class_name AttackBox
 
+var damage : float
+
 func _ready() -> void:
 	boxes_amount += 1
 	id = boxes_amount
@@ -17,3 +19,5 @@ func _exit_tree() -> void:
 func slice() -> void:
 	%cs.disabled = true
 	%anim.play("break")
+	
+	GlobalSignals.DamageEnemy.emit(damage)

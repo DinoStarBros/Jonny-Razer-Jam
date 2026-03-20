@@ -18,11 +18,14 @@ func _process(delta: float) -> void:
 	
 	cursor_speed = clamp(cursor_speed, 0, max_speed)
 	
-	_move_handle(delta)
+	_move(delta)
 	
 	#%text.text = str("Combo : ", combo)
 
 func _input(event: InputEvent) -> void:
+	if not Global.current_game_state == Global.game_states.FIGHT:
+		return
+	
 	if Input.is_action_just_pressed("click"):
 		var overlaps : Array = get_overlapping_areas()
 		var box_zorders_in_area : Array = []
@@ -39,7 +42,7 @@ func _input(event: InputEvent) -> void:
 		else:
 			_failed_box_hit()
 
-func _move_handle(delta: float) -> void:
+func _move(delta: float) -> void:
 	if cursor_move_mode:
 		global_position.x += cursor_speed * delta
 		

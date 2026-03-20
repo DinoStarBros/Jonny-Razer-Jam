@@ -41,6 +41,7 @@ func _spawn_timer_timeout() -> void:
 			box_instance.velocity.x = -randf_range(box_speed_range.x, box_speed_range.y)
 			box_instance.damage = stats.damage
 			GlobalSignals.SpawnBox.emit(box_instance, Global.endpoints_x.y)
-		else:
+		elif box_instance is AttackBox:
+			box_instance.damage = stats.damage
 			GlobalSignals.SpawnBoxRandomX.emit(box_instance)
 	

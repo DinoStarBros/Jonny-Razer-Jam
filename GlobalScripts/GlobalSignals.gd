@@ -1,4 +1,9 @@
 extends Node
+## Why the fuck am I over relying on Global signals for this shit.
+## Who cares I had to work on a fucking research and had to travel aswell
+## While the jam was ongoing, so I don't give a shit
+## if this is spaghetti as hell
+
 
 ## Signal that spawns a box, specify box scene and position x
 signal SpawnBox(
@@ -13,5 +18,9 @@ signal SpawnBoxRandomX(
 
 ## Signal called for damaging the player
 signal DamagePlayer(
-	damage : float
+	damage: float
+)
+
+signal DamageEnemy(
+	damage: float
 )
