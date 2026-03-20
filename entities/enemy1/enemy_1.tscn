@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsmb3ir6ou4kt" path="res://entities/enemy1/enemy_1.gd" id="1_t4fes"]
 [ext_resource type="Texture2D" uid="uid://bn200tim80d5i" path="res://Art/Placeholder/Eneme.png" id="1_tdfkp"]
-[ext_resource type="Resource" uid="uid://bdt5xe8k206d1" path="res://Stats/OPStats.tres" id="3_c0nl6"]
+[ext_resource type="Resource" uid="uid://btf7g5tbv53ae" path="res://Stats/Enemy1Stats.tres" id="3_c0nl6"]
 [ext_resource type="PackedScene" uid="uid://ih821u05qh4v" path="res://Components/HealthComponent/health_component.tscn" id="3_ortin"]
 [ext_resource type="PackedScene" uid="uid://c1qobuo6afwil" path="res://Components/StatsAllocator/stats_allocator.tscn" id="3_ygu5k"]
 [ext_resource type="PackedScene" uid="uid://dqqmdp3hyac81" path="res://Components/BoxDecider/box_decider.tscn" id="4_c0nl6"]

@@ -11,13 +11,6 @@ var hp : float:
 var stats : EntityStats
 var died : bool = false
 
-func _ready() -> void:
-	max_hp = stats.max_hp
-	hp = max_hp
-	
-	if get_parent() is Player:
-		GlobalSignals.DamagePlayer.connect(player_hurt)
-
 func player_hurt(damage: float) -> void:
 	hp -= damage
 	if hp <= 0:
@@ -27,6 +20,18 @@ func player_hurt(damage: float) -> void:
 			died = true
 	else:
 		get_parent().play_hurt_sfx()
+
+func enemy_hurt(damage: float) -> void:
+	hp -= damage
+
+func _ready() -> void:
+	max_hp = stats.max_hp
+	hp = max_hp
+	
+	if get_parent() is Player:
+		GlobalSignals.DamagePlayer.connect(player_hurt)
+	else:
+		GlobalSignals.DamageEnemy.connect(enemy_hurt)
 
 func _process(delta: float) -> void:
 	if health_text:
