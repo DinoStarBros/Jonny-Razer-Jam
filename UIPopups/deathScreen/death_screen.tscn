@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cm14oxbcwtmbq"]
 
-[ext_resource type="Script" uid="uid://d2vnfgdvse7bh" path="res://deathScreen/death_screen.gd" id="1_bvyep"]
+[ext_resource type="Script" uid="uid://d2vnfgdvse7bh" path="res://UIPopups/deathScreen/death_screen.gd" id="1_bvyep"]
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_duotr"]
 
 [node name="death_screen" type="Control" unique_id=894014762]

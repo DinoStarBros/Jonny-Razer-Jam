@@ -28,3 +28,6 @@ signal DamageEnemy(
 
 ## When you press the cursor but hit nothing, it'll deal damage to the player
 signal CursorMiss
+
+## When the player defeats an enemy
+signal FightWin

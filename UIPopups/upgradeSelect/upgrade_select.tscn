@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cpav3y0wkprx"]
+
+[ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_gr6er"]
+[ext_resource type="Script" uid="uid://dtnrkmorm7baj" path="res://UIPopups/upgradeSelect/upgrade_select.gd" id="1_kevp4"]
+
+[node name="upgradeSelect" type="Control" unique_id=471964966]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gr6er")
+script = ExtResource("1_kevp4")
+
+[node name="panel" type="PanelContainer" parent="." unique_id=545492977]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 154.0
+offset_right = 579.0
+offset_bottom = 194.0
+
+[node name="buttons" type="VBoxContainer" parent="panel" unique_id=908669666]
+layout_mode = 2
+
+[node name="upg1" type="Button" parent="panel/buttons" unique_id=489762656]
+layout_mode = 2
+text = "Upgrade 1:"
+
+[node name="upg2" type="Button" parent="panel/buttons" unique_id=824602839]
+layout_mode = 2
+text = "Upgrade 2:"
+
+[node name="upg3" type="Button" parent="panel/buttons" unique_id=1022094973]
+layout_mode = 2
+text = "Upgrade 3:"

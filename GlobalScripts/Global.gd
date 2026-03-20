@@ -10,6 +10,7 @@ var endpoints_x : Vector2
 
 const MAX_BOXES : int = 50 ## The maximum amount of boxes that can be on screen 
 
+
 func _volume_handle() -> void:
 	AudioServer.set_bus_volume_db(
 		0,

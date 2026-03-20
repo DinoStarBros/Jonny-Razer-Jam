@@ -47,4 +47,5 @@ func _process(delta: float) -> void:
 		health_bar.value = hp
 
 func enemy_dead() -> void:
+	GlobalSignals.FightWin.emit()
 	get_parent().queue_free()
