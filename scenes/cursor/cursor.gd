@@ -43,6 +43,9 @@ func _input(event: InputEvent) -> void:
 			_failed_box_hit()
 
 func _move(delta: float) -> void:
+	if not Global.current_game_state == Global.game_states.FIGHT:
+		return
+	
 	if cursor_move_mode:
 		global_position.x += cursor_speed * delta
 		

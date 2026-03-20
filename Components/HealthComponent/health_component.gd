@@ -23,6 +23,10 @@ func player_hurt(damage: float) -> void:
 
 func enemy_hurt(damage: float) -> void:
 	hp -= damage
+	if hp <= 0:
+		if !died:
+			Global.current_game_state = Global.game_states.WIN
+			died = true
 
 func _ready() -> void:
 	max_hp = stats.max_hp

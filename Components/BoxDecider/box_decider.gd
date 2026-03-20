@@ -31,6 +31,8 @@ func _spawn_timer_timeout() -> void:
 	%SpawnTimer.start(spawn_time)
 	
 	if Global.boxes_amnt >= Global.MAX_BOXES: return
+	if not Global.current_game_state == Global.game_states.FIGHT:
+		return
 	
 	for n in spawn_amount:
 		## 1st param, box scene
