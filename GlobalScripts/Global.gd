@@ -4,6 +4,7 @@ enum game_states {
 	TITLE, FIGHT, DEAD, WIN, UPGRADE, TRANSITION_NEXT_COMBAT
 }
 
+
 var current_game_state : game_states
 var boxes_amnt : int = 0
 var endpoints_x : Vector2

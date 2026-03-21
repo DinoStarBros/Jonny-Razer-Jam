@@ -2,77 +2,26 @@
 
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_gr6er"]
 [ext_resource type="Script" uid="uid://dtnrkmorm7baj" path="res://UIPopups/upgradeSelect/upgrade_select.gd" id="1_kevp4"]
+[ext_resource type="Texture2D" uid="uid://cpm4yl536x7rv" path="res://Art/CrokDag/crokDagUpgIcons-Sheet.png" id="3_hi281"]
 [ext_resource type="AudioStream" uid="uid://dfmwmaey2pvsn" path="res://Audio/41randsfx/19.wav" id="3_qc0sp"]
 
-[sub_resource type="Animation" id="Animation_hi281"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("panel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(575, 800)]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_u34w5"]
+atlas = ExtResource("3_hi281")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="Animation" id="Animation_u34w5"]
-resource_name = "enter"
-length = 0.3
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("panel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(-2, 1),
-"update": 0,
-"values": [Vector2(563, 800), Vector2(563, 164)]
-}
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hi281"]
+load_path = "res://.godot/imported/crokDagUpgIcons-Sheet.png-ab0a49411de8a09e4cb091d2ab27687d.ctex"
 
-[sub_resource type="Animation" id="Animation_qc0sp"]
-resource_name = "exit"
-length = 0.3
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("panel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(-2, 1),
-"update": 0,
-"values": [Vector2(563, 164), Vector2(563, 800)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"queue_free"
-}]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yjp0"]
+atlas = SubResource("CompressedTexture2D_hi281")
+region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hi281"]
-_data = {
-&"RESET": SubResource("Animation_hi281"),
-&"enter": SubResource("Animation_u34w5"),
-&"exit": SubResource("Animation_qc0sp")
-}
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fn70y"]
+load_path = "res://.godot/imported/crokDagUpgIcons-Sheet.png-ab0a49411de8a09e4cb091d2ab27687d.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bjp0"]
+atlas = SubResource("CompressedTexture2D_fn70y")
+region = Rect2(64, 0, 64, 64)
 
 [node name="upgradeSelect" type="Control" unique_id=471964966]
 layout_mode = 3
@@ -85,46 +34,58 @@ theme = ExtResource("1_gr6er")
 script = ExtResource("1_kevp4")
 
 [node name="panel" type="PanelContainer" parent="." unique_id=545492977]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -65.0
+offset_left = -314.166
 offset_top = 440.0
-offset_right = 88.667114
-offset_bottom = 694.6404
+offset_right = 314.16687
+offset_bottom = 801.3596
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="buttons" type="VBoxContainer" parent="panel" unique_id=908669666]
+unique_name_in_owner = true
 layout_mode = 2
 alignment = 1
+
+[node name="text" type="Label" parent="panel/buttons" unique_id=308884675]
+layout_mode = 2
+text = "Choose an upgrade:"
 
 [node name="upg1" type="Button" parent="panel/buttons" unique_id=489762656]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Upgrade 1:"
+text = "Upgrade 1:
+Health"
+icon = SubResource("AtlasTexture_u34w5")
 alignment = 0
 
 [node name="upg2" type="Button" parent="panel/buttons" unique_id=824602839]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Upgrade 2:"
+text = "Upgrade 2:
+Attack Damage"
+icon = SubResource("AtlasTexture_1yjp0")
 alignment = 0
 
 [node name="upg3" type="Button" parent="panel/buttons" unique_id=1022094973]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Upgrade 3:"
+text = "Upgrade 3:
+Critical Strike Chance
+"
+icon = SubResource("AtlasTexture_2bjp0")
 alignment = 0
 
 [node name="upgPicked" type="AudioStreamPlayer" parent="." unique_id=425292919]
 unique_name_in_owner = true
 stream = ExtResource("3_qc0sp")
 
-[node name="anim" type="AnimationPlayer" parent="." unique_id=2001768597]
+[node name="deleTimer" type="Timer" parent="." unique_id=20179333]
 unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_hi281")
-autoplay = &"enter"
+one_shot = true

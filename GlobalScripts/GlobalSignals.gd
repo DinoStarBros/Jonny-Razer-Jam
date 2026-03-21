@@ -5,6 +5,7 @@ extends Node
 ## if this is spaghetti as hell
 
 
+
 ## Signal that spawns a box, specify box scene and position x
 signal SpawnBox(
 	box_scn:Box,
@@ -40,3 +41,6 @@ signal CombatStart
 
 ## When hitting a defend box
 signal Defended
+
+## When selecting stat upgrade after a fight
+signal AddUpgrade(upgrade_type:StatUpgrades.upgrades_enum)
