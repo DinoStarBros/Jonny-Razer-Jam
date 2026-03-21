@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://cylaa818xeqx2" path="res://scenes/cursor/cursor.gd" id="1_e5wmr"]
 [ext_resource type="Texture2D" uid="uid://bqubavsk5td7m" path="res://Art/newsprites.png" id="2_tdtef"]
 [ext_resource type="AudioStream" uid="uid://daiixog5jq884" path="res://Audio/cardtowersfx/sword_slash.wav" id="3_nghos"]
-[ext_resource type="AudioStream" uid="uid://cspd72htqero" path="res://Audio/jetslash sfx/SFX/hit.mp3" id="4_1fc3j"]
+[ext_resource type="AudioStream" uid="uid://cspd72htqero" path="res://Audio/jetslash sfx/hit.mp3" id="4_1fc3j"]
 [ext_resource type="AudioStream" uid="uid://e7fgtf2ti3ki" path="res://Audio/41randsfx/15.wav" id="5_dicen"]
+[ext_resource type="AudioStream" uid="uid://cw0s6bkxlwn2b" path="res://Audio/splashtownSFX/Jump.wav" id="5_tdtef"]
+[ext_resource type="AudioStream" uid="uid://cqncyy1lryhig" path="res://Audio/41randsfx/14.wav" id="6_nghos"]
 [ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="6_vq56n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8r5s"]
@@ -46,7 +48,18 @@ bus = &"SFX"
 [node name="hit2" type="AudioStreamPlayer" parent="sfx" unique_id=1728571137]
 unique_name_in_owner = true
 stream = ExtResource("4_1fc3j")
+bus = &"SFX"
+
+[node name="hit3" type="AudioStreamPlayer" parent="sfx" unique_id=453942213]
+unique_name_in_owner = true
+stream = ExtResource("5_tdtef")
+bus = &"SFX"
+
+[node name="block" type="AudioStreamPlayer" parent="sfx" unique_id=1890103036]
+unique_name_in_owner = true
+stream = ExtResource("6_nghos")
 volume_db = -5.0
+pitch_scale = 0.8
 bus = &"SFX"
 
 [node name="hurt1" type="AudioStreamPlayer" parent="sfx" unique_id=2115316130]

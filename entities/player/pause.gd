@@ -13,6 +13,8 @@ func _ready() -> void:
 		%settingsMenu._on_save_pressed()
 		)
 
+
+
 func _input(event: InputEvent) -> void:
 	if (Input.is_action_just_pressed("esc") and 
 		Global.current_game_state == Global.game_states.FIGHT

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://njcv30k0or0v"
+path="res://.godot/imported/slash.mp3-9aaf54f498a4ddba8ee904ef923acb70.mp3str"
+
+[deps]
+
+source_file="res://Audio/jetslash sfx/slash.mp3"
+dest_files=["res://.godot/imported/slash.mp3-9aaf54f498a4ddba8ee904ef923acb70.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

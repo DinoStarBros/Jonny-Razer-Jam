@@ -39,6 +39,9 @@ func _input(event: InputEvent) -> void:
 			biggest_box.slice()
 			
 			_succesful_box_hit()
+			if biggest_box is DefendBox:
+				%block.pitch_scale = randf_range(0.7,0.9)
+				%block.play()
 		else:
 			_failed_box_hit()
 
@@ -80,6 +83,9 @@ func _succesful_box_hit() -> void:
 	%hit1.play()
 	%hit2.pitch_scale = randf_range(0.8, 1.1)
 	%hit2.play()
+	await get_tree().create_timer(0.05).timeout
+	%hit3.pitch_scale = randf_range(0.8, 1.1)
+	%hit3.play()
 
 func _failed_box_hit() -> void:
 	cursor_speed = base_speed

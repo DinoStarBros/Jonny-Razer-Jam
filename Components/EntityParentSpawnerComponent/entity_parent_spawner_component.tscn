@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://clqb3v33yj3ol"]
+
+[ext_resource type="Script" uid="uid://cm6tf63scj13p" path="res://Components/EntityParentSpawnerComponent/entity_parent_spawner_component.gd" id="1_2m1it"]
+
+[node name="EntityParentSpawnerComponent" type="Node2D" unique_id=2034184696]
+script = ExtResource("1_2m1it")

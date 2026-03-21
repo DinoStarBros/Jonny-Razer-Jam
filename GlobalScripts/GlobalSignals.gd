@@ -31,3 +31,6 @@ signal CursorMiss
 
 ## When the player defeats an enemy
 signal FightWin
+
+## When player is done picking an upgrade
+signal UpgradeDone

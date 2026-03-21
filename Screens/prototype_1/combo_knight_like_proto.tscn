@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxfnqf885pwrr" path="res://Screens/prototype_1/combo_knight_like_proto.gd" id="1_37rw4"]
 [ext_resource type="PackedScene" uid="uid://0mt44wimyda" path="res://entities/player/player.tscn" id="2_qbdax"]
+[ext_resource type="PackedScene" uid="uid://clqb3v33yj3ol" path="res://Components/EntityParentSpawnerComponent/entity_parent_spawner_component.tscn" id="2_vqkvo"]
 [ext_resource type="PackedScene" uid="uid://bfmvl41xfvs85" path="res://entities/enemy1/enemy_1.tscn" id="3_qbdax"]
 [ext_resource type="PackedScene" uid="uid://cio8dkdlh1ofh" path="res://scenes/belt/belt.tscn" id="4_y47bw"]
 
@@ -9,10 +10,12 @@
 script = ExtResource("1_37rw4")
 metadata/_edit_vertical_guides_ = [-778.0]
 
-[node name="player" parent="." unique_id=1225601102 instance=ExtResource("2_qbdax")]
+[node name="EntityParentSpawnerComponent" parent="." unique_id=2034184696 instance=ExtResource("2_vqkvo")]
+
+[node name="player" parent="EntityParentSpawnerComponent" unique_id=1225601102 instance=ExtResource("2_qbdax")]
 position = Vector2(320, 360)
 
-[node name="enemy1" parent="." unique_id=1657567192 instance=ExtResource("3_qbdax")]
+[node name="enemy1" parent="EntityParentSpawnerComponent" unique_id=1657567192 instance=ExtResource("3_qbdax")]
 position = Vector2(960, 360)
 
 [node name="Label" type="Label" parent="." unique_id=762185603]

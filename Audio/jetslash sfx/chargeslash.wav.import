@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cryj6702ttly6"
-path="res://.godot/imported/chargeslash.wav-1f78981231fd0c656dfc3b4d4ba9f29b.sample"
+path="res://.godot/imported/chargeslash.wav-12ea79bfd34334834e6136f6123ef9de.sample"
 
 [deps]
 
-source_file="res://Audio/jetslash sfx/SFX/chargeslash.wav"
-dest_files=["res://.godot/imported/chargeslash.wav-1f78981231fd0c656dfc3b4d4ba9f29b.sample"]
+source_file="res://Audio/jetslash sfx/chargeslash.wav"
+dest_files=["res://.godot/imported/chargeslash.wav-12ea79bfd34334834e6136f6123ef9de.sample"]
 
 [params]
 

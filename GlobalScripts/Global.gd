@@ -8,8 +8,8 @@ var current_game_state : game_states
 var boxes_amnt : int = 0
 var endpoints_x : Vector2
 
-const MAX_BOXES : int = 50 ## The maximum amount of boxes that can be on screen 
-
+## The maximum amount of boxes that can be on screen 
+const MAX_BOXES : int = 25 
 
 func _volume_handle() -> void:
 	AudioServer.set_bus_volume_db(

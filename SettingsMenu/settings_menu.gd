@@ -21,6 +21,9 @@ func _ready()->void:
 func on_pause() -> void:
 	sure_quit = false
 
+func on_resume() -> void:
+	get_tree().paused=false
+	_on_save_pressed()
 
 func _on_save_pressed()->void: ## Saves the settings stuff
 	SaveLoad.save_settings_stuff()
