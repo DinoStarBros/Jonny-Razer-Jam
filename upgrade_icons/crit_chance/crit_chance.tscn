@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bdl8guqbonmtk"]
 
+[ext_resource type="Texture2D" uid="uid://b8yg3apk70xsg" path="res://upgrade_icons/crit_chance_texture.tres" id="1_6ln3s"]
 [ext_resource type="Script" uid="uid://d4md4gqhem1ss" path="res://upgrade_icons/crit_chance/crit_chance.gd" id="1_7b3o4"]
 
-[node name="crit_chance" type="Sprite2D" unique_id=928995980]
+[node name="crit_chance" type="TextureRect" unique_id=465953579]
+texture = ExtResource("1_6ln3s")
 script = ExtResource("1_7b3o4")

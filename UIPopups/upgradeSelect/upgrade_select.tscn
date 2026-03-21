@@ -2,26 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_gr6er"]
 [ext_resource type="Script" uid="uid://dtnrkmorm7baj" path="res://UIPopups/upgradeSelect/upgrade_select.gd" id="1_kevp4"]
-[ext_resource type="Texture2D" uid="uid://cpm4yl536x7rv" path="res://Art/CrokDag/crokDagUpgIcons-Sheet.png" id="3_hi281"]
+[ext_resource type="Texture2D" uid="uid://cmfbapj7ja4kw" path="res://upgrade_icons/health_texture.tres" id="3_hi281"]
 [ext_resource type="AudioStream" uid="uid://dfmwmaey2pvsn" path="res://Audio/41randsfx/19.wav" id="3_qc0sp"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u34w5"]
-atlas = ExtResource("3_hi281")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hi281"]
-load_path = "res://.godot/imported/crokDagUpgIcons-Sheet.png-ab0a49411de8a09e4cb091d2ab27687d.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1yjp0"]
-atlas = SubResource("CompressedTexture2D_hi281")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fn70y"]
-load_path = "res://.godot/imported/crokDagUpgIcons-Sheet.png-ab0a49411de8a09e4cb091d2ab27687d.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2bjp0"]
-atlas = SubResource("CompressedTexture2D_fn70y")
-region = Rect2(64, 0, 64, 64)
+[ext_resource type="Texture2D" uid="uid://gwcc7asaaqt0" path="res://upgrade_icons/attack_damage_texture.tres" id="4_u34w5"]
+[ext_resource type="Texture2D" uid="uid://b8yg3apk70xsg" path="res://upgrade_icons/crit_chance_texture.tres" id="5_1yjp0"]
 
 [node name="upgradeSelect" type="Control" unique_id=471964966]
 layout_mode = 3
@@ -62,7 +46,7 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Upgrade 1:
 Health"
-icon = SubResource("AtlasTexture_u34w5")
+icon = ExtResource("3_hi281")
 alignment = 0
 
 [node name="upg2" type="Button" parent="panel/buttons" unique_id=824602839]
@@ -70,7 +54,7 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Upgrade 2:
 Attack Damage"
-icon = SubResource("AtlasTexture_1yjp0")
+icon = ExtResource("4_u34w5")
 alignment = 0
 
 [node name="upg3" type="Button" parent="panel/buttons" unique_id=1022094973]
@@ -79,7 +63,7 @@ layout_mode = 2
 text = "Upgrade 3:
 Critical Strike Chance
 "
-icon = SubResource("AtlasTexture_2bjp0")
+icon = ExtResource("5_1yjp0")
 alignment = 0
 
 [node name="upgPicked" type="AudioStreamPlayer" parent="." unique_id=425292919]

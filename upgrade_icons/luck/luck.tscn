@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bqhusbjb44vgk"]
 
+[ext_resource type="Texture2D" uid="uid://6qut60atp317" path="res://upgrade_icons/luck_texture.tres" id="1_c8eix"]
 [ext_resource type="Script" uid="uid://bfle7pmyrb5iy" path="res://upgrade_icons/luck/luck.gd" id="1_rx5t1"]
 
-[node name="luck" type="Sprite2D" unique_id=118224678]
+[node name="luck" type="TextureRect" unique_id=1864825649]
+texture = ExtResource("1_c8eix")
 script = ExtResource("1_rx5t1")

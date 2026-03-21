@@ -513,6 +513,12 @@ icon = ExtResource("9_gx6sm")
 [node name="stat_upgrades" type="Node" parent="ui" unique_id=622475214]
 script = ExtResource("12_b2kln")
 
+[node name="upgrade_icons" type="HBoxContainer" parent="ui/stat_upgrades" unique_id=1741048231]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+
 [node name="pause" type="CanvasLayer" parent="." unique_id=898789355]
 unique_name_in_owner = true
 process_mode = 3

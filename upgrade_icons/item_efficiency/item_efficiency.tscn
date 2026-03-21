@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bmkwn2p1uls8o"]
 
+[ext_resource type="Texture2D" uid="uid://d3675h3my7445" path="res://upgrade_icons/item_eff_texture.tres" id="1_2nr4k"]
 [ext_resource type="Script" uid="uid://cb3ujje8uqgf" path="res://upgrade_icons/item_efficiency/item_efficiency.gd" id="1_s60ti"]
 
-[node name="item_efficiency" type="Sprite2D" unique_id=1086001439]
+[node name="item_efficiency" type="TextureRect" unique_id=478335858]
+texture = ExtResource("1_2nr4k")
 script = ExtResource("1_s60ti")

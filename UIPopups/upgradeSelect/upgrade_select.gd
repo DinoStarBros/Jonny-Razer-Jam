@@ -7,6 +7,40 @@ class_name UpgradeSelect
 
 var panel_desire_pos_y : float
 var upgrades : Array
+var upgrade_ids : Array
+
+enum upgrades_enum {
+	HEALTH, ATTACK_DAMAGE, CRIT_CHANCE, ITEM_EFFICIENCY, LUCK
+}
+
+## 0-Description, 1-Texture, 2-UpgScene
+const ITEM_DATA : Dictionary = {
+	upgrades_enum.HEALTH: [
+		"Max Health",
+		preload("res://upgrade_icons/health_texture.tres"),
+		preload("res://upgrade_icons/health/health.tscn")
+	],
+	upgrades_enum.ATTACK_DAMAGE: [
+		"Attack Damage",
+		preload("res://upgrade_icons/attack_damage_texture.tres"),
+		preload("res://upgrade_icons/attack_damage/attack_damage.tscn")
+	],
+	upgrades_enum.CRIT_CHANCE: [
+		"Crit Chance",
+		preload("res://upgrade_icons/crit_chance_texture.tres"),
+		preload("res://upgrade_icons/crit_chance/crit_chance.tscn")
+	],
+	upgrades_enum.ITEM_EFFICIENCY: [
+		"Item Efficiency",
+		preload("res://upgrade_icons/item_eff_texture.tres"),
+		preload("res://upgrade_icons/item_efficiency/item_efficiency.tscn")
+	],
+	upgrades_enum.LUCK: [
+		"Luck",
+		preload("res://upgrade_icons/luck_texture.tres"),
+		preload("res://upgrade_icons/luck/luck.tscn")
+	],
+}
 
 func _choose_upgrade_done() -> void:
 	GlobalSignals.UpgradeDone.emit()
@@ -17,15 +51,15 @@ func _choose_upgrade_done() -> void:
 
 func _upg1_press() -> void:
 	_choose_upgrade_done()
-	GlobalSignals.AddUpgrade.emit(StatUpgrades.upgrades_enum.HEALTH)
+	GlobalSignals.AddUpgrade.emit(ITEM_DATA[upgrade_ids[0]][2])
 
 func _upg2_press() -> void:
 	_choose_upgrade_done()
-	GlobalSignals.AddUpgrade.emit(StatUpgrades.upgrades_enum.ATTACK_DAMAGE)
+	GlobalSignals.AddUpgrade.emit(ITEM_DATA[upgrade_ids[1]][2])
 
 func _upg3_press() -> void:
 	_choose_upgrade_done()
-	GlobalSignals.AddUpgrade.emit(StatUpgrades.upgrades_enum.CRIT_CHANCE)
+	GlobalSignals.AddUpgrade.emit(ITEM_DATA[upgrade_ids[2]][2])
 
 func _ready() -> void:
 	%upg1.pressed.connect(_upg1_press)
@@ -34,6 +68,35 @@ func _ready() -> void:
 	%deleTimer.timeout.connect(func(): queue_free())
 	
 	panel_desire_pos_y = 180
+	
+	for item in upgrades_enum.size():
+		upgrade_ids.append(item)
+	
+	upgrade_ids.shuffle()
+	
+	_load_button_text()
+	_load_button_textures()
 
 func _physics_process(delta: float) -> void:
 	panel.global_position.y = lerp(panel.global_position.y, panel_desire_pos_y, 8.0 * delta)
+
+func _load_button_text() -> void:
+	%upg1.text = str(
+		"Upgrade 1: \n",
+		ITEM_DATA[upgrade_ids[0]][0]
+	)
+	
+	%upg2.text = str(
+		"Upgrade 2: \n",
+		ITEM_DATA[upgrade_ids[1]][0]
+	)
+	
+	%upg3.text = str(
+		"Upgrade 3: \n",
+		ITEM_DATA[upgrade_ids[2]][0]
+	)
+
+func _load_button_textures() -> void:
+	%upg1.icon = ITEM_DATA[upgrade_ids[0]][1]
+	%upg2.icon = ITEM_DATA[upgrade_ids[1]][1]
+	%upg3.icon = ITEM_DATA[upgrade_ids[2]][1]

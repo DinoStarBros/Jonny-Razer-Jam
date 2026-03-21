@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://d3675h3my7445"]
+
+[ext_resource type="Texture2D" uid="uid://cpm4yl536x7rv" path="res://Art/CrokDag/crokDagUpgIcons-Sheet.png" id="1_qc6xj"]
+
+[resource]
+atlas = ExtResource("1_qc6xj")
+region = Rect2(64, 64, 64, 64)

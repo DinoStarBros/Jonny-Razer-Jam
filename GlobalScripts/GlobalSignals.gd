@@ -43,4 +43,4 @@ signal CombatStart
 signal Defended
 
 ## When selecting stat upgrade after a fight
-signal AddUpgrade(upgrade_type:StatUpgrades.upgrades_enum)
+signal AddUpgrade(upgrade_scn: PackedScene)
