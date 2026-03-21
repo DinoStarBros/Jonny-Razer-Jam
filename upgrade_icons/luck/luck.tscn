@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqhusbjb44vgk"]
+
+[ext_resource type="Script" uid="uid://bfle7pmyrb5iy" path="res://upgrade_icons/luck/luck.gd" id="1_rx5t1"]
+
+[node name="luck" type="Sprite2D" unique_id=118224678]
+script = ExtResource("1_rx5t1")

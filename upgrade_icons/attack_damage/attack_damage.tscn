@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://blofkg7dyfjki"]
+
+[ext_resource type="Script" uid="uid://crmqmn8qvneej" path="res://upgrade_icons/attack_damage/attack_damage.gd" id="1_rrxm0"]
+
+[node name="attack_damage" type="Sprite2D" unique_id=1510264502]
+script = ExtResource("1_rrxm0")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bdl8guqbonmtk"]
+
+[ext_resource type="Script" uid="uid://d4md4gqhem1ss" path="res://upgrade_icons/crit_chance/crit_chance.gd" id="1_7b3o4"]
+
+[node name="crit_chance" type="Sprite2D" unique_id=928995980]
+script = ExtResource("1_7b3o4")

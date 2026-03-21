@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bmkwn2p1uls8o"]
+
+[ext_resource type="Script" uid="uid://cb3ujje8uqgf" path="res://upgrade_icons/item_efficiency/item_efficiency.gd" id="1_s60ti"]
+
+[node name="item_efficiency" type="Sprite2D" unique_id=1086001439]
+script = ExtResource("1_s60ti")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dtks65ntrbdlf"]
+
+[ext_resource type="Script" uid="uid://rqou1l5ly2xf" path="res://upgrade_icons/health/health.gd" id="1_jx2ga"]
+
+[node name="health" type="Sprite2D" unique_id=844729475]
+script = ExtResource("1_jx2ga")

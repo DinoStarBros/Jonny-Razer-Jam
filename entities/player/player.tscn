@@ -16,6 +16,7 @@
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="9_yqrof"]
 [ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="10_7thud"]
 [ext_resource type="PackedScene" uid="uid://cm14oxbcwtmbq" path="res://UIPopups/deathScreen/death_screen.tscn" id="10_a1qjk"]
+[ext_resource type="Script" uid="uid://c2l0k6v21mlhb" path="res://entities/player/stat_upgrades.gd" id="12_b2kln"]
 [ext_resource type="Texture2D" uid="uid://diihmdabfwa8g" path="res://Art/Placeholder/Trail2.png" id="14_afbqv"]
 
 [sub_resource type="Animation" id="Animation_sglur"]
@@ -508,6 +509,9 @@ grow_horizontal = 2
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("9_yqrof")
 icon = ExtResource("9_gx6sm")
+
+[node name="stat_upgrades" type="Node" parent="ui" unique_id=622475214]
+script = ExtResource("12_b2kln")
 
 [node name="pause" type="CanvasLayer" parent="." unique_id=898789355]
 unique_name_in_owner = true
