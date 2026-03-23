@@ -12,6 +12,8 @@ var endpoints_x : Vector2
 const MAX_BOXES : int = 25
 ## The time you need to wait for next combat
 const WAIT_TIME : float = 1.5
+## The position of the enemy in combat
+const ESPAWN_POS : Vector2 = Vector2(960, 360)
 
 func _volume_handle() -> void:
 	AudioServer.set_bus_volume_db(

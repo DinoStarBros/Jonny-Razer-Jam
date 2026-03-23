@@ -8,6 +8,7 @@ var enemy_scns : Array[PackedScene] = [
 	preload("res://entities/enemy1/enemy_1.tscn"),
 	
 ]
+@export var level_resource : LevelResource
 
 func _ready() -> void:
 	GlobalSignals.UpgradeDone.connect(_upgrade_done)
@@ -22,4 +23,5 @@ func _upgrade_done() -> void:
 func _combat_done() -> void:
 	var enemy = enemy_scns.pick_random().instantiate()
 	add_child(enemy)
-	enemy.global_position = Vector2(960, 360)
+	enemy.global_position = Global.ESPAWN_POS
+	

@@ -59,6 +59,7 @@ folder_colors={
 "res://FlatUI4/": "blue",
 "res://GlobalScripts/": "purple",
 "res://LevelResources/": "red",
+"res://Levels/": "green",
 "res://SaveLoadDataStuff/": "red",
 "res://Screens/": "yellow",
 "res://SettingsMenu/": "green",
