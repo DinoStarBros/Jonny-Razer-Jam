@@ -57,6 +57,7 @@ folder_colors={
 "res://Components/": "green",
 "res://FlatUI4/": "blue",
 "res://GlobalScripts/": "purple",
+"res://LevelResources/": "red",
 "res://SaveLoadDataStuff/": "red",
 "res://Screens/": "yellow",
 "res://SettingsMenu/": "green",
