@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/prototype_1/line.gd" id="1_0u7u5"]
 [ext_resource type="PackedScene" uid="uid://durivfa6igytm" path="res://scenes/cursor/cursor.tscn" id="2_c5s5w"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u7u5"]
+size = Vector2(1, 80)
+
 [node name="belt" type="Line2D" unique_id=1659621718]
 points = PackedVector2Array(-450, 0, 450, 0)
 width = 80.0
@@ -15,3 +18,13 @@ unique_name_in_owner = true
 [node name="cursor" parent="." unique_id=1348747850 instance=ExtResource("2_c5s5w")]
 unique_name_in_owner = true
 position = Vector2(-454.755, 0)
+
+[node name="left_endpoint_area" type="Area2D" parent="." unique_id=1009645935]
+unique_name_in_owner = true
+position = Vector2(-450, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="lecs" type="CollisionShape2D" parent="left_endpoint_area" unique_id=1838547450]
+shape = SubResource("RectangleShape2D_0u7u5")
+debug_color = Color(0.9283834, 0.22010732, 0.3965983, 0.41960785)

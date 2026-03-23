@@ -16,6 +16,8 @@ func _ready() -> void:
 	
 	GlobalSignals.SpawnBox.connect(_spawn_box)
 	GlobalSignals.SpawnBoxRandomX.connect(_spawn_box_rand_x)
+	
+	%left_endpoint_area.global_position.x = endpoints_x.x
 
 func _process(delta: float) -> void:
 	Global.boxes_amnt = %box_parent.get_child_count()

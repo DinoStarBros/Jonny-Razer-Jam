@@ -141,6 +141,7 @@ esc={
 [layer_names]
 
 2d_physics/layer_1="Cursor - Box"
+2d_physics/layer_2="Left Endpoint Area - Defend Box"
 
 [rendering]
 

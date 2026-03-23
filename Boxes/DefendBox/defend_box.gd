@@ -12,6 +12,8 @@ func _ready() -> void:
 	%Label.text = str(z_index)
 	
 	scale.x *= randf_range(0.5, 2)
+	
+	area_entered.connect(_area_entered)
 
 func _exit_tree() -> void:
 	boxes_amount -= 1
@@ -23,9 +25,16 @@ func slice() -> void:
 func _physics_process(delta: float) -> void:
 	_move(delta)
 	
-	if global_position.x <= Global.endpoints_x.x:
-		queue_free()
-		GlobalSignals.DamagePlayer.emit(damage)
+	#if global_position.x <= Global.endpoints_x.x:
+	#	deal_damage_to_player()
 	
 	if not Global.current_game_state == Global.game_states.FIGHT:
 		queue_free()
+
+func deal_damage_to_player() -> void:
+	queue_free()
+	GlobalSignals.DamagePlayer.emit(damage)
+
+func _area_entered(area : Area2D) -> void:
+	if area.name == "left_endpoint_area":
+		deal_damage_to_player()
