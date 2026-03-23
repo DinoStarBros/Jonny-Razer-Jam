@@ -65,6 +65,7 @@ folder_colors={
 "res://SettingsMenu/": "green",
 "res://Stats/": "blue",
 "res://entities/": "teal",
+"res://juices/": "yellow",
 "res://musicManager/": "pink",
 "res://scenes/": "orange",
 "res://shaders/": "teal"

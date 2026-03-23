@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c0r81ukybciid"]
+
+[ext_resource type="Script" uid="uid://brybii358vyuf" path="res://juices/EnemiesDefeatedPopup/enemies_defeated_popup.gd" id="1_d7ii7"]
+[ext_resource type="Shader" uid="uid://bo4glcknvatqh" path="res://shaders/wavy_text.gdshader" id="2_fm7y3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rw0bw"]
+shader = ExtResource("2_fm7y3")
+shader_parameter/height = 1.0
+shader_parameter/frequency = 10.0
+shader_parameter/speed = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_d7ii7"]
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="EnemiesDefeatedPopup" type="CanvasLayer" unique_id=773924252]
+script = ExtResource("1_d7ii7")
+
+[node name="Text" type="Label" parent="." unique_id=991756323]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_rw0bw")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 52.0
+offset_right = 200.0
+offset_bottom = 103.0
+grow_horizontal = 2
+text = "3/10 Enemies Defeated!"
+label_settings = SubResource("LabelSettings_d7ii7")

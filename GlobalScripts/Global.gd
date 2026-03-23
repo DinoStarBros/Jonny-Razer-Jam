@@ -14,6 +14,7 @@ const MAX_BOXES : int = 25
 const WAIT_TIME : float = 1.5
 ## The position of the enemy in combat
 const ESPAWN_POS : Vector2 = Vector2(960, 360)
+const enemies_def_scn : PackedScene = preload("res://juices/EnemiesDefeatedPopup/enemies_defeated_popup.tscn")
 
 func _volume_handle() -> void:
 	AudioServer.set_bus_volume_db(
@@ -38,3 +39,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_volume_handle()
+
+func _spawn_ene_defeated_popup(enemies_defeated: int, max_enemies: int) -> void:
+	var enemies_defeated_popup : EnemiesDefeatedPopup = enemies_def_scn.instantiate()
+	
