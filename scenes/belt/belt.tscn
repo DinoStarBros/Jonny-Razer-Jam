@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cio8dkdlh1ofh"]
 
-[ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/prototype_1/line.gd" id="1_0u7u5"]
+[ext_resource type="Script" uid="uid://b6231vs26i3yt" path="res://Screens/level_1/line.gd" id="1_0u7u5"]
 [ext_resource type="PackedScene" uid="uid://durivfa6igytm" path="res://scenes/cursor/cursor.tscn" id="2_c5s5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u7u5"]
