@@ -6,11 +6,14 @@ class_name EntityParentSpawnerComponent
 
 @export var level_resource : LevelResource
 
-var curr_enemies_defeated: int = 0
+var curr_enemies_defeated: int = -1
 
 func _ready() -> void:
 	GlobalSignals.UpgradeDone.connect(_upgrade_done)
 	GlobalSignals.CombatStart.connect(_combat_start)
+	
+	await get_tree().process_frame
+	GlobalSignals.UpgradeDone.emit()
 
 func _upgrade_done() -> void:
 	
@@ -23,6 +26,9 @@ func _upgrade_done() -> void:
 	GlobalSignals.CombatStart.emit()
 
 func _combat_start() -> void:
+	_spawn_enemy()
+
+func _spawn_enemy() -> void:
 	var enemy = level_resource.enemy_scns.pick_random().instantiate()
 	add_child(enemy)
 	enemy.global_position = Global.ESPAWN_POS

@@ -15,7 +15,7 @@ func _ready() -> void:
 	GlobalSignals.UpgradeDone.connect(_upgrade_done)
 	GlobalSignals.CombatStart.connect(_combat_done)
 	GlobalSignals.Defended.connect(_defended)
-	Global.current_game_state = Global.game_states.FIGHT
+
 
 func _process(delta: float) -> void:
 	pass

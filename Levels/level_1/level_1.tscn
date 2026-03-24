@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cxfnqf885pwrr" path="res://Levels/level_1/level_1.gd" id="1_37rw4"]
 [ext_resource type="PackedScene" uid="uid://0mt44wimyda" path="res://entities/player/player.tscn" id="2_qbdax"]
 [ext_resource type="PackedScene" uid="uid://clqb3v33yj3ol" path="res://Components/EntityParentSpawnerComponent/entity_parent_spawner_component.tscn" id="2_vqkvo"]
-[ext_resource type="PackedScene" uid="uid://bfmvl41xfvs85" path="res://entities/enemies/enemy1/enemy_1.tscn" id="3_qbdax"]
 [ext_resource type="Resource" uid="uid://b2wdj6jcb0gce" path="res://LevelResources/1-1.tres" id="4_or086"]
 [ext_resource type="PackedScene" uid="uid://cio8dkdlh1ofh" path="res://scenes/belt/belt.tscn" id="4_y47bw"]
 [ext_resource type="Texture2D" uid="uid://ckq3u0xeguhhb" path="res://Art/crokDagTestBG.png" id="5_vqkvo"]
@@ -94,9 +93,6 @@ level_resource = ExtResource("4_or086")
 
 [node name="player" parent="EntityParentSpawnerComponent" unique_id=1225601102 instance=ExtResource("2_qbdax")]
 position = Vector2(320, 360)
-
-[node name="enemy1" parent="EntityParentSpawnerComponent" unique_id=1657567192 instance=ExtResource("3_qbdax")]
-position = Vector2(960, 360)
 
 [node name="Label" type="Label" parent="." unique_id=762185603]
 unique_name_in_owner = true
