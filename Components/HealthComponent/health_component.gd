@@ -41,7 +41,7 @@ func _ready() -> void:
 		enemy_stat_mult = 1
 	
 	max_hp = roundi(
-		stats.max_hp * scaling(enemy_stat_mult - 1, 4, true)
+		stats.max_hp * scaling(enemy_stat_mult - 1, 5, true)
 		)
 	hp = roundi(max_hp)
 	
@@ -52,8 +52,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if health_text:
-		#health_text.text = str(roundi(hp), " / ", roundi(max_hp))
-		health_text.text = str((hp), " / ", (max_hp))
+		health_text.text = str(roundi(hp), " / ", roundi(max_hp))
+		#health_text.text = str((hp), " / ", (max_hp))
 	
 	if health_bar:
 		health_bar.max_value = max_hp

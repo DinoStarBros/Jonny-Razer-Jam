@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var pause_ui: PauseUI = %pause
+@onready var stats_allocator: StatsAllocator = %StatsAllocator
 
 var upgrade_select_scn : PackedScene = load("res://UIPopups/upgradeSelect/upgrade_select.tscn")
 
@@ -14,6 +15,10 @@ func fight_win() -> void:
 
 func _process(delta: float) -> void:
 	%pauseButton.visible = Global.current_game_state == Global.game_states.FIGHT
+	_stats_texts()
 
 func _pause_pressed() -> void:
 	pause_ui.pause_or_resume()
+
+func _stats_texts() -> void:
+	pass

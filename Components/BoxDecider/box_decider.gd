@@ -11,6 +11,10 @@ var spawn_time_range : Vector2
 var box_speed_range : Vector2
 var stats : EntityStats
 var enemy_stat_mult : float
+## Damage value after going through scaling
+var final_damage : float
+
+@export var final_damage_text : Label ## UI text that shows the final damage
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -31,6 +35,14 @@ func _ready() -> void:
 	# Increases box speed, making defend boxes move faster to the left
 	box_speed_range = stats.box_speed_range * scaling(enemy_stat_mult, 50, true)
 	
+	final_damage = roundi(
+		stats.damage * scaling(enemy_stat_mult - 1, 2.5, true)
+		)
+	
+	final_damage_text.text = str(
+		"Damage: ", roundi(final_damage)
+		)
+	
 	%SpawnTimer.timeout.connect(_spawn_timer_timeout)
 	%SpawnTimer.start(
 		randf_range(spawn_time_range.x, spawn_time_range.y)
@@ -47,15 +59,20 @@ func _spawn_timer_timeout() -> void:
 		return
 	
 	for n in spawn_amount:
+
+		
+		
 		## 1st param, box scene
 		## 2nd param, pos x, if it's not random x
-		#if box_scenes[0] is Box:
 		var box_instance : Box = box_scenes[0].instantiate()
 		if box_instance is DefendBox:
+			# Boxes for the enemies
 			box_instance.velocity.x = -randf_range(box_speed_range.x, box_speed_range.y)
-			box_instance.damage = stats.damage
+			box_instance.damage = final_damage
 			GlobalSignals.SpawnBox.emit(box_instance, Global.endpoints_x.y)
+		
 		elif box_instance is AttackBox:
+			## Boxes for the player
 			if Global.boxes_amnt >= Global.MAX_BOXES: 
 				return
 			

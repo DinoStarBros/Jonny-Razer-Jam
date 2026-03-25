@@ -59,7 +59,9 @@ unique_name_in_owner = true
 health_bar = NodePath("../ui/healthBar")
 health_text = NodePath("../ui/healthBar/healthText")
 
-[node name="BoxDecider" parent="." unique_id=448822901 instance=ExtResource("4_c0nl6")]
+[node name="BoxDecider" parent="." unique_id=448822901 node_paths=PackedStringArray("final_damage_text") instance=ExtResource("4_c0nl6")]
+unique_name_in_owner = true
+final_damage_text = NodePath("../ui/stats_panel/damage_txt")
 
 [node name="Eneme" type="Sprite2D" parent="." unique_id=211008156]
 scale = Vector2(4, 4)
@@ -86,3 +88,13 @@ show_percentage = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="stats_panel" type="VBoxContainer" parent="ui" unique_id=60656746]
+offset_left = 1063.0
+offset_top = 137.0
+offset_right = 1103.0
+offset_bottom = 177.0
+
+[node name="damage_txt" type="Label" parent="ui/stats_panel" unique_id=1925632547]
+unique_name_in_owner = true
+layout_mode = 2
