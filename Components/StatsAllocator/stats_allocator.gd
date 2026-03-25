@@ -1,4 +1,4 @@
-extends Node
+extends EntityComponentClass
 ## Component that allocates the stats from the Stats resource to
 ## its corresponding Components
 ## Also acts like a checklist for the components needed for
@@ -10,12 +10,9 @@ class_name StatsAllocator
 @export var health_component : HealthComponent
 @export var box_decider : BoxDecider
 
-var enemy_idx : int = 67
-
 func _ready() -> void:
 	
 	await get_tree().process_frame
-	print(enemy_idx)
 	
 	#if get_parent() is Enemy:
 		#stats.max_hp *= enemy_idx + 1
@@ -27,3 +24,4 @@ func _ready() -> void:
 	
 	health_component.stats = stats
 	box_decider.stats = stats
+	

@@ -9,6 +9,8 @@ class_name EntityParentSpawnerComponent
 var curr_enemies_defeated: int = -1
 
 func _ready() -> void:
+	Global.enemy_idx = curr_enemies_defeated
+	
 	GlobalSignals.UpgradeDone.connect(_upgrade_done)
 	GlobalSignals.CombatStart.connect(_combat_start)
 	
@@ -18,6 +20,7 @@ func _ready() -> void:
 func _upgrade_done() -> void:
 	
 	curr_enemies_defeated += 1
+	Global.enemy_idx = curr_enemies_defeated
 	_spawn_ene_defeated_popup(curr_enemies_defeated, level_resource.enemy_amount)
 	
 	Global.current_game_state = Global.game_states.TRANSITION_NEXT_COMBAT
@@ -30,7 +33,6 @@ func _combat_start() -> void:
 
 func _spawn_enemy() -> void:
 	var enemy : Enemy = level_resource.enemy_scns.pick_random().instantiate()
-	enemy.enemy_idx = curr_enemies_defeated
 	add_child(enemy)
 	enemy.global_position = Global.ESPAWN_POS
 

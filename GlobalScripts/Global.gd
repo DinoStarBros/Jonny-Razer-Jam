@@ -7,6 +7,8 @@ enum game_states {
 var current_game_state : game_states
 var boxes_amnt : int = 0
 var endpoints_x : Vector2
+## Index for the current enemy in the level
+var enemy_idx : int = -1
 
 ## The maximum amount of boxes that can be on screen 
 const MAX_BOXES : int = 25

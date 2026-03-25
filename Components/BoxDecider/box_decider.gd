@@ -1,4 +1,4 @@
-extends Node2D
+extends EntityComponentClass
 ## Component for entities that decides what, when, and where for the box spawning
 class_name BoxDecider
 
@@ -10,15 +10,26 @@ var spawn_amount_range : Vector2i
 var spawn_time_range : Vector2
 var box_speed_range : Vector2
 var stats : EntityStats
+var enemy_stat_mult : float
 
 func _ready() -> void:
 	await get_tree().process_frame
 	
 	random_or_pattern = stats.random_or_pattern
 	box_scenes = stats.box_scenes
+	
+	if get_parent() is Enemy:
+		enemy_stat_mult = (Global.enemy_idx + 1)
+	else:
+		enemy_stat_mult = 1
+	
 	spawn_amount_range = stats.spawn_amount_range
-	spawn_time_range = stats.spawn_time_range
-	box_speed_range = stats.box_speed_range
+	
+	# Decreases spawn time, making the enemy spawn boxes faster
+	spawn_time_range = stats.spawn_time_range * scaling(enemy_stat_mult, 50, false)
+	
+	# Increases box speed, making defend boxes move faster to the left
+	box_speed_range = stats.box_speed_range * scaling(enemy_stat_mult, 50, true)
 	
 	%SpawnTimer.timeout.connect(_spawn_timer_timeout)
 	%SpawnTimer.start(
@@ -32,7 +43,6 @@ func _spawn_timer_timeout() -> void:
 	
 	%SpawnTimer.start(spawn_time)
 	
-
 	if not Global.current_game_state == Global.game_states.FIGHT:
 		return
 	
@@ -51,4 +61,3 @@ func _spawn_timer_timeout() -> void:
 			
 			box_instance.damage = stats.damage
 			GlobalSignals.SpawnBoxRandomX.emit(box_instance)
-	
