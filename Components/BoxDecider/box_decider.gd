@@ -36,11 +36,7 @@ func _ready() -> void:
 	box_speed_range = stats.box_speed_range * scaling(enemy_stat_mult, 40, true)
 	
 	final_damage = roundi(
-		stats.damage * scaling(enemy_stat_mult - 1, 4, true)
-		)
-	
-	final_damage_text.text = str(
-		"Damage: ", roundi(final_damage)
+		stats.damage * scaling(enemy_stat_mult - 1, 5, true)
 		)
 	
 	%SpawnTimer.timeout.connect(_spawn_timer_timeout)
@@ -76,5 +72,10 @@ func _spawn_timer_timeout() -> void:
 			if Global.boxes_amnt >= Global.MAX_BOXES: 
 				return
 			
-			box_instance.damage = stats.damage
+			box_instance.damage = final_damage
 			GlobalSignals.SpawnBoxRandomX.emit(box_instance)
+
+func _process(delta: float) -> void:
+	final_damage_text.text = str(
+		"Damage: ", roundi(final_damage)
+		)

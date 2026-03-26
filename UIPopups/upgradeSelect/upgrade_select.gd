@@ -72,7 +72,7 @@ func _ready() -> void:
 	for item in upgrades_enum.size():
 		upgrade_ids.append(item)
 	
-	upgrade_ids.shuffle()
+	#upgrade_ids.shuffle()
 	
 	_load_button_text()
 	_load_button_textures()
