@@ -1,6 +1,11 @@
 [gd_scene format=4 uid="uid://dn0iqnqk1ax2t"]
 
 [ext_resource type="Script" uid="uid://cad8y63hr8jqu" path="res://ItemEffects/CS5Effect/cs5fx.gd" id="1_4m0s5"]
+[ext_resource type="AudioStream" uid="uid://cq1v7cgw8ngyk" path="res://Audio/tresure/slashParry.wav" id="2_xbaye"]
+[ext_resource type="AudioStream" uid="uid://bj2u06h14hxmp" path="res://Audio/splashtownSFX/Airspin.wav" id="3_p185e"]
+[ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="4_7l6nb"]
+[ext_resource type="AudioStream" uid="uid://clojxvbxghphc" path="res://Audio/41randsfx/11.wav" id="5_facj5"]
+[ext_resource type="AudioStream" uid="uid://r0pny8lw760t" path="res://Audio/41randsfx/30.wav" id="6_8skgu"]
 
 [sub_resource type="Animation" id="Animation_xbaye"]
 length = 0.001
@@ -16,10 +21,100 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1e-05, 1e-05)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("greyOut:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sfx/1:pitch_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sfx/3:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("sfx/3:pitch_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("laser:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p185e"]
+resource_name = "done"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("greyOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.27450982), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_4m0s5"]
 resource_name = "use"
-length = 3.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -33,10 +128,109 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(3, 3), Vector2(2, 2)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("greyOut:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.27450982)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sfx/1:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sfx/1:pitch_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5, 0.8]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("sfx/2:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("sfx/3:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("sfx/3:pitch_scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.5, 1.0, 1.5]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("laser:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(2, 2)]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"beam_start"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xbaye"]
 _data = {
 &"RESET": SubResource("Animation_xbaye"),
+&"done": SubResource("Animation_p185e"),
 &"use": SubResource("Animation_4m0s5")
 }
 
@@ -44,14 +238,87 @@ _data = {
 _data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAYAwAAUklGRhADAABXRUJQVlA4TAQDAAAvX8AXEN/ANrJtJd+iPz9zgQ6omHJIPYfcXSOGNpgGAJhka+4NeYEj9GQeILrDB55ItLENALBMqtE2P9DYA/pLz+VkY+ro+Y/f/af30IFQbTkpfHz/KUKVE66aUlQVQEpdJMKZF8Nz0hYD/deaDlPrdPMbe1dPVZWKLlWKARsvdHfFXiIJVaEXgSQBYNu2QcKo3oZEjSiq///PkAAIEOg8RfRfgiTJcRtlA7McEKRv7B9e/0ECPEtJbIinP7pzIyG9kQDpInn/wSpzIeMsfDoBkUsZ8kRBmq5ut6v0KfRhaAyufdVAZ+WCpn4GJmL6knO9XUOYaZj2CGA+rTWnWVXqcPBZOobOU51lMAClY4Pd0vwCiBTnxrqCqE4yGKCpAPi8Xbueeys0rOs81+d4YVP4DrK8TLEV+r551RSA1kIXui3zi71Jgy90HH3+7sR/m24hsAjqDAXaMyBNggFQg5K+lhLd56UPESP6e7+TLJpE80kTGZYE93xGMJEENwyTrUGMwLCFiNB4bEmvYUpTz78qIN3ScTlNyejeDtSuo6FI02CiHC2IjlCdfufGFw3xIaQHzblnxK/wGzQuMGfMRaZdpl3uaar5qpPu5R9AgFSj9sUK2fHBnouJx9FPq+PbwRwWWGV0cBzpYGGfQntLzgLUGYbBtGUcx5TGcZQ+AH9RFqrRUKN7kX65H3Ea/+6a05kyzSks0y+lc2OPz7lUS2zLsrhY7sosGogYlRAn2ujgIoiQX9Ly5zI207Ar8zJGIYuJCUky1oREg/nXbDZlnBqM3PTYkhIxkDg0HUryZvm7k6YrtDUpkemqsVGFTu+Gb1c1dD4e3tixkfXlsT/cAGQAwAzsuQZyTQlj7488hVr0CYbGAWAJkGDbvgfAQotBmcE9dkdZShHvXN02lJK3re102kk9nXbSORCjVDqh1n39NYaJY5GXNaR7fiWjFIvdk3hTsYW9lzo5QaOdnE21o+vxluk9sTots/8X1PjxTTgtI3kFBi10r0nivJax8Xcd8NxrJJAX")
 size_override = Vector2(96, 96)
 
+[sub_resource type="Animation" id="Animation_facj5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("laser/laserW:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("laser/laserB:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_7l6nb"]
+resource_name = "loop"
+length = 0.1
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("laser/laserW:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 0.6), Vector2(1, 1.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("laser/laserB:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1.3), Vector2(1, 0.8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_facj5"]
+_data = {
+&"RESET": SubResource("Animation_facj5"),
+&"loop": SubResource("Animation_7l6nb")
+}
+
 [node name="CS5Fx" type="Node2D" unique_id=1796393015]
 script = ExtResource("1_4m0s5")
 
 [node name="anim" type="AnimationPlayer" parent="." unique_id=701149470]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_xbaye")
 autoplay = &"use"
 
+[node name="greyOut" type="ColorRect" parent="." unique_id=1224218096]
+z_index = 1
+offset_left = -52.0
+offset_top = -52.0
+offset_right = 1331.0
+offset_bottom = 744.0
+color = Color(0, 0, 0, 0)
+
 [node name="spr_par" type="Node2D" parent="." unique_id=42871090]
+z_index = 2
 position = Vector2(356, 362)
 scale = Vector2(1e-05, 1e-05)
 
@@ -119,3 +386,52 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 2903553389710257372
 }
 metadata/_aseprite_wizard_source_file_hash_ = "9d1678a65874f360cf64c9e38e35fd15"
+
+[node name="sfx" type="Node" parent="." unique_id=1808197177]
+
+[node name="1" type="AudioStreamPlayer" parent="sfx" unique_id=761012262]
+stream = ExtResource("2_xbaye")
+bus = &"SFX"
+
+[node name="2" type="AudioStreamPlayer" parent="sfx" unique_id=1783676799]
+stream = ExtResource("3_p185e")
+bus = &"SFX"
+
+[node name="3" type="AudioStreamPlayer" parent="sfx" unique_id=952590931]
+stream = ExtResource("4_7l6nb")
+bus = &"SFX"
+
+[node name="beam" type="AudioStreamPlayer" parent="sfx" unique_id=921400243]
+unique_name_in_owner = true
+stream = ExtResource("5_facj5")
+volume_db = -20.0
+pitch_scale = 0.01
+bus = &"SFX"
+
+[node name="beambass" type="AudioStreamPlayer" parent="sfx" unique_id=1967593490]
+unique_name_in_owner = true
+stream = ExtResource("6_8skgu")
+volume_db = -20.0
+pitch_scale = 0.2
+bus = &"SFX"
+
+[node name="laser" type="Node2D" parent="." unique_id=130078584]
+z_index = 1
+position = Vector2(347, 362)
+
+[node name="laserB" type="Line2D" parent="laser" unique_id=1258241467]
+scale = Vector2(1, 0.8)
+points = PackedVector2Array(0, 0, 1000, 0)
+width = 20.0
+default_color = Color(0, 0.7413211, 0.79326844, 1)
+
+[node name="laserW" type="Line2D" parent="laser" unique_id=196467692]
+points = PackedVector2Array(0, 0, 1000, 0)
+
+[node name="laserLoop" type="AnimationPlayer" parent="laser" unique_id=999421731]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_facj5")
+autoplay = &"loop"
+
+[node name="Timer" type="Timer" parent="." unique_id=664436817]
+unique_name_in_owner = true

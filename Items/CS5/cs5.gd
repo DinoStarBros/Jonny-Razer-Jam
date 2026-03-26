@@ -12,6 +12,7 @@ func use() -> void:
 		
 		Global.current_game_state = Global.game_states.USING_ITEM
 		
-		
+		var item_effect : ItemEffect = item_effect_scn.instantiate()
+		Global.item_effects.add_child(item_effect)
 		
 		queue_free()
