@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_h71i2"]
 [ext_resource type="Script" uid="uid://bcynn1ggypty8" path="res://Items/TCG/tcg.gd" id="2_k63dq"]
-[ext_resource type="PackedScene" uid="uid://dn0iqnqk1ax2t" path="res://ItemEffects/CS5Effect/cs5fx.tscn" id="3_yvuyt"]
+[ext_resource type="PackedScene" uid="uid://dn0iqnqk1ax2t" path="res://ItemEffects/CS5Fx/cs5fx.tscn" id="3_yvuyt"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_hnkkn"]
 _data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAYAwAAUklGRhADAABXRUJQVlA4TAQDAAAvX8AXEN/ANrJtJd+iPz9zgQ6omHJIPYfcXSOGNpgGAJhka+4NeYEj9GQeILrDB55ItLENALBMqtE2P9DYA/pLz+VkY+ro+Y/f/af30IFQbTkpfHz/KUKVE66aUlQVQEpdJMKZF8Nz0hYD/deaDlPrdPMbe1dPVZWKLlWKARsvdHfFXiIJVaEXgSQBYNu2QcKo3oZEjSiq///PkAAIEOg8RfRfgiTJcRtlA7McEKRv7B9e/0ECPEtJbIinP7pzIyG9kQDpInn/wSpzIeMsfDoBkUsZ8kRBmq5ut6v0KfRhaAyufdVAZ+WCpn4GJmL6knO9XUOYaZj2CGA+rTWnWVXqcPBZOobOU51lMAClY4Pd0vwCiBTnxrqCqE4yGKCpAPi8Xbueeys0rOs81+d4YVP4DrK8TLEV+r551RSA1kIXui3zi71Jgy90HH3+7sR/m24hsAjqDAXaMyBNggFQg5K+lhLd56UPESP6e7+TLJpE80kTGZYE93xGMJEENwyTrUGMwLCFiNB4bEmvYUpTz78qIN3ScTlNyejeDtSuo6FI02CiHC2IjlCdfufGFw3xIaQHzblnxK/wGzQuMGfMRaZdpl3uaar5qpPu5R9AgFSj9sUK2fHBnouJx9FPq+PbwRwWWGV0cBzpYGGfQntLzgLUGYbBtGUcx5TGcZQ+AH9RFqrRUKN7kX65H3Ea/+6a05kyzSks0y+lc2OPz7lUS2zLsrhY7sosGogYlRAn2ujgIoiQX9Ly5zI207Ar8zJGIYuJCUky1oREg/nXbDZlnBqM3PTYkhIxkDg0HUryZvm7k6YrtDUpkemqsVGFTu+Gb1c1dD4e3tixkfXlsT/cAGQAwAzsuQZyTQlj7488hVr0CYbGAWAJkGDbvgfAQotBmcE9dkdZShHvXN02lJK3re102kk9nXbSORCjVDqh1n39NYaJY5GXNaR7fiWjFIvdk3hTsYW9lzo5QaOdnE21o+vxluk9sTots/8X1PjxTTgtI3kFBi10r0nivJax8Xcd8NxrJJAX")

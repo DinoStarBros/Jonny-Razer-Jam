@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cd6aj1gbj5adb"]
+
+[ext_resource type="Script" uid="uid://dm46xf1txxej" path="res://ItemEffects/KroflexFX/kroflex_fx.gd" id="1_bneyb"]
+
+[node name="KroflexFX" type="Node2D" unique_id=847359284]
+script = ExtResource("1_bneyb")

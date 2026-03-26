@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://biv3un7j4wa6t"]
+
+[ext_resource type="Script" uid="uid://fqui3epib6ug" path="res://ItemEffects/CroakDonaldsFX/croakdonalds_fx.gd" id="1_y6cfg"]
+
+[node name="CroakDonaldsFX" type="Node2D" unique_id=847359284]
+script = ExtResource("1_y6cfg")

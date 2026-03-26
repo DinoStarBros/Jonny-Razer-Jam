@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dn0iqnqk1ax2t"]
 
-[ext_resource type="Script" uid="uid://cad8y63hr8jqu" path="res://ItemEffects/CS5Effect/cs5fx.gd" id="1_4m0s5"]
+[ext_resource type="Script" uid="uid://cad8y63hr8jqu" path="res://ItemEffects/CS5Fx/cs5fx.gd" id="1_4m0s5"]
 [ext_resource type="AudioStream" uid="uid://cq1v7cgw8ngyk" path="res://Audio/tresure/slashParry.wav" id="2_xbaye"]
 [ext_resource type="AudioStream" uid="uid://bj2u06h14hxmp" path="res://Audio/splashtownSFX/Airspin.wav" id="3_p185e"]
 [ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="4_7l6nb"]

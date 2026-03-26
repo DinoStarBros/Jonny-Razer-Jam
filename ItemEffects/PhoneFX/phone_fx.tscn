@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btxuby0pfprnr"]
+
+[ext_resource type="Script" uid="uid://6x2a1npihpmu" path="res://ItemEffects/PhoneFX/phone_fx.gd" id="1_brfng"]
+
+[node name="PhoneFX" type="Node2D" unique_id=847359284]
+script = ExtResource("1_brfng")

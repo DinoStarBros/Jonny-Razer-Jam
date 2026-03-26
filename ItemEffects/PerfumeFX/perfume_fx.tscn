@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c77h6llxfg6nc"]
+
+[ext_resource type="Script" uid="uid://co0geggngrjvr" path="res://ItemEffects/PerfumeFX/perfume_fx.gd" id="1_wiomu"]
+
+[node name="PerfumeFX" type="Node2D" unique_id=847359284]
+script = ExtResource("1_wiomu")

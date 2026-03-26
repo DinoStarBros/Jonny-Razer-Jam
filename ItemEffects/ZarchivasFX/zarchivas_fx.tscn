@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://n7ffugljfpmd"]
+
+[ext_resource type="Script" uid="uid://dvy8dngck3cpg" path="res://ItemEffects/ZarchivasFX/zarchivas_fx.gd" id="1_x156y"]
+
+[node name="ZarchivasFX" type="Node2D" unique_id=847359284]
+script = ExtResource("1_x156y")
