@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://6ppgamywek0"]
+
+[ext_resource type="AudioStream" uid="uid://cq1v7cgw8ngyk" path="res://Audio/tresure/slashParry.wav" id="1_yysr6"]
+[ext_resource type="AudioStream" uid="uid://bj2u06h14hxmp" path="res://Audio/splashtownSFX/Airspin.wav" id="2_xm2t2"]
+[ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="3_2lnhk"]
+
+[sub_resource type="Animation" id="Animation_tx1mk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sfx/1:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sfx/3:pitch_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_2wmtw"]
+resource_name = "start"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.275)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sfx/1:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sfx/1:pitch_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5, 0.8]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sfx/3:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("sfx/3:pitch_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.5, 1.0, 1.5]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("sfx/2:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2wmtw"]
+_data = {
+&"RESET": SubResource("Animation_tx1mk"),
+&"start": SubResource("Animation_2wmtw")
+}
+
+[node name="itemFXIntro" type="ColorRect" unique_id=794341249]
+z_index = 1
+offset_left = -52.0
+offset_top = -52.0
+offset_right = 1331.0
+offset_bottom = 744.0
+color = Color(0, 0, 0, 0)
+
+[node name="anim" type="AnimationPlayer" parent="." unique_id=619337565]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_2wmtw")
+autoplay = &"start"
+
+[node name="sfx" type="Node" parent="." unique_id=1568098581]
+
+[node name="1" type="AudioStreamPlayer" parent="sfx" unique_id=2140197758]
+stream = ExtResource("1_yysr6")
+pitch_scale = 0.8
+bus = &"SFX"
+
+[node name="2" type="AudioStreamPlayer" parent="sfx" unique_id=1507833078]
+stream = ExtResource("2_xm2t2")
+bus = &"SFX"
+
+[node name="3" type="AudioStreamPlayer" parent="sfx" unique_id=1145466038]
+stream = ExtResource("3_2lnhk")
+bus = &"SFX"

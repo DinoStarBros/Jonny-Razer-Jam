@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://csjgw1g7ut6wx"]
-
-[ext_resource type="Script" uid="uid://cfjwtr81gby5t" path="res://ItemEffects/CardFx/card_fx.gd" id="1_7iouh"]
-
-[node name="CardFX" type="Node2D" unique_id=847359284]
-script = ExtResource("1_7iouh")
