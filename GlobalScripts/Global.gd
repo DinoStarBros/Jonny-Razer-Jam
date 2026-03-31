@@ -13,6 +13,7 @@ var enemy_idx : int = -1
 var inventory : Inventory
 var cursor : Cursor
 var item_effects : ItemEffects
+var final_damage : float
 
 ## The maximum amount of boxes that can be on screen 
 const MAX_BOXES : int = 25

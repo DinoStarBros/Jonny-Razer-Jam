@@ -79,3 +79,6 @@ func _process(delta: float) -> void:
 	final_damage_text.text = str(
 		"Damage: ", roundi(final_damage)
 		)
+		
+	
+	Global.final_damage = final_damage

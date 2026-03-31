@@ -22,6 +22,7 @@ item_duration_timer = NodePath("ItemDurationTimer")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=709423721]
 unique_name_in_owner = true
+z_index = 2
 texture_filter = 1
 position = Vector2(356, 362)
 scale = Vector2(3, 3)

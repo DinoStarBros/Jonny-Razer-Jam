@@ -4,12 +4,14 @@ class_name CS5Effect
 var time_val : float = 0
 var time_scale : float = 10
 var radius : float = 10
-var duration : float = 3
+var duration : float = 2
 var beam_shoot : bool = false
 var damage : float
 
+const tick_dmg_mult : float = 4
+
 func _ready() -> void:
-	damage = item_effects.box_decider.final_damage * 3
+	damage = item_effects.box_decider.final_damage * 4
 
 func _process(delta: float) -> void:
 	_visuals(delta)
@@ -38,8 +40,8 @@ func beam_start() -> void:
 	_extra_sfx()
 	
 	for dmg in damage:
-		GlobalSignals.DamageEnemy.emit(1)
-		await get_tree().create_timer(duration/damage).timeout
+		GlobalSignals.DamageEnemy.emit(tick_dmg_mult)
+		await get_tree().create_timer((duration/damage) * tick_dmg_mult).timeout
 
 func _extra_sfx() -> void:
 	const PLAY_TIMES : int = 4

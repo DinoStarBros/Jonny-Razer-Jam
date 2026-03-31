@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" uid="uid://qgoaabrphv3n" path="res://Components/ItemDurationTimer/item_duration_timer.gd" id="1_2culo"]
 
-[node name="ItemDurationTimer" type="Timer" unique_id=1562411559]
-one_shot = true
+[node name="ItemDurationTimer" type="Timer" unique_id=1004819799]
 script = ExtResource("1_2culo")
