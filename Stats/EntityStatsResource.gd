@@ -17,4 +17,4 @@ class_name EntityStats
 @export var box_speed_range : Vector2 = Vector2(100, 200)
 
 @export_category("Displayed Combat Stats")
-@export var damage : int = 2
+@export var damage : float = 2

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bw2tak656ypfb"]
 
-[ext_resource type="Script" uid="uid://dm275270lbr41" path="res://Boxes/CardBoxes/BurnBox/BurnBox/burn_box.gd" id="1_sj37n"]
+[ext_resource type="Script" uid="uid://dm275270lbr41" path="res://Boxes/CardBoxes/BurnBox/burn_box.gd" id="1_sj37n"]
 [ext_resource type="Texture2D" uid="uid://dmtpa8fpy5ex6" path="res://Art/Placeholder/AbilityIcons.png" id="2_op25c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wadgx"]

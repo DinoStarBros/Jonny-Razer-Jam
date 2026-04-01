@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name EntityComponentClass
 
 ## Epic scaling function, just multiply it with a value you want scaled

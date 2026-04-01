@@ -8,7 +8,7 @@ var duration : float = 1
 
 const cards_amnt : int = 4
 const cards_scns : Array[PackedScene] = [
-	preload("res://Boxes/CardBoxes/BurnBox/BurnBox/burn_box.tscn")
+	preload("res://Boxes/CardBoxes/BurnBox/burn_box.tscn")
 	
 ]
 
