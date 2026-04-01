@@ -8,11 +8,10 @@ enum Debuffs {
 	POISON, BURN, SLOW,
 }
 
-const poison_dmg_tick : float = 1
 const debuffs_dict : Dictionary = {
-	Debuffs.POISON: "huh",
+	Debuffs.POISON: "pluh",
 	Debuffs.BURN: preload("res://Debuffs/Burn/burn.tscn"),
-	Debuffs.SLOW: "hurb",
+	Debuffs.SLOW: "huh",
 }
 
 func _init() -> void:

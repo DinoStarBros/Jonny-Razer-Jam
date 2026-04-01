@@ -1,5 +1,5 @@
 extends Debuff
-class_name PoisonDebuff
+class_name BurnDebuff
 
 func _ready() -> void:
 	%Timer.start(duration)
@@ -9,4 +9,4 @@ func _ready() -> void:
 	%TickTimer.timeout.connect(_tick)
 
 func _tick() -> void:
-	health_component.hp -= roundi(burn_dmg_tick)
+	health_component.hp -= roundi(poison_dmg_tick)

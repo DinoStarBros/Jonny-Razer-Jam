@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b2b36ok7gysx3"]
+
+[ext_resource type="Script" uid="uid://cu1d6i6kkjqas" path="res://Debuffs/Poison/poison.gd" id="1_r1isc"]
+[ext_resource type="Material" uid="uid://bdj7quxyvvr0h" path="res://Debuffs/Poison/poison_particles.tres" id="2_1lmlt"]
+
+[node name="Poison" type="Node2D" unique_id=1515188683]
+script = ExtResource("1_r1isc")
+
+[node name="Timer" type="Timer" parent="." unique_id=1444776408]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="TickTimer" type="Timer" parent="." unique_id=676343954]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=872367582]
+lifetime = 1.5
+randomness = 0.5
+process_material = ExtResource("2_1lmlt")

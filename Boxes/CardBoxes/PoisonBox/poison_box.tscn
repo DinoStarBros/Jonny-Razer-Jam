@@ -1,9 +1,9 @@
-[gd_scene format=4 uid="uid://e72dn1y2o4s0"]
+[gd_scene format=4 uid="uid://n5hfjdopol38"]
 
-[ext_resource type="Script" uid="uid://dm275270lbr41" path="res://Boxes/CardBoxes/BurnBox/burn_box.gd" id="1_sj37n"]
-[ext_resource type="Texture2D" uid="uid://bu0x7lpmcykd8" path="res://Art/CrokDag/slashCleaveThing.png" id="2_0blj1"]
-[ext_resource type="PackedScene" uid="uid://eruaxc4xhip" path="res://Components/ItemSpawningComponent/item_spawning_component.tscn" id="3_n2men"]
-[ext_resource type="PackedScene" uid="uid://n7kyhjwgq41n" path="res://Items/CS5/cs5.tscn" id="4_uyve4"]
+[ext_resource type="Script" uid="uid://c8ohtc8s0ubxl" path="res://Boxes/CardBoxes/PoisonBox/poison_box.gd" id="1_f1xiv"]
+[ext_resource type="Texture2D" uid="uid://bu0x7lpmcykd8" path="res://Art/CrokDag/slashCleaveThing.png" id="2_m5xqd"]
+[ext_resource type="PackedScene" uid="uid://eruaxc4xhip" path="res://Components/ItemSpawningComponent/item_spawning_component.tscn" id="3_uuirb"]
+[ext_resource type="PackedScene" uid="uid://n7kyhjwgq41n" path="res://Items/CS5/cs5.tscn" id="4_warmh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wadgx"]
 size = Vector2(42, 64)
@@ -271,8 +271,8 @@ size_override = Vector2(128, 128)
 _data = PackedByteArray("AAADAAUAAAABAAAAgAAAAIAAAAAUAwAAUklGRgwDAABXRUJQVlA4TAADAAAvf8AfEG9gpraN/5PYTFQw2yWQliZiqKEkkhXqWb6aAjgaUIvYFEChKADIyP1SQQclNNBZACW8VmHzHwD4/4lyHwZr7xEaVc42pQcPE6m6j06DHG2b3LZBiRayDedYZ5s+AcEbcDrnAFex2goKXe6FBzcAThA6Po9zjqsGh9HMLHdH4+wmov8OJEmSkmzDgRVmOX1E5GR51ZM4crJ3x3Uo8WTF7+VbTzZ/OMuJN7H3uN6+PTNjZrxTvPfOsoUzimjbs2ffzhS9naEzus7MzqoO48pb3eG3iEXR218BeKbtGvz8QNU1BzzTAoTtpOSaA7QBPFNyDZhreoBMgDppygCmeibwFjKYTJ8pekbgrZJrkE0BZXom3FRTBjiuCDIWALVNOCraMtBbGTvlmQ5wjLCouIauKJtk+7DQdlMVQC6pS8bqLv0ARjgOSiAbuZ5pNaIN92kbJcqSfUky1nvuJyhBUx1v0Sjhnmn9b1ylynqpmJ//kaJDPiuRNy99NqMfzvKqJ/HPd1zbpSdrfjuDJ1s/nOWy7Cum4p38jYbBWMbyTrFfyxZ6gYItGAHatm3LSvI12KIYrEBZoV5isMjI9BXuJGJsIRrGlVI2jCuDbLhELOFfiEWgFBv+/hVWmzFCbd8LFcZYmaauKxmDEWnrXZ3MU2SD8drUlUhKn2Csdl3dieSpOZjI1A1p+3B5cju3MjXBncLdznOjx1juU7C+EcIOD8jB74GwdqQKH06NMeS2hPC5o44kl2icGog6ypR9Re8d+yVQngs5oWk6LX1fMXWghy7Rc9eJYPm+i9WDNkxDXdlwU4UZcH/WuThoAnerO176rgsyL+agsQGoNtidrQoVyATqaqmDlhxPMIHm/FAFKg4a8jBP81xC8r9jDhpW0HeZsgzCrzcvaR64G3ttw7nXm5J+Fzx3Au715gnTUhVwrjcRvXcSzvXmk4ZhkXCuN59Uhe+1UeRMqsiZVJEzqeKwM6kiZ1JFfFJtw/AnKtr2WYu82fHZin44y6uexHt2XBE=")
 size_override = Vector2(128, 128)
 
-[node name="burnbox" type="Area2D" unique_id=192665163]
-script = ExtResource("1_sj37n")
+[node name="poisonbox" type="Area2D" unique_id=192665163]
+script = ExtResource("1_f1xiv")
 
 [node name="cs" type="CollisionShape2D" parent="." unique_id=1870801512]
 unique_name_in_owner = true
@@ -294,7 +294,7 @@ position = Vector2(-16, 0)
 texture = SubResource("PortableCompressedTexture2D_ub2mx")
 hframes = 2
 region_enabled = true
-region_rect = Rect2(64, 0, 64, 64)
+region_rect = Rect2(0, 64, 64, 64)
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -325,7 +325,7 @@ texture = SubResource("PortableCompressedTexture2D_xlwd1")
 hframes = 2
 frame = 1
 region_enabled = true
-region_rect = Rect2(64, 0, 64, 64)
+region_rect = Rect2(0, 64, 64, 64)
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": false,
 "pending_changes": {}
@@ -353,7 +353,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "8288a11faf421e953aaa8edaa93d08af"
 [node name="slash" type="Sprite2D" parent="." unique_id=201124272]
 rotation = -0.9302605
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("2_0blj1")
+texture = ExtResource("2_m5xqd")
 
-[node name="ItemSpawningComponent" parent="." unique_id=1018164484 instance=ExtResource("3_n2men")]
-item_scn = ExtResource("4_uyve4")
+[node name="ItemSpawningComponent" parent="." unique_id=1018164484 instance=ExtResource("3_uuirb")]
+item_scn = ExtResource("4_warmh")
