@@ -75,8 +75,7 @@ func _process(delta: float) -> void:
 		#health_text.text = str((hp), " / ", (max_hp))
 	
 	if health_bar:
-		if get_parent() is Player: pass
-		#	print(max_hp)
+		if get_parent() is Player:
 		health_bar.max_value = max_hp
 		health_bar.value = hp
 	
