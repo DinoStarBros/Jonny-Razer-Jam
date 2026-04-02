@@ -14,6 +14,9 @@ var inventory : Inventory
 var cursor : Cursor
 var item_effects : ItemEffects
 var final_damage : float
+var defend_box_speed_multiplier: float = 1:  ## Multiplier for how fast defend boxes go from left to right
+	set(value):
+		defend_box_speed_multiplier = clamp(value, 0, 1)
 
 ## The maximum amount of boxes that can be on screen 
 const MAX_BOXES : int = 25

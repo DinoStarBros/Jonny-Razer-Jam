@@ -10,10 +10,6 @@ script = ExtResource("1_j2kwx")
 unique_name_in_owner = true
 one_shot = true
 
-[node name="TickTimer" type="Timer" parent="." unique_id=676343954]
-unique_name_in_owner = true
-wait_time = 0.1
-
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=872367582]
 lifetime = 1.5
 randomness = 0.5

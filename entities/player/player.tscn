@@ -21,7 +21,6 @@
 [ext_resource type="Script" uid="uid://ba4q7byfi2rvv" path="res://entities/player/inventory.gd" id="17_we0b7"]
 [ext_resource type="PackedScene" uid="uid://q4xc2vqw6hgi" path="res://scenes/item_slot/item_slot.tscn" id="18_mtric"]
 [ext_resource type="PackedScene" uid="uid://bxmtpk0ucjb1c" path="res://Items/TCG/tcg.tscn" id="19_221hk"]
-[ext_resource type="PackedScene" uid="uid://n7kyhjwgq41n" path="res://Items/CS5/cs5.tscn" id="20_ghoj8"]
 [ext_resource type="Script" uid="uid://dgggbtvfb1dl" path="res://entities/player/item_effects.gd" id="21_eyb6c"]
 
 [sub_resource type="Animation" id="Animation_sglur"]
@@ -545,6 +544,14 @@ offset_bottom = 177.0
 unique_name_in_owner = true
 layout_mode = 2
 
+[node name="debug" type="Label" parent="ui" unique_id=65773474]
+unique_name_in_owner = true
+offset_left = 276.0
+offset_top = 177.0
+offset_right = 316.0
+offset_bottom = 194.0
+text = "6767"
+
 [node name="pause" type="CanvasLayer" parent="." unique_id=898789355]
 unique_name_in_owner = true
 process_mode = 3
@@ -588,20 +595,20 @@ visible = false
 layout_mode = 2
 text = "Sure"
 
-[node name="deathCanvas" type="CanvasLayer" parent="." unique_id=1772796247]
+[node name="deathPanel" type="CanvasLayer" parent="." unique_id=1772796247]
 process_mode = 3
 layer = 2
 visible = false
 script = ExtResource("9_7thud")
 
-[node name="Panel" type="Panel" parent="deathCanvas" unique_id=2046507243]
+[node name="Panel" type="Panel" parent="deathPanel" unique_id=2046507243]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="death_screen" parent="deathCanvas" unique_id=894014762 instance=ExtResource("10_a1qjk")]
+[node name="death_screen" parent="deathPanel" unique_id=894014762 instance=ExtResource("10_a1qjk")]
 
 [node name="Inventory" type="CanvasLayer" parent="." unique_id=1740634853]
 layer = -1
@@ -665,13 +672,17 @@ combo_cost = 0
 layout_mode = 2
 use_button = "item2"
 
-[node name="CS5" parent="Inventory/itmtxt/items/item_slot2" unique_id=1353055808 instance=ExtResource("20_ghoj8")]
+[node name="TCG" parent="Inventory/itmtxt/items/item_slot2" unique_id=1868987453 instance=ExtResource("19_221hk")]
 layout_mode = 2
 combo_cost = 0
 
 [node name="item_slot3" parent="Inventory/itmtxt/items" unique_id=850390082 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item3"
+
+[node name="TCG" parent="Inventory/itmtxt/items/item_slot3" unique_id=610142446 instance=ExtResource("19_221hk")]
+layout_mode = 2
+combo_cost = 0
 
 [node name="ItemEffects" type="CanvasLayer" parent="." unique_id=368405744]
 script = ExtResource("21_eyb6c")

@@ -15,8 +15,10 @@ func slice() -> void:
 #func _init() -> void:
 	#global_position.x = clamp(global_position.x, Global.endpoints_x.x, Global.endpoints_x.y)
 
+
+
 func _move(delta: float) -> void:
 	if not Global.current_game_state == Global.game_states.FIGHT: 
 		return
 	
-	global_position += velocity * delta
+	global_position += velocity * delta * Global.defend_box_speed_multiplier

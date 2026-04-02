@@ -22,6 +22,7 @@ func slice() -> void:
 	queue_free()
 
 func _physics_process(delta: float) -> void:
+	
 	_move(delta)
 	
 	#if global_position.x <= Global.endpoints_x.x:

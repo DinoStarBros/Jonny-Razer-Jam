@@ -16,6 +16,10 @@ func fight_win() -> void:
 func _process(delta: float) -> void:
 	%pauseButton.visible = Global.current_game_state == Global.game_states.FIGHT
 	_stats_texts()
+	
+	%debug.text = str(
+		Global.defend_box_speed_multiplier
+	)
 
 func _pause_pressed() -> void:
 	pause_ui.pause_or_resume()

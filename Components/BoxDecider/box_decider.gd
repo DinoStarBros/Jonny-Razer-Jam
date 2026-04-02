@@ -72,7 +72,7 @@ func _spawn_timer_timeout() -> void:
 			if Global.boxes_amnt >= Global.MAX_BOXES: 
 				return
 			
-			#box_instance.damage = final_damage
+			box_instance.damage = final_damage
 			GlobalSignals.SpawnBoxRandomX.emit(box_instance)
 
 func _process(delta: float) -> void:
@@ -81,4 +81,4 @@ func _process(delta: float) -> void:
 		)
 		
 	
-	Global.final_damage = final_damage
+	#Global.final_damage = final_damage
