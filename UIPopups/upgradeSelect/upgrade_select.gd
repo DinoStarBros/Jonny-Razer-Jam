@@ -15,11 +15,6 @@ var upgrade_ids : Array
 
 ## 0-Description, 1-Texture, 2-UpgScene
 const ITEM_DATA : Dictionary = {
-	4: [
-		"Item Efficiency",
-		preload("res://upgrade_icons/item_eff_texture.tres"),
-		preload("res://upgrade_icons/item_efficiency/item_efficiency.tscn")
-	],
 	0: [
 		"Max Health",
 		preload("res://upgrade_icons/health_texture.tres"),
@@ -39,6 +34,11 @@ const ITEM_DATA : Dictionary = {
 		"Luck",
 		preload("res://upgrade_icons/luck_texture.tres"),
 		preload("res://upgrade_icons/luck/luck.tscn")
+	],
+	4: [
+		"Item Efficiency",
+		preload("res://upgrade_icons/item_eff_texture.tres"),
+		preload("res://upgrade_icons/item_efficiency/item_efficiency.tscn")
 	],
 }
 
@@ -74,7 +74,7 @@ func _ready() -> void:
 		upgrade_ids.append(item)
 	
 	upgrade_ids = [
-		4, 1,2,3,0
+		4,3, 1,2,0
 	]
 	
 	#upgrade_ids.shuffle()

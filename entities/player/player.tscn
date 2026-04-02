@@ -554,6 +554,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Crit Chance : 69"
 
+[node name="luck_txt" type="Label" parent="ui/stats_panel" unique_id=538254473]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Crit Chance : 69"
+
 [node name="debug" type="Label" parent="ui" unique_id=65773474]
 unique_name_in_owner = true
 offset_left = 276.0

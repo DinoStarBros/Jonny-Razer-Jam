@@ -34,6 +34,10 @@ func _process(delta: float) -> void:
 	%item_eff_txt.text = str(
 		"Item Efficiency: ", roundi(Global.item_efficiency)
 	)
+	
+	%luck_txt.text = str(
+		"Luck: ", roundi(Global.luck)
+	)
 
 func _pause_pressed() -> void:
 	pause_ui.pause_or_resume()

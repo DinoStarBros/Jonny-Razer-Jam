@@ -10,7 +10,9 @@ class_name Player
 @onready var camera: Camera = %Camera
 
 var died : bool = false ## A one time thingy
-var current
+#var current
+
+const stats : EntityStats = preload("res://Stats/BasePlayerStats.tres")
 
 func _ready() -> void:
 	GlobalSignals.DamagePlayer.connect(hurt)
@@ -20,6 +22,9 @@ func _ready() -> void:
 	GlobalSignals.CombatStart.connect(_combat_done)
 	GlobalSignals.Defended.connect(_defended)
 	GlobalSignals.HealPlayerPercent.connect(_heal_player_percent)
+	
+	Global.item_efficiency = stats.item_efficiency
+	Global.luck = stats.luck
 
 func _process(delta: float) -> void:
 	pass

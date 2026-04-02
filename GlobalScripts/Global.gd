@@ -24,6 +24,7 @@ var item_efficiency : int: ## The less combo cost items have
 		GlobalSignals.ItemEfficiencyChanged.emit()
 var entity_parent_spawner_comp : EntityParentSpawnerComponent
 var camera : Camera
+var luck : float = 0
 
 ## The maximum amount of boxes that can be on screen 
 const MAX_BOXES : int = 25

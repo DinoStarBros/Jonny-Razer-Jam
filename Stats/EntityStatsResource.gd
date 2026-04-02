@@ -20,3 +20,4 @@ class_name EntityStats
 @export var damage : float = 2
 @export var crit_chance : float = 3
 @export var item_efficiency : int = 0
+@export var luck : float = 0
