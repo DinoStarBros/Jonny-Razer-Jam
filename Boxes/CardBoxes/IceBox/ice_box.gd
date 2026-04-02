@@ -1,5 +1,5 @@
 extends CardBox
-class_name BurnBox
+class_name IceBox
 
 var damage : float
 
@@ -17,6 +17,6 @@ func slice() -> void:
 	
 	#GlobalSignals.DamageEnemy.emit(damage)
 	GlobalSignals.DebuffEnemy.emit(
-		DebuffsComponent.Debuffs.BURN,
-		3
+		DebuffsComponent.Debuffs.ICE,
+		5
 		)

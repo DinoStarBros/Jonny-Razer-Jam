@@ -7,8 +7,6 @@ func _ready() -> void:
 	boxes_amount += 1
 	id = boxes_amount
 	z_index = id
-	
-	#scale.x *= randf_range(0.5, 2)
 
 func _exit_tree() -> void:
 	boxes_amount -= 1

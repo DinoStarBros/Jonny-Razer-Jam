@@ -10,6 +10,8 @@ const cards_amnt : int = 4
 const cards_scns : Array[PackedScene] = [
 	preload("res://Boxes/CardBoxes/BurnBox/burn_box.tscn"),
 	preload("res://Boxes/CardBoxes/PoisonBox/poison_box.tscn"),
+	preload("res://Boxes/CardBoxes/IceBox/ice_box.tscn"),
+	
 ]
 
 func _ready() -> void:

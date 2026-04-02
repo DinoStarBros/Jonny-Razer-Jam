@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cnsbed46lpsy"]
+
+[ext_resource type="Script" uid="uid://ccnqbsbxgmxh6" path="res://Debuffs/Ice/ice.gd" id="1_j2kwx"]
+[ext_resource type="Material" uid="uid://cj0rvklp43o61" path="res://Debuffs/Ice/ice_particles.tres" id="2_msf2t"]
+
+[node name="Ice" type="Node2D" unique_id=1515188683]
+script = ExtResource("1_j2kwx")
+
+[node name="Timer" type="Timer" parent="." unique_id=1444776408]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="TickTimer" type="Timer" parent="." unique_id=676343954]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=872367582]
+lifetime = 1.5
+randomness = 0.5
+process_material = ExtResource("2_msf2t")

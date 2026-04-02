@@ -5,13 +5,13 @@ class_name DebuffsComponent
 @export var health_component : HealthComponent
 
 enum Debuffs {
-	POISON, BURN, SLOW,
+	POISON, BURN, ICE,
 }
 
 const debuffs_dict : Dictionary = {
 	Debuffs.POISON: preload("res://Debuffs/Poison/poison.tscn"),
 	Debuffs.BURN: preload("res://Debuffs/Burn/burn.tscn"),
-	Debuffs.SLOW: "huh",
+	Debuffs.ICE: preload("res://Debuffs/Ice/ice.tscn"),
 }
 
 func _init() -> void:
