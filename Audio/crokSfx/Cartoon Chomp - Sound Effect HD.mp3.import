@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1chrdoyj11hx"
+path="res://.godot/imported/Cartoon Chomp - Sound Effect HD.mp3-07861bc78f6aae9b3d34d72ea5143e34.mp3str"
+
+[deps]
+
+source_file="res://Audio/crokSfx/Cartoon Chomp - Sound Effect HD.mp3"
+dest_files=["res://.godot/imported/Cartoon Chomp - Sound Effect HD.mp3-07861bc78f6aae9b3d34d72ea5143e34.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

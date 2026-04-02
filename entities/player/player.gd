@@ -1,6 +1,8 @@
 extends Node2D
 class_name Player
 
+@export var health_component: HealthComponent
+
 #@onready var health_component: HealthComponent = %HealthComponent
 @onready var box_decider: BoxDecider = %BoxDecider
 @onready var ui: CanvasLayer = %ui
@@ -15,7 +17,7 @@ func _ready() -> void:
 	GlobalSignals.UpgradeDone.connect(_upgrade_done)
 	GlobalSignals.CombatStart.connect(_combat_done)
 	GlobalSignals.Defended.connect(_defended)
-
+	GlobalSignals.HealPlayerPercent.connect(_heal_player_percent)
 
 func _process(delta: float) -> void:
 	pass
@@ -53,3 +55,8 @@ func _combat_done() -> void:
 func _defended() -> void:
 	anim.stop()
 	anim.play("block")
+
+func _heal_player_percent(percent: float) -> void:
+	print(
+		health_component.max_hp * percent
+	)

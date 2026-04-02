@@ -22,6 +22,11 @@ signal DamagePlayer(
 	damage: float
 )
 
+## Signal for Healing the player by a percentage of their Max HP
+signal HealPlayerPercent (
+	heal_percent : float 
+)
+
 ## Signal called for damaging the enemy
 signal DamageEnemy(
 	damage: float

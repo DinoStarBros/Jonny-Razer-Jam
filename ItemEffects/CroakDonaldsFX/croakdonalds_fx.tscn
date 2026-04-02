@@ -1,6 +1,173 @@
-[gd_scene format=3 uid="uid://biv3un7j4wa6t"]
+[gd_scene format=4 uid="uid://biv3un7j4wa6t"]
 
 [ext_resource type="Script" uid="uid://fqui3epib6ug" path="res://ItemEffects/CroakDonaldsFX/croakdonalds_fx.gd" id="1_y6cfg"]
+[ext_resource type="AudioStream" uid="uid://c1chrdoyj11hx" path="res://Audio/crokSfx/Cartoon Chomp - Sound Effect HD.mp3" id="2_rn8b4"]
+[ext_resource type="PackedScene" uid="uid://6ppgamywek0" path="res://Components/ItemFXIntro/item_fx_intro.tscn" id="3_2kmwt"]
+[ext_resource type="PackedScene" uid="uid://bk6spsfchrune" path="res://Components/ItemDurationTimer/item_duration_timer.tscn" id="4_2kmwt"]
 
-[node name="CroakDonaldsFX" type="Node2D" unique_id=847359284]
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_g6ofq"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAQAwAAUklGRggDAABXRUJQVlA4TPsCAAAvX8AXEN/ANrJtJd+iPz9zgQ6omHJIPYfcXSOGNpgGAJhka+4NeYEj9GQeILrDB55ItLENALBMqtE2P9DYA/pLz+VkY+ro+Y/f/af30IFQbTkpfHz/KUKVE66aUlQVQEpdJMKZF8Nz0hYD/deaDlPrdPMbe1dPVZWKLlWKARsvdHfFXiIJVaEXgSQBYNu2Ycuo3gYFSfGo/v/PkAAIEOg8RfQfgts2kiS6KtvpqT72qkfs/0GSeNaa2AAOf3THTkL6RpJIF8n3H6wyJzKOwusERA5lwBMFaYa6XM7SK4xhaAzOY7WkweoBTXsDEzFjyTlfziEsNEx/BLActpbDoiptOHjUjqHz0GYdTEq1Y4N9pPkDECn2jW1LojbJYBJNkxKfl/PQfW9LHdu2LO06XtgUfoIsuym2Qu+3bJqSUu/EELoly87upMFPDBxj/u/Er12XEFgEbYaS+jMgTYJJSS3VjLXW6N5LHyJG9J/9TrJqEs2DJjKoCe5+j2AmCW6aZlsDEIFhCRGh8ViS92nO88j/qkS6deDpPGejaz+pdQNNVZ4nE+XoAXAE6ozbN140xIeQETT7nhE/gi+pcwCIgBXSDmmHI80trzbpWv4AAVCdOhYrZMUHuy4mHkc/rd5f3szbAhoEB+93frOwV+gvQRSAzjRNpiWllJxLKdID+I1QqEZTi+5G+tPjiNP4f9edzpTpTuE0/VYGN/b47EutxLauq4v1qsyqAQBRCXGijQ6sggj5Ja1/LqWbjqcyuzE6SPP7hkCDGBZdUBQ+lRlM7oeViHImJhIPQFMAtLIveoX2/06azpDeHVVyJtNdKRZtRsaObzdnNGApt+fNTaoBmtTSQY4pYTyHk6LU7snQuEAWjeczBrapgok0/RoAW5Gm52ki3r76KQXapt93ODxJrQ8gnQ9kUaqdUNs6F3yJkV/hqV91pM9Y8QOANk8u2hJ2X+rgybDkSfam1rHzAbUpVQ+ItYMWPb59uyK3iFoAENF4mvM7DSxN6H3vM5QdAA==")
+size_override = Vector2(96, 96)
+
+[sub_resource type="Animation" id="Animation_2kmwt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.3, 2.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 300)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_g6ofq"]
+resource_name = "start"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(2.3, 2.3), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Vector2(400, 300), Vector2(400, 300), Vector2(356, 362)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sfx/chomp:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"heal"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rn8b4"]
+_data = {
+&"RESET": SubResource("Animation_2kmwt"),
+&"start": SubResource("Animation_g6ofq")
+}
+
+[node name="CroakDonaldsFX" type="Node2D" unique_id=847359284 node_paths=PackedStringArray("item_duration_timer")]
 script = ExtResource("1_y6cfg")
+item_duration_timer = NodePath("ItemDurationTimer")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1247295515]
+z_index = 2
+texture_filter = 1
+position = Vector2(400, 300)
+scale = Vector2(2.3, 2.3)
+texture = SubResource("PortableCompressedTexture2D_g6ofq")
+hframes = 3
+vframes = 3
+frame = 3
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="anim" type="AnimationPlayer" parent="." unique_id=764222496]
+libraries/ = SubResource("AnimationLibrary_rn8b4")
+autoplay = &"start"
+
+[node name="sfx" type="Node" parent="." unique_id=799560913]
+
+[node name="chomp" type="AudioStreamPlayer" parent="sfx" unique_id=1706606761]
+stream = ExtResource("2_rn8b4")
+volume_db = 5.0
+bus = &"SFX"
+
+[node name="itemFXIntro" parent="." unique_id=794341249 instance=ExtResource("3_2kmwt")]
+
+[node name="ItemDurationTimer" parent="." unique_id=1004819799 instance=ExtResource("4_2kmwt")]
