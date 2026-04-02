@@ -5,9 +5,9 @@ class_name HealthComponent
 @export var health_text : Label
 
 var max_hp : float = 100.0
-var hp : int
-	#set(value):
-		#hp = clampi(value, 0.0, max_hp)
+var hp : float:
+	set(value):
+		hp = clampi(value, 0.0, max_hp)
 var stats : EntityStats
 var died : bool = false
 var enemy_stat_mult : float

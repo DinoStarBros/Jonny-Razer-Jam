@@ -57,6 +57,6 @@ func _defended() -> void:
 	anim.play("block")
 
 func _heal_player_percent(percent: float) -> void:
-	print(
-		health_component.max_hp * percent
-	)
+	var heal_amount : float = (health_component.max_hp * percent)
+	
+	health_component.hp += roundi(heal_amount)

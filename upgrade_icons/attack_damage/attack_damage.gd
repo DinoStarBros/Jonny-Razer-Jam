@@ -1,9 +1,11 @@
 extends Upgrade
 class_name AttackDamage
 
-var scaling_val : float = 1
+var siblings : Array
 
 func _ready() -> void:
-	scaling_val = get_parent().get_child_count()
+	siblings = get_parent().get_children()
+	
+	scaling_val = siblings.size()
 	
 	stat_upgrades.box_decider.final_damage = scaling(scaling_val, 3, true) * stat_upgrades.box_decider.stats.damage

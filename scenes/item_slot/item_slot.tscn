@@ -3,6 +3,11 @@
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_7iywk"]
 [ext_resource type="Script" uid="uid://bilui2vexxhk8" path="res://scenes/item_slot/item_slot.gd" id="1_oeqa3"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_7iywk"]
+font_size = 12
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
 [node name="item_slot" type="PanelContainer" unique_id=2055774397]
 custom_minimum_size = Vector2(64, 64)
 offset_right = 64.0
@@ -11,3 +16,9 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource("1_7iywk")
 script = ExtResource("1_oeqa3")
+
+[node name="text" type="Label" parent="." unique_id=1889977558]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1."
+label_settings = SubResource("LabelSettings_7iywk")

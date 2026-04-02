@@ -446,10 +446,6 @@ font_size = 20
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_mtric"]
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-
 [node name="player" type="Node2D" unique_id=1225601102 node_paths=PackedStringArray("health_component")]
 script = ExtResource("1_symyc")
 health_component = NodePath("HealthComponent")
@@ -623,36 +619,6 @@ offset_bottom = 494.0
 text = "Items:"
 label_settings = SubResource("LabelSettings_we0b7")
 
-[node name="i1" type="Label" parent="Inventory/itmtxt" unique_id=1499574419]
-z_index = 1
-layout_mode = 0
-offset_left = 3.0
-offset_top = 18.0
-offset_right = 12.0
-offset_bottom = 35.0
-text = "1."
-label_settings = SubResource("LabelSettings_mtric")
-
-[node name="i2" type="Label" parent="Inventory/itmtxt" unique_id=1282105748]
-z_index = 1
-layout_mode = 0
-offset_left = 71.0
-offset_top = 18.0
-offset_right = 80.0
-offset_bottom = 35.0
-text = "2."
-label_settings = SubResource("LabelSettings_mtric")
-
-[node name="i3" type="Label" parent="Inventory/itmtxt" unique_id=1481974845]
-z_index = 1
-layout_mode = 0
-offset_left = 139.0
-offset_top = 18.0
-offset_right = 148.0
-offset_bottom = 35.0
-text = "3."
-label_settings = SubResource("LabelSettings_mtric")
-
 [node name="items" type="HBoxContainer" parent="Inventory/itmtxt" unique_id=1668745939]
 unique_name_in_owner = true
 layout_mode = 0
@@ -676,6 +642,14 @@ use_button = "item2"
 [node name="item_slot3" parent="Inventory/itmtxt/items" unique_id=850390082 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item3"
+
+[node name="item_slot4" parent="Inventory/itmtxt/items" unique_id=1855295061 instance=ExtResource("18_mtric")]
+layout_mode = 2
+use_button = "item4"
+
+[node name="item_slot5" parent="Inventory/itmtxt/items" unique_id=425938539 instance=ExtResource("18_mtric")]
+layout_mode = 2
+use_button = "item5"
 
 [node name="ItemEffects" type="CanvasLayer" parent="." unique_id=368405744]
 script = ExtResource("21_eyb6c")

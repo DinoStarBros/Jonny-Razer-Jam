@@ -2,6 +2,7 @@ extends TextureRect
 class_name Upgrade
 
 @onready var stat_upgrades : StatUpgrades = get_parent().get_parent()
+var scaling_val : float = 1
 
 func scaling(
 	## Scaling Index/Value here
