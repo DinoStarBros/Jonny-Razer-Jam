@@ -23,6 +23,6 @@ func slice() -> void:
 	%cs.disabled = true
 	%anim.play("break")
 	
-	GlobalSignals.DamageEnemy.emit(damage)
+	GlobalSignals.DamageEnemy.emit(damage, true)
 	
 	item_spawn_comp.on_slash()

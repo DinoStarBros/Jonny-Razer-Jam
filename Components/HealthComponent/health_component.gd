@@ -24,31 +24,32 @@ func player_hurt(damage: float) -> void:
 		get_parent().play_hurt_sfx()
 
 ## Player damaging the enemy
-func enemy_hurt(damage: float) -> void:
-	var percent_crit : float = Global.player_crit_chance / 100
-	var rand_val : float = randf()
-	var is_crit : bool = rand_val < percent_crit
-	
-	if is_crit:
-		hp -= roundi(damage * Global.CRIT_DMG_MULT)
-		Global.spawn_txt(
-			str(roundi(damage * Global.CRIT_DMG_MULT)),
-			global_position,
-			Color.RED
-		)
-		GlobalSignals.Crit.emit()
+func enemy_hurt(damage: float, allow_crit: bool = true) -> void:
+	if allow_crit:
+		var percent_crit : float = Global.player_crit_chance / 100
+		var rand_val : float = randf()
+		var is_crit : bool = rand_val < percent_crit
+		
+		if is_crit:
+			hp -= roundi(damage * Global.CRIT_DMG_MULT)
+			Global.spawn_txt(
+				str(roundi(damage * Global.CRIT_DMG_MULT)),
+				global_position,
+				Color.RED
+			)
+			GlobalSignals.Crit.emit()
+		else:
+			hp -= roundi(damage)
+			Global.spawn_txt(
+				str(roundi(damage)),
+				global_position
+			)
 	else:
 		hp -= roundi(damage)
 		Global.spawn_txt(
 			str(roundi(damage)),
 			global_position
 		)
-	#if hp <= 0:
-		#if !died:
-			#Global.current_game_state = Global.game_states.WIN
-			#died = true
-			#enemy_dead()
-	
 
 func _ready() -> void:
 	await get_tree().process_frame

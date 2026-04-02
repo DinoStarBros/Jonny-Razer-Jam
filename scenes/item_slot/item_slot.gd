@@ -24,7 +24,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 					item_held = child
 			
 			#item_held = get_child(0)
-			if item_held:
+			if item_held and Global.cursor.combo >= item_held.combo_cost:
 				item_held.use()
 			
 				Global.cursor.cursor_speed = Global.cursor.base_speed

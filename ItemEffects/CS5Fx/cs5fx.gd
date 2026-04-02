@@ -8,10 +8,11 @@ var duration : float = 2
 var beam_shoot : bool = false
 var damage : float
 
-const tick_dmg_mult : float = 4
+const tick_dmg_mult : float = 1
 
 func _ready() -> void:
-	damage = item_effects.box_decider.final_damage * 4
+	damage = roundi(item_effects.box_decider.final_damage * 4)
+	print(damage)
 
 func _process(delta: float) -> void:
 	_visuals(delta)
@@ -39,10 +40,11 @@ func beam_start() -> void:
 	
 	_extra_sfx()
 	
-	for dmg in damage:
-		GlobalSignals.DamageEnemy.emit(tick_dmg_mult)
-		Global.camera.screen_shake(10, 0.05)
-		await get_tree().create_timer((duration/damage) * tick_dmg_mult).timeout
+	for dmg in damage/tick_dmg_mult:
+		GlobalSignals.DamageEnemy.emit(tick_dmg_mult, false)
+		#Global.camera.screen_shake(10, 0.05)
+		#await get_tree().create_timer((duration/damage) * tick_dmg_mult).timeout
+		await get_tree().process_frame
 
 func _extra_sfx() -> void:
 	const PLAY_TIMES : int = 4

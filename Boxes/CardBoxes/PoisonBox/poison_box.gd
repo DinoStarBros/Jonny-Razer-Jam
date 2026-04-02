@@ -15,7 +15,7 @@ func slice() -> void:
 	%cs.disabled = true
 	%anim.play("break")
 	
-	#GlobalSignals.DamageEnemy.emit(damage)
+
 	%slashsfx.pitch_scale += randf_range(-.1, .1)
 	%slashsfx.play()
 	Global.camera.screen_shake(6, 0.2)

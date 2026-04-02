@@ -29,7 +29,8 @@ signal HealPlayerPercent (
 
 ## Signal called for damaging the enemy
 signal DamageEnemy(
-	damage: float
+	damage: float,
+	allow_crit: bool
 )
 
 ## When the player just did a crit on an enemy

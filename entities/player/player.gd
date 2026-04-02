@@ -30,7 +30,7 @@ func hurt(damage: float) -> void:
 	camera.screen_shake(5, 0.2)
 	Global.frame_freeze(0.9, 0.1)
 
-func hit_enemy(damage: float) -> void:
+func hit_enemy(damage: float, allow_crit: bool) -> void:
 	if not Global.current_game_state == Global.game_states.FIGHT:
 		return
 	
