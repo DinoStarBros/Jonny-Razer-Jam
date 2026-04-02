@@ -461,9 +461,8 @@ unique_name_in_owner = true
 health_bar = NodePath("../ui/healthBar")
 health_text = NodePath("../ui/healthBar/healthText")
 
-[node name="BoxDecider" parent="." unique_id=448822901 node_paths=PackedStringArray("final_damage_text") instance=ExtResource("6_qiwj3")]
+[node name="BoxDecider" parent="." unique_id=448822901 instance=ExtResource("6_qiwj3")]
 unique_name_in_owner = true
-final_damage_text = NodePath("../ui/stats_panel/damage_txt")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1200674643]
 scale = Vector2(0.8, 1.2)
@@ -540,6 +539,12 @@ offset_bottom = 177.0
 [node name="damage_txt" type="Label" parent="ui/stats_panel" unique_id=500562700]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Damage: 67"
+
+[node name="crit_txt" type="Label" parent="ui/stats_panel" unique_id=405168453]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Crit Chance : 69"
 
 [node name="debug" type="Label" parent="ui" unique_id=65773474]
 unique_name_in_owner = true

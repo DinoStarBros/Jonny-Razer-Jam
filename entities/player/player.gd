@@ -9,6 +9,7 @@ class_name Player
 @onready var anim: AnimationPlayer = %anim
 
 var died : bool = false ## A one time thingy
+var current
 
 func _ready() -> void:
 	GlobalSignals.DamagePlayer.connect(hurt)

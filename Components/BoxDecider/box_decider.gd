@@ -14,7 +14,7 @@ var enemy_stat_mult : float
 ## Damage value after going through scaling
 var final_damage : float
 
-@export var final_damage_text : Label ## UI text that shows the final damage
+#@export var final_damage_text : Label ## UI text that shows the final damage
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -76,9 +76,9 @@ func _spawn_timer_timeout() -> void:
 			GlobalSignals.SpawnBoxRandomX.emit(box_instance)
 
 func _process(delta: float) -> void:
-	final_damage_text.text = str(
-		"Damage: ", roundi(final_damage)
-		)
-		
+	#final_damage_text.text = str(
+		#"Damage: ", roundi(final_damage)
+		#)
+	pass
 	
 	#Global.final_damage = final_damage

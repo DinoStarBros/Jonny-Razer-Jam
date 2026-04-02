@@ -2,11 +2,13 @@ extends CanvasLayer
 
 @onready var pause_ui: PauseUI = %pause
 @onready var stats_allocator: StatsAllocator = %StatsAllocator
+@onready var box_decider: BoxDecider = %BoxDecider
 
 var upgrade_select_scn : PackedScene = load("res://UIPopups/upgradeSelect/upgrade_select.tscn")
 
 func _ready() -> void:
 	GlobalSignals.FightWin.connect(fight_win)
+	Global.player_crit_chance = stats_allocator.stats.crit_chance
 	%pauseButton.pressed.connect(_pause_pressed)
 
 func fight_win() -> void:
@@ -19,6 +21,14 @@ func _process(delta: float) -> void:
 	
 	%debug.text = str(
 		Global.defend_box_speed_multiplier
+	)
+	
+	%damage_txt.text = str(
+		"Damage: ", roundi(box_decider.final_damage)
+		)
+	
+	%crit_txt.text = str(
+		"Critical Chance: ", roundi(Global.player_crit_chance)
 	)
 
 func _pause_pressed() -> void:
