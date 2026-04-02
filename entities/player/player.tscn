@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://ba4q7byfi2rvv" path="res://entities/player/inventory.gd" id="17_we0b7"]
 [ext_resource type="PackedScene" uid="uid://q4xc2vqw6hgi" path="res://scenes/item_slot/item_slot.tscn" id="18_mtric"]
 [ext_resource type="PackedScene" uid="uid://b2kijos1eykp8" path="res://Items/CroakDonalds/croakdonalds.tscn" id="19_221hk"]
+[ext_resource type="PackedScene" uid="uid://bxmtpk0ucjb1c" path="res://Items/TCG/tcg.tscn" id="20_t1t22"]
 [ext_resource type="Script" uid="uid://dgggbtvfb1dl" path="res://entities/player/item_effects.gd" id="21_eyb6c"]
 [ext_resource type="Script" uid="uid://cfa7h6tybbt7x" path="res://entities/player/camera.gd" id="23_ghoj8"]
 
@@ -644,6 +645,10 @@ combo_cost = 0
 [node name="item_slot2" parent="Inventory/itmtxt/items" unique_id=1191385227 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item2"
+
+[node name="TCG" parent="Inventory/itmtxt/items/item_slot2" unique_id=1327641511 instance=ExtResource("20_t1t22")]
+layout_mode = 2
+combo_cost = 0
 
 [node name="item_slot3" parent="Inventory/itmtxt/items" unique_id=850390082 instance=ExtResource("18_mtric")]
 layout_mode = 2

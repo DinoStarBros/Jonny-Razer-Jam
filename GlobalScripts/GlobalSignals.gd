@@ -32,6 +32,9 @@ signal DamageEnemy(
 	damage: float
 )
 
+## When the player just did a crit on an enemy
+signal Crit
+
 ## When you wanna give a debuff to an enemy
 signal DebuffEnemy(
 	debuff: DebuffsComponent.Debuffs,

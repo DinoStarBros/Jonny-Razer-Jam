@@ -55,7 +55,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(0.196146, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -30)]
+"values": [Vector2(0, -50), Vector2(0, -100)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -77,7 +77,7 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_34won"]
-font_size = 25
+font_size = 50
 outline_size = 9
 outline_color = Color(0, 0, 0, 1)
 
@@ -90,9 +90,12 @@ libraries/ = SubResource("AnimationLibrary_6g2at")
 autoplay = &"splash"
 
 [node name="pivot" type="Node2D" parent="." unique_id=1571503915]
+unique_name_in_owner = true
+z_index = 10
 
 [node name="DmgText" type="Label" parent="pivot" unique_id=1205060482]
 unique_name_in_owner = true
+z_index = 10
 offset_left = -20.0
 offset_top = -8.5
 offset_right = 20.0

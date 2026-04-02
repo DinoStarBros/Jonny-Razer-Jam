@@ -14,6 +14,7 @@ var combo : int = 0
 func _ready() -> void:
 	GlobalSignals.CombatStart.connect(_combat_done)
 	GlobalSignals.DamagePlayer.connect(_player_hurt)
+	GlobalSignals.Crit.connect(_crit)
 	
 	Global.cursor = self
 
@@ -100,10 +101,6 @@ func _succesful_box_hit() -> void:
 func _failed_box_hit() -> void:
 	cursor_speed = base_speed
 	combo = 0
-	#%hurt1.pitch_scale = randf_range(0.8, 1.0)
-	#%hurt1.play()
-	#%hurt2.pitch_scale = randf_range(0.8, 1.0)
-	#%hurt2.play()
 	
 	GlobalSignals.CursorMiss.emit()
 
@@ -119,3 +116,7 @@ func _player_hurt(damage: float) -> void:
 
 func _combat_done() -> void:
 	cursor_speed = base_speed
+
+func _crit() -> void:
+	%crit.pitch_scale = randf_range(1.2,1.5)
+	%crit.play()

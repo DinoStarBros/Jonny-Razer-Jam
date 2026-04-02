@@ -16,6 +16,8 @@ func slice() -> void:
 	%anim.play("break")
 	
 	#GlobalSignals.DamageEnemy.emit(damage)
+	%slashsfx.pitch_scale += randf_range(-.1, .1)
+	%slashsfx.play()
 	GlobalSignals.DebuffEnemy.emit(
 		DebuffsComponent.Debuffs.POISON,
 		6

@@ -25,8 +25,8 @@ func _upgrade_done() -> void:
 	_spawn_ene_defeated_popup(curr_enemies_defeated, level_resource.enemy_amount)
 	
 	Global.current_game_state = Global.game_states.TRANSITION_NEXT_COMBAT
-	#await get_tree().create_timer(Global.WAIT_TIME + randf_range(-0.2, 0.5)).timeout
-	await get_tree().create_timer(0).timeout
+	await get_tree().create_timer(Global.WAIT_TIME + randf_range(-0.2, 0.5)).timeout
+	#await get_tree().create_timer(0).timeout
 	Global.current_game_state = Global.game_states.FIGHT
 	GlobalSignals.CombatStart.emit()
 

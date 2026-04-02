@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bu0x7lpmcykd8" path="res://Art/CrokDag/slashCleaveThing.png" id="2_otj8k"]
 [ext_resource type="PackedScene" uid="uid://eruaxc4xhip" path="res://Components/ItemSpawningComponent/item_spawning_component.tscn" id="3_iv4hs"]
 [ext_resource type="PackedScene" uid="uid://n7kyhjwgq41n" path="res://Items/CS5/cs5.tscn" id="4_p06yl"]
+[ext_resource type="AudioStream" uid="uid://5wriy6ec0gyv" path="res://Audio/41randsfx/21.wav" id="5_bttbw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wadgx"]
 size = Vector2(42, 64)
@@ -357,3 +358,10 @@ texture = ExtResource("2_otj8k")
 
 [node name="ItemSpawningComponent" parent="." unique_id=1018164484 instance=ExtResource("3_iv4hs")]
 item_scn = ExtResource("4_p06yl")
+
+[node name="slashsfx" type="AudioStreamPlayer" parent="." unique_id=1051228919]
+unique_name_in_owner = true
+stream = ExtResource("5_bttbw")
+volume_db = -5.0
+pitch_scale = 2.0
+bus = &"SFX"

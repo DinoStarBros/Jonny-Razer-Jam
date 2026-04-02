@@ -61,8 +61,9 @@ func frame_freeze(timescale: float, duration: float) -> void: ## Slows down the 
 		await get_tree().create_timer(duration, true, false, true).timeout
 		Engine.time_scale = 1.0
 
-func spawn_txt(text: String, global_pos: Vector2)->void: ## Spawns a splash text effect, can be used for damage numbers, or score
+func spawn_txt(text: String, global_pos: Vector2, color: Color = Color.WHITE)->void: ## Spawns a splash text effect, can be used for damage numbers, or score
 	var txt : DmgNum = txt_scn.instantiate()
 	txt.text = text
 	txt.global_position = global_pos
+	txt.modulate = color
 	entity_parent_spawner_comp.add_child(txt)
