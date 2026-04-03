@@ -77,7 +77,7 @@ func _ready() -> void:
 		4,3, 1,2,0
 	]
 	
-	#upgrade_ids.shuffle()
+	upgrade_ids.shuffle()
 	
 	_load_button_text()
 	_load_button_textures()

@@ -8,7 +8,7 @@ class_name ItemSpawningComponent
 
 var item_drop_chance : float 
 
-const base_item_chance : float = 10.0/60.0
+const base_item_chance : float = 1.0/8.0
 
 func on_slash() -> void:
 	#item_drop_chance = base_item_chance * diminishing_returns_scaling(Global.luck, 5)
