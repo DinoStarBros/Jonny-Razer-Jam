@@ -1,5 +1,5 @@
-extends Debuff
-class_name BurnDebuff
+extends Status
+class_name BurnStatus
 
 func _ready() -> void:
 	%Timer.start(duration)

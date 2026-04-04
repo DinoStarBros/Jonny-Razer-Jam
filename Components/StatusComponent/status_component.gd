@@ -24,14 +24,14 @@ func _ready() -> void:
 
 func apply_debuff_enemy(debuff:Statuses, duration:float=1.0) -> void:
 	if not get_parent() is Player:
-		var db : Debuff = statuses_dict[debuff].instantiate()
+		var db : Status = statuses_dict[debuff].instantiate()
 		db.health_component = health_component
 		db.duration = duration
 		add_child(db)
 
 func apply_debuff_player(debuff:Statuses, duration:float=1.0) -> void:
 	if get_parent() is Player:
-		var db : Debuff = statuses_dict[debuff].instantiate()
+		var db : Status = statuses_dict[debuff].instantiate()
 		db.health_component = health_component
 		db.duration = duration
 		add_child(db)

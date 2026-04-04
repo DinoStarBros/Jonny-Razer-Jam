@@ -1,5 +1,5 @@
-extends Debuff
-class_name IceDebuff
+extends Status
+class_name IceStatus
 
 func _ready() -> void:
 	%Timer.start(duration)

@@ -1,5 +1,5 @@
 extends Node2D
-class_name Debuff
+class_name Status
 
 var duration : float = 1
 var health_component : HealthComponent

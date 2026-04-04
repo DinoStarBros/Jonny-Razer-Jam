@@ -1,5 +1,5 @@
-extends Debuff
-class_name TimeSlowDebuff
+extends Status
+class_name TimeSlowStatus
 
 func _ready() -> void:
 	%Timer.start(duration)

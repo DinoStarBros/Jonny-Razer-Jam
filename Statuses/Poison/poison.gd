@@ -1,5 +1,5 @@
-extends Debuff
-class_name PoisonDebuff
+extends Status
+class_name PoisonStatus
 
 func _ready() -> void:
 	%Timer.start(duration)
