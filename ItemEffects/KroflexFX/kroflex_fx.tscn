@@ -216,6 +216,7 @@ bus = &"SFX"
 
 [node name="eaow" type="AudioStreamPlayer" parent="." unique_id=1082340588]
 stream = ExtResource("5_yb5rn")
+volume_db = -5.0
 autoplay = true
 bus = &"SFX"
 

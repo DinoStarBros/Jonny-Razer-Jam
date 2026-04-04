@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://0uair2p0ft75"]
-
-[ext_resource type="Script" uid="uid://j7hlyaf10xev" path="res://Components/DebuffsComponent/debuffs_component.gd" id="1_a2owd"]
-
-[node name="DebuffsComponent" type="Node2D" unique_id=1285624151]
-script = ExtResource("1_a2owd")

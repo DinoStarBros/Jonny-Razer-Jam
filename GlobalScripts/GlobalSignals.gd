@@ -39,7 +39,7 @@ signal Crit
 
 ## When you wanna give a debuff to an enemy
 signal DebuffEnemy(
-	debuff: DebuffsComponent.Debuffs,
+	debuff: EnemyDebuffsComponent.Debuffs,
 	duration: float
 )
 

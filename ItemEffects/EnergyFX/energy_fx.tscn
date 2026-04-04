@@ -1,10 +1,99 @@
-[gd_scene format=3 uid="uid://dycpwdl8pvj4c"]
+[gd_scene format=4 uid="uid://dycpwdl8pvj4c"]
 
 [ext_resource type="Script" uid="uid://dxohn4843wum1" path="res://ItemEffects/EnergyFX/energy_fx.gd" id="1_er7va"]
 [ext_resource type="PackedScene" uid="uid://6ppgamywek0" path="res://Components/ItemFXIntro/item_fx_intro.tscn" id="2_ib8a2"]
 [ext_resource type="PackedScene" uid="uid://bk6spsfchrune" path="res://Components/ItemDurationTimer/item_duration_timer.tscn" id="3_kxrty"]
+[ext_resource type="AudioStream" uid="uid://y1mk7idnwsk5" path="res://Audio/crokSfx/dragon-studio-dramatic-riser-397994.mp3" id="4_kxrty"]
+[ext_resource type="AudioStream" uid="uid://brfec33u2m785" path="res://Audio/crokSfx/oxidvideos-soda-can-open-183214.mp3" id="5_2k38y"]
+
+[sub_resource type="Animation" id="Animation_of5c7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(362, 356)]
+}
+
+[sub_resource type="Animation" id="Animation_2k38y"]
+resource_name = "start"
+length = 1.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(2.2, 2.2), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.9),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [0.0, 0.0, -2.356194490192345]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.90000004),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [Vector2(370, 356), Vector2(370, 356), Vector2(370, 340)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_of5c7"]
+_data = {
+&"RESET": SubResource("Animation_of5c7"),
+&"start": SubResource("Animation_2k38y")
+}
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_2k38y"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAQAwAAUklGRggDAABXRUJQVlA4TPsCAAAvX8AXEN/ANrJtJd+iPz9zgQ6omHJIPYfcXSOGNpgGAJhka+4NeYEj9GQeILrDB55ItLENALBMqtE2P9DYA/pLz+VkY+ro+Y/f/af30IFQbTkpfHz/KUKVE66aUlQVQEpdJMKZF8Nz0hYD/deaDlPrdPMbe1dPVZWKLlWKARsvdHfFXiIJVaEXgSQBYNu2Ycuo3gYFSfGo/v/PkAAIEOg8RfQfgts2kiS6KtvpqT72qkfs/0GSeNaa2AAOf3THTkL6RpJIF8n3H6wyJzKOwusERA5lwBMFaYa6XM7SK4xhaAzOY7WkweoBTXsDEzFjyTlfziEsNEx/BLActpbDoiptOHjUjqHz0GYdTEq1Y4N9pPkDECn2jW1LojbJYBJNkxKfl/PQfW9LHdu2LO06XtgUfoIsuym2Qu+3bJqSUu/EELoly87upMFPDBxj/u/Er12XEFgEbYaS+jMgTYJJSS3VjLXW6N5LHyJG9J/9TrJqEs2DJjKoCe5+j2AmCW6aZlsDEIFhCRGh8ViS92nO88j/qkS6deDpPGejaz+pdQNNVZ4nE+XoAXAE6ozbN140xIeQETT7nhE/gi+pcwCIgBXSDmmHI80trzbpWv4AAVCdOhYrZMUHuy4mHkc/rd5f3szbAhoEB+93frOwV+gvQRSAzjRNpiWllJxLKdID+I1QqEZTi+5G+tPjiNP4f9edzpTpTuE0/VYGN/b47EutxLauq4v1qsyqAQBRCXGijQ6sggj5Ja1/LqWbjqcyuzE6SPP7hkCDGBZdUBQ+lRlM7oeViHImJhIPQFMAtLIveoX2/06azpDeHVVyJtNdKRZtRsaObzdnNGApt+fNTaoBmtTSQY4pYTyHk6LU7snQuEAWjeczBrapgok0/RoAW5Gm52ki3r76KQXapt93ODxJrQ8gnQ9kUaqdUNs6F3yJkV/hqV91pM9Y8QOANk8u2hJ2X+rgybDkSfam1rHzAbUpVQ+ItYMWPb59uyK3iFoAENF4mvM7DSxN6H3vM5QdAA==")
 size_override = Vector2(96, 96)
 
 [node name="EnergyFX" type="Node2D" unique_id=847359284]
@@ -16,20 +105,33 @@ script = ExtResource("1_er7va")
 wait_time = 1.5
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1456316574]
-z_index = 1
+[node name="whup" type="AudioStreamPlayer" parent="." unique_id=1115598345]
+unique_name_in_owner = true
+stream = ExtResource("4_kxrty")
+volume_db = -5.0
+pitch_scale = 2.0
+autoplay = true
+
+[node name="open" type="AudioStreamPlayer" parent="." unique_id=666198799]
+unique_name_in_owner = true
+stream = ExtResource("5_2k38y")
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=370789132]
+libraries/ = SubResource("AnimationLibrary_of5c7")
+autoplay = &"start"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=32398126]
+z_index = 2
 texture_filter = 1
-position = Vector2(640, 750)
-scale = Vector2(4, 4)
+position = Vector2(362, 356)
+scale = Vector2(2, 2)
 texture = SubResource("PortableCompressedTexture2D_2k38y")
 hframes = 3
 vframes = 3
 frame = 6
 metadata/_aseprite_wizard_interface_config_ = {
-"layer_section": false,
-"output_section": false,
-"pending_changes": {},
-"slice_section": false
+"pending_changes": {}
 }
 metadata/_aseprite_wizard_config_ = {
 "convert_fps_field": 60.0,

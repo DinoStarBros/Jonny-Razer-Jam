@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	_stats_texts()
 	
 	%debug.text = str(
-		Global.defend_box_speed_multiplier
+		Global.product_box_spawn_speed_multiplier
 	)
 	
 	%damage_txt.text = str(

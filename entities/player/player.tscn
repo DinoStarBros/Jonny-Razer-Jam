@@ -20,8 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://diihmdabfwa8g" path="res://Art/Placeholder/Trail2.png" id="14_afbqv"]
 [ext_resource type="Script" uid="uid://ba4q7byfi2rvv" path="res://entities/player/inventory.gd" id="17_we0b7"]
 [ext_resource type="PackedScene" uid="uid://q4xc2vqw6hgi" path="res://scenes/item_slot/item_slot.tscn" id="18_mtric"]
-[ext_resource type="PackedScene" uid="uid://0xm1jhtb62bo" path="res://Items/KroFlex/kroflex.tscn" id="19_ghoj8"]
+[ext_resource type="PackedScene" uid="uid://jv652lncy1uc" path="res://Items/Energy/energy.tscn" id="19_ghoj8"]
 [ext_resource type="Script" uid="uid://dgggbtvfb1dl" path="res://entities/player/item_effects.gd" id="21_eyb6c"]
+[ext_resource type="PackedScene" uid="uid://0xm1jhtb62bo" path="res://Items/KroFlex/kroflex.tscn" id="21_wuv6x"]
 [ext_resource type="Script" uid="uid://cfa7h6tybbt7x" path="res://entities/player/camera.gd" id="23_ghoj8"]
 
 [sub_resource type="Animation" id="Animation_sglur"]
@@ -647,21 +648,21 @@ offset_bottom = 74.0
 layout_mode = 2
 use_button = "item1"
 
-[node name="Kroflex" parent="Inventory/itmtxt/items/item_slot1" unique_id=1293636754 instance=ExtResource("19_ghoj8")]
+[node name="Energy" parent="Inventory/itmtxt/items/item_slot1" unique_id=1293636754 instance=ExtResource("19_ghoj8")]
 layout_mode = 2
 
 [node name="item_slot2" parent="Inventory/itmtxt/items" unique_id=1191385227 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item2"
 
-[node name="Kroflex" parent="Inventory/itmtxt/items/item_slot2" unique_id=496979129 instance=ExtResource("19_ghoj8")]
+[node name="Energy" parent="Inventory/itmtxt/items/item_slot2" unique_id=1639231355 instance=ExtResource("19_ghoj8")]
 layout_mode = 2
 
 [node name="item_slot3" parent="Inventory/itmtxt/items" unique_id=850390082 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item3"
 
-[node name="Kroflex" parent="Inventory/itmtxt/items/item_slot3" unique_id=812592080 instance=ExtResource("19_ghoj8")]
+[node name="Kroflex" parent="Inventory/itmtxt/items/item_slot3" unique_id=923538177 instance=ExtResource("21_wuv6x")]
 layout_mode = 2
 
 [node name="item_slot4" parent="Inventory/itmtxt/items" unique_id=1855295061 instance=ExtResource("18_mtric")]

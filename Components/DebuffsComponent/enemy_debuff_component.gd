@@ -1,6 +1,6 @@
 extends EntityComponentClass
-## Component that handles taking debuffs and stuff
-class_name DebuffsComponent
+## Component that handles enemies taking debuffs and stuff
+class_name EnemyDebuffsComponent
 
 @export var health_component : HealthComponent
 

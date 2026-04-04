@@ -20,6 +20,6 @@ func slice() -> void:
 	%slashsfx.play()
 	Global.camera.screen_shake(6, 0.2)
 	GlobalSignals.DebuffEnemy.emit(
-		DebuffsComponent.Debuffs.POISON,
+		EnemyDebuffsComponent.Debuffs.POISON,
 		6
 		)
