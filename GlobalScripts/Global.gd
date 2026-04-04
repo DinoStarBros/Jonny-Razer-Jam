@@ -16,10 +16,10 @@ var item_effects : ItemEffects
 var final_damage : float
 var defend_box_speed_multiplier: float = 1:  ## Multiplier for how fast defend boxes go from left to right
 	set(value):
-		defend_box_speed_multiplier = clamp(value, 0, 1)
-var product_box_spawn_speed_multiplier : float = 1:
+		defend_box_speed_multiplier = clamp(value, 0.1, 1)
+var product_box_spawn_speed_multiplier : float = 0:
 	set(value):
-		product_box_spawn_speed_multiplier = clamp(value, 0, 1)
+		product_box_spawn_speed_multiplier = clamp(value, 0, 0.9)
 var player_crit_chance : float
 var item_efficiency : int: ## The less combo cost items have
 	set(value):

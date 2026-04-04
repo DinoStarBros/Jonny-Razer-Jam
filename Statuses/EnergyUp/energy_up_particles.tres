@@ -1,0 +1,18 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://dgitpafr81n4l"]
+
+[sub_resource type="Curve" id="Curve_gtex4"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_j8lo2"]
+curve = SubResource("Curve_gtex4")
+
+[resource]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(31.68, 40.525, 1)
+gravity = Vector3(0, 98, 0)
+scale_min = 2.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_j8lo2")
+turbulence_enabled = true

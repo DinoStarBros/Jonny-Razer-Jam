@@ -2,4 +2,7 @@ extends ItemEffect
 class_name EnergyFX
 
 func _ready() -> void:
-	Global.product_box_spawn_speed_multiplier
+	GlobalSignals.GiveStatusPlayer.emit(
+		StatusComponent.Statuses.ENERGY_UP,
+		8
+	)

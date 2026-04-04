@@ -5,7 +5,7 @@ class_name StatusComponent
 @export var health_component : HealthComponent
 
 enum Statuses {
-	POISON, BURN, ICE, TIME_SLOW
+	POISON, BURN, ICE, TIME_SLOW, ENERGY_UP
 }
 
 const statuses_dict : Dictionary = {
@@ -13,6 +13,7 @@ const statuses_dict : Dictionary = {
 	Statuses.BURN: preload("res://Statuses/Burn/burn.tscn"),
 	Statuses.ICE: preload("res://Statuses/Ice/ice.tscn"),
 	Statuses.TIME_SLOW: preload("res://Statuses/TimeSlow/time_slow.tscn"),
+	Statuses.ENERGY_UP: preload("res://Statuses/EnergyUp/energy_up.tscn")
 }
 
 func _init() -> void: 

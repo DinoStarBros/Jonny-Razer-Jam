@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crp05bh8hay0q"]
+
+[ext_resource type="Script" uid="uid://d1kdaykbyr17o" path="res://Statuses/EnergyUp/energy_up.gd" id="1_d22cp"]
+[ext_resource type="Material" uid="uid://dgitpafr81n4l" path="res://Statuses/EnergyUp/energy_up_particles.tres" id="2_4lkwa"]
+[ext_resource type="Texture2D" uid="uid://1jvx664jy8pj" path="res://Art/CrokDag/electric.png" id="2_h1ox3"]
+
+[node name="EnergyUp" type="Node2D" unique_id=1515188683]
+script = ExtResource("1_d22cp")
+
+[node name="Timer" type="Timer" parent="." unique_id=1444776408]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=872367582]
+texture = ExtResource("2_h1ox3")
+lifetime = 1.5
+randomness = 0.5
+process_material = ExtResource("2_4lkwa")

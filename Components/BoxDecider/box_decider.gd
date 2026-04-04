@@ -49,6 +49,9 @@ func _spawn_timer_timeout() -> void:
 	var spawn_amount : int = randi_range(spawn_amount_range.x, spawn_amount_range.y)
 	var spawn_time : float = randf_range(spawn_time_range.x, spawn_time_range.y)
 	
+	if get_parent() is Player:
+		spawn_time -= spawn_time * Global.product_box_spawn_speed_multiplier
+	
 	%SpawnTimer.start(spawn_time)
 	
 	if not Global.current_game_state == Global.game_states.FIGHT:
