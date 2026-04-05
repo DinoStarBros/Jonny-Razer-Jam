@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cmhn8qvkc0k4m"]
+
+[ext_resource type="Script" uid="uid://f1fw6apfyq6o" path="res://Statuses/StatusDurationTimer/status_duration_timer.gd" id="1_ujkhn"]
+
+[node name="StatusDurationTimer" type="Timer" unique_id=1831485290]
+one_shot = true
+script = ExtResource("1_ujkhn")

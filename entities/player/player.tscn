@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://ba4q7byfi2rvv" path="res://entities/player/inventory.gd" id="17_we0b7"]
 [ext_resource type="PackedScene" uid="uid://q4xc2vqw6hgi" path="res://scenes/item_slot/item_slot.tscn" id="18_mtric"]
 [ext_resource type="PackedScene" uid="uid://jv652lncy1uc" path="res://Items/Energy/energy.tscn" id="19_ghoj8"]
+[ext_resource type="PackedScene" uid="uid://bxmtpk0ucjb1c" path="res://Items/TCG/tcg.tscn" id="20_t1t22"]
 [ext_resource type="Script" uid="uid://dgggbtvfb1dl" path="res://entities/player/item_effects.gd" id="21_eyb6c"]
 [ext_resource type="PackedScene" uid="uid://n7kyhjwgq41n" path="res://Items/CS5/cs5.tscn" id="21_qpopc"]
 [ext_resource type="PackedScene" uid="uid://0xm1jhtb62bo" path="res://Items/KroFlex/kroflex.tscn" id="21_wuv6x"]
@@ -675,6 +676,9 @@ layout_mode = 2
 [node name="item_slot4" parent="Inventory/itmtxt/items" unique_id=1855295061 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item4"
+
+[node name="TCG" parent="Inventory/itmtxt/items/item_slot4" unique_id=833072207 instance=ExtResource("20_t1t22")]
+layout_mode = 2
 
 [node name="item_slot5" parent="Inventory/itmtxt/items" unique_id=425938539 instance=ExtResource("18_mtric")]
 layout_mode = 2

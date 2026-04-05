@@ -5,7 +5,11 @@ enum game_states {
 	USING_ITEM
 }
 
-var current_game_state : game_states
+var current_game_state : game_states:
+	set(value):
+		current_game_state = value
+		await get_tree().process_frame
+		GlobalSignals.GameStateChanged.emit()
 var boxes_amnt : int = 0
 var endpoints_x : Vector2
 ## Index for the current enemy in the level

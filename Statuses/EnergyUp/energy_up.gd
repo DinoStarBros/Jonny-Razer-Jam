@@ -2,8 +2,7 @@ extends Status
 class_name EnergyUpStatus
 
 func _ready() -> void:
-	%Timer.start(duration)
-	%Timer.timeout.connect(queue_free)
+	_setup_timer()
 	
 	Global.product_box_spawn_speed_multiplier += energy_up_mult
 

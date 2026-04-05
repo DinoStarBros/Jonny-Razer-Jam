@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://d1kdaykbyr17o" path="res://Statuses/EnergyUp/energy_up.gd" id="1_d22cp"]
 [ext_resource type="Material" uid="uid://dgitpafr81n4l" path="res://Statuses/EnergyUp/energy_up_particles.tres" id="2_4lkwa"]
 [ext_resource type="Texture2D" uid="uid://1jvx664jy8pj" path="res://Art/CrokDag/electric.png" id="2_h1ox3"]
+[ext_resource type="PackedScene" uid="uid://cmhn8qvkc0k4m" path="res://Statuses/StatusDurationTimer/status_duration_timer.tscn" id="4_cs2cy"]
 
-[node name="EnergyUp" type="Node2D" unique_id=1515188683]
+[node name="EnergyUp" type="Node2D" unique_id=1515188683 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_d22cp")
-
-[node name="Timer" type="Timer" parent="." unique_id=1444776408]
-unique_name_in_owner = true
-one_shot = true
+timer = NodePath("StatusDurationTimer")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=872367582]
 texture = ExtResource("2_h1ox3")
 lifetime = 1.5
 randomness = 0.5
 process_material = ExtResource("2_4lkwa")
+
+[node name="StatusDurationTimer" parent="." unique_id=1831485290 instance=ExtResource("4_cs2cy")]

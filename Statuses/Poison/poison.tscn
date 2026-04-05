@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cu1d6i6kkjqas" path="res://Statuses/Poison/poison.gd" id="1_r1isc"]
 [ext_resource type="Material" uid="uid://bdj7quxyvvr0h" path="res://Statuses/Poison/poison_particles.tres" id="2_1lmlt"]
+[ext_resource type="PackedScene" uid="uid://cmhn8qvkc0k4m" path="res://Statuses/StatusDurationTimer/status_duration_timer.tscn" id="3_qyr4h"]
 
-[node name="Poison" type="Node2D" unique_id=1515188683]
+[node name="Poison" type="Node2D" unique_id=1515188683 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_r1isc")
+timer = NodePath("StatusDurationTimer")
 
 [node name="Timer" type="Timer" parent="." unique_id=1444776408]
 unique_name_in_owner = true
@@ -18,3 +20,5 @@ wait_time = 0.1
 lifetime = 1.5
 randomness = 0.5
 process_material = ExtResource("2_1lmlt")
+
+[node name="StatusDurationTimer" parent="." unique_id=1831485290 instance=ExtResource("3_qyr4h")]

@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ccnqbsbxgmxh6" path="res://Statuses/Ice/ice.gd" id="1_j2kwx"]
 [ext_resource type="Material" uid="uid://cj0rvklp43o61" path="res://Statuses/Ice/ice_particles.tres" id="2_msf2t"]
+[ext_resource type="PackedScene" uid="uid://cmhn8qvkc0k4m" path="res://Statuses/StatusDurationTimer/status_duration_timer.tscn" id="3_w6njf"]
 
-[node name="Ice" type="Node2D" unique_id=1515188683]
+[node name="Ice" type="Node2D" unique_id=1515188683 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_j2kwx")
+timer = NodePath("StatusDurationTimer")
 
 [node name="Timer" type="Timer" parent="." unique_id=1444776408]
 unique_name_in_owner = true
@@ -14,3 +16,5 @@ one_shot = true
 lifetime = 1.5
 randomness = 0.5
 process_material = ExtResource("2_msf2t")
+
+[node name="StatusDurationTimer" parent="." unique_id=1831485290 instance=ExtResource("3_w6njf")]

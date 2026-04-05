@@ -2,13 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cmdwomiij11af" path="res://Statuses/Burn/burn.gd" id="1_rjaux"]
 [ext_resource type="Material" uid="uid://dcy3gqsxcj2bs" path="res://Statuses/Burn/burn_particles.tres" id="2_t67ku"]
+[ext_resource type="PackedScene" uid="uid://cmhn8qvkc0k4m" path="res://Statuses/StatusDurationTimer/status_duration_timer.tscn" id="3_51b1h"]
 
-[node name="Burn" type="Node2D" unique_id=1515188683]
+[node name="Burn" type="Node2D" unique_id=1515188683 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_rjaux")
-
-[node name="Timer" type="Timer" parent="." unique_id=1444776408]
-unique_name_in_owner = true
-one_shot = true
+timer = NodePath("StatusDurationTimer")
 
 [node name="TickTimer" type="Timer" parent="." unique_id=676343954]
 unique_name_in_owner = true
@@ -18,3 +16,5 @@ wait_time = 0.1
 lifetime = 1.5
 randomness = 0.5
 process_material = ExtResource("2_t67ku")
+
+[node name="StatusDurationTimer" parent="." unique_id=1831485290 instance=ExtResource("3_51b1h")]

@@ -2,8 +2,7 @@ extends Status
 class_name TimeSlowStatus
 
 func _ready() -> void:
-	%Timer.start(duration)
-	%Timer.timeout.connect(queue_free)
+	_setup_timer()
 	
 	Global.defend_box_speed_multiplier -= time_slow_mult
 

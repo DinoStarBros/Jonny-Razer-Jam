@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://camlfnv6wkrha" path="res://Statuses/TimeSlow/time_slow_particles.gd" id="1_8gd6a"]
 [ext_resource type="Material" uid="uid://bumxqts7bqgu6" path="res://Statuses/TimeSlow/time_slow_particles.tres" id="2_81xhs"]
 [ext_resource type="AudioStream" uid="uid://dogbkcuv1aiuc" path="res://Audio/crokSfx/slow-cinematic-clock-ticking-405471.mp3" id="3_12517"]
+[ext_resource type="PackedScene" uid="uid://cmhn8qvkc0k4m" path="res://Statuses/StatusDurationTimer/status_duration_timer.tscn" id="4_akdd7"]
 
-[node name="TimeSlow" type="Node2D" unique_id=1515188683]
+[node name="TimeSlow" type="Node2D" unique_id=1515188683 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_8gd6a")
+timer = NodePath("StatusDurationTimer")
 
 [node name="Timer" type="Timer" parent="." unique_id=1444776408]
 unique_name_in_owner = true
@@ -21,3 +23,5 @@ stream = ExtResource("3_12517")
 pitch_scale = 0.8
 autoplay = true
 bus = &"SFX"
+
+[node name="StatusDurationTimer" parent="." unique_id=1831485290 instance=ExtResource("4_akdd7")]
