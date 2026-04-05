@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://8kfx3xqx05k3" path="res://Boxes/DefendBox/defend_box.gd" id="1_q254n"]
 [ext_resource type="Texture2D" uid="uid://dmtpa8fpy5ex6" path="res://Art/Placeholder/AbilityIcons.png" id="2_au5w6"]
+[ext_resource type="PackedScene" uid="uid://1m6nr4r7vqyl" path="res://Boxes/BoxKickTaker/box_kick_taker.tscn" id="3_60eia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q254n"]
 size = Vector2(68, 64)
@@ -21,3 +22,5 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_au5w6")
 hframes = 6
 frame = 5
+
+[node name="BoxKickTaker" parent="." unique_id=1446199620 instance=ExtResource("3_60eia")]

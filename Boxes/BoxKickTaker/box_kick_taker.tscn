@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://1m6nr4r7vqyl"]
+
+[ext_resource type="Script" uid="uid://c1hqqswmyo7tv" path="res://Boxes/BoxKickTaker/box_kick_taker.gd" id="1_xdt65"]
+
+[node name="BoxKickTaker" type="Node2D" unique_id=1446199620]
+script = ExtResource("1_xdt65")

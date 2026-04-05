@@ -17,7 +17,7 @@ var enemy_idx : int = -1
 var inventory : Inventory
 var cursor : Cursor
 var item_effects : ItemEffects
-var final_damage : float
+var player_final_damage : float
 var defend_box_speed_multiplier: float = 1:  ## Multiplier for how fast defend boxes go from left to right
 	set(value):
 		defend_box_speed_multiplier = clamp(value, 0.1, 1)

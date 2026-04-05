@@ -83,4 +83,5 @@ func _process(delta: float) -> void:
 		"Damage: ", roundi(final_damage)
 		)
 	
-	Global.final_damage = final_damage
+	if get_parent() is Player:
+		Global.player_final_damage = final_damage

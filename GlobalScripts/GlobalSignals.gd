@@ -70,6 +70,7 @@ signal AddUpgrade(upgrade_scn: PackedScene)
 signal ItemEfficiencyChanged
 
 ## When the current_game_state gets changed
-signal GameStateChanged(
-	
-)
+signal GameStateChanged
+
+## When the Zarchivas shoes item gets used
+signal ZarchivasKick
