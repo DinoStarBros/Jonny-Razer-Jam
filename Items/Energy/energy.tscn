@@ -26,7 +26,7 @@ offset_bottom = 64.0
 theme = ExtResource("1_spmj0")
 texture = SubResource("AtlasTexture_6c40d")
 script = ExtResource("2_6c40d")
-combo_cost = 7
+combo_cost = 10
 item_effect_scn = ExtResource("3_spmj0")
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
