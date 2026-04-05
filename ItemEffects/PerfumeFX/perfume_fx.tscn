@@ -177,3 +177,4 @@ autoplay = &"start"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=151065964]
 stream = ExtResource("5_26tj8")
 volume_db = -5.0
+bus = &"SFX"

@@ -3,12 +3,104 @@
 [ext_resource type="Script" uid="uid://6x2a1npihpmu" path="res://ItemEffects/PhoneFX/phone_fx.gd" id="1_brfng"]
 [ext_resource type="PackedScene" uid="uid://6ppgamywek0" path="res://Components/ItemFXIntro/item_fx_intro.tscn" id="2_h8n0d"]
 [ext_resource type="PackedScene" uid="uid://bk6spsfchrune" path="res://Components/ItemDurationTimer/item_duration_timer.tscn" id="3_760pl"]
+[ext_resource type="AudioStream" uid="uid://60ywox2einvd" path="res://Audio/crokSfx/alexis_gaming_cam-item-collected-1-367087.mp3" id="4_760pl"]
+
+[sub_resource type="Animation" id="Animation_760pl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../text_parent:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h8n0d"]
+resource_name = "start"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../text_parent:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"add_items"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_760pl"]
+_data = {
+&"RESET": SubResource("Animation_760pl"),
+&"start": SubResource("Animation_h8n0d")
+}
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_7d6s4"]
 _data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAQAwAAUklGRggDAABXRUJQVlA4TPsCAAAvX8AXEN/ANrJtJd+iPz9zgQ6omHJIPYfcXSOGNpgGAJhka+4NeYEj9GQeILrDB55ItLENALBMqtE2P9DYA/pLz+VkY+ro+Y/f/af30IFQbTkpfHz/KUKVE66aUlQVQEpdJMKZF8Nz0hYD/deaDlPrdPMbe1dPVZWKLlWKARsvdHfFXiIJVaEXgSQBYNu2Ycuo3gYFSfGo/v/PkAAIEOg8RfQfgts2kiS6KtvpqT72qkfs/0GSeNaa2AAOf3THTkL6RpJIF8n3H6wyJzKOwusERA5lwBMFaYa6XM7SK4xhaAzOY7WkweoBTXsDEzFjyTlfziEsNEx/BLActpbDoiptOHjUjqHz0GYdTEq1Y4N9pPkDECn2jW1LojbJYBJNkxKfl/PQfW9LHdu2LO06XtgUfoIsuym2Qu+3bJqSUu/EELoly87upMFPDBxj/u/Er12XEFgEbYaS+jMgTYJJSS3VjLXW6N5LHyJG9J/9TrJqEs2DJjKoCe5+j2AmCW6aZlsDEIFhCRGh8ViS92nO88j/qkS6deDpPGejaz+pdQNNVZ4nE+XoAXAE6ozbN140xIeQETT7nhE/gi+pcwCIgBXSDmmHI80trzbpWv4AAVCdOhYrZMUHuy4mHkc/rd5f3szbAhoEB+93frOwV+gvQRSAzjRNpiWllJxLKdID+I1QqEZTi+5G+tPjiNP4f9edzpTpTuE0/VYGN/b47EutxLauq4v1qsyqAQBRCXGijQ6sggj5Ja1/LqWbjqcyuzE6SPP7hkCDGBZdUBQ+lRlM7oeViHImJhIPQFMAtLIveoX2/06azpDeHVVyJtNdKRZtRsaObzdnNGApt+fNTaoBmtTSQY4pYTyHk6LU7snQuEAWjeczBrapgok0/RoAW5Gm52ki3r76KQXapt93ODxJrQ8gnQ9kUaqdUNs6F3yJkV/hqV91pM9Y8QOANk8u2hJ2X+rgybDkSfam1rHzAbUpVQ+ItYMWPb59uyK3iFoAENF4mvM7DSxN6H3vM5QdAA==")
 size_override = Vector2(96, 96)
+
+[sub_resource type="LabelSettings" id="LabelSettings_760pl"]
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="PhoneFX" type="Node2D" unique_id=847359284 node_paths=PackedStringArray("item_duration_timer")]
 script = ExtResource("1_brfng")
@@ -17,17 +109,19 @@ item_duration_timer = NodePath("ItemDurationTimer")
 [node name="itemFXIntro" parent="." unique_id=794341249 instance=ExtResource("2_h8n0d")]
 
 [node name="ItemDurationTimer" parent="." unique_id=1004819799 instance=ExtResource("3_760pl")]
+wait_time = 1.2999999999999998
 autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1655608284]
 root_node = NodePath("../Sprite2D")
 libraries/ = SubResource("AnimationLibrary_760pl")
+autoplay = &"start"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2064568271]
-z_index = 1
+z_index = 2
 texture_filter = 1
-position = Vector2(218, 173)
-scale = Vector2(2, 2)
+position = Vector2(450, 360)
+scale = Vector2(3, 3)
 texture = SubResource("PortableCompressedTexture2D_7d6s4")
 hframes = 3
 vframes = 3
@@ -54,3 +148,21 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 2903553389710257372
 }
 metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=740874310]
+stream = ExtResource("4_760pl")
+bus = &"SFX"
+
+[node name="text_parent" type="Node2D" parent="." unique_id=2102320742]
+z_index = 2
+position = Vector2(445, 281)
+
+[node name="text" type="Label" parent="text_parent" unique_id=915731937]
+offset_left = -68.0
+offset_top = -28.0
+offset_right = 74.0
+offset_bottom = 23.0
+text = "Delivery!"
+label_settings = SubResource("LabelSettings_760pl")
+horizontal_alignment = 1
+vertical_alignment = 1
