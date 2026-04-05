@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://d1sa6j4hn6gud" path="res://Items/Phone/phone.tscn" id="20_wuv6x"]
 [ext_resource type="Script" uid="uid://dgggbtvfb1dl" path="res://entities/player/item_effects.gd" id="21_eyb6c"]
 [ext_resource type="PackedScene" uid="uid://njpr1s68ann7" path="res://Items/Zarchivas/zarchivas.tscn" id="21_qpopc"]
+[ext_resource type="PackedScene" uid="uid://bptk4a85i4y5n" path="res://Items/Perfume/perfume.tscn" id="22_wq0jh"]
 [ext_resource type="Script" uid="uid://cfa7h6tybbt7x" path="res://entities/player/camera.gd" id="23_ghoj8"]
 [ext_resource type="PackedScene" uid="uid://0uair2p0ft75" path="res://Components/StatusComponent/status_component.tscn" id="25_50fht"]
 
@@ -668,34 +669,16 @@ layout_mode = 2
 layout_mode = 2
 use_button = "item3"
 
-[node name="Phone" parent="Inventory/itmtxt/items/item_slot3" unique_id=612023433 instance=ExtResource("20_wuv6x")]
+[node name="Perfume" parent="Inventory/itmtxt/items/item_slot3" unique_id=1257628675 instance=ExtResource("22_wq0jh")]
 layout_mode = 2
 
 [node name="item_slot4" parent="Inventory/itmtxt/items" unique_id=1855295061 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item4"
 
-[node name="Phone" parent="Inventory/itmtxt/items/item_slot4" unique_id=406649394 instance=ExtResource("20_wuv6x")]
-layout_mode = 2
-
 [node name="item_slot5" parent="Inventory/itmtxt/items" unique_id=425938539 instance=ExtResource("18_mtric")]
 layout_mode = 2
 use_button = "item5"
-
-[node name="Phone" parent="Inventory/itmtxt/items/item_slot5" unique_id=1255045802 instance=ExtResource("20_wuv6x")]
-layout_mode = 2
-
-[node name="item_slot6" parent="Inventory/itmtxt/items" unique_id=1119973670 instance=ExtResource("18_mtric")]
-layout_mode = 2
-use_button = "item6"
-
-[node name="item_slot7" parent="Inventory/itmtxt/items" unique_id=1746487864 instance=ExtResource("18_mtric")]
-layout_mode = 2
-use_button = "item7"
-
-[node name="item_slot8" parent="Inventory/itmtxt/items" unique_id=1468405439 instance=ExtResource("18_mtric")]
-layout_mode = 2
-use_button = "item8"
 
 [node name="ItemEffects" type="CanvasLayer" parent="." unique_id=368405744]
 script = ExtResource("21_eyb6c")
