@@ -144,13 +144,16 @@ autoplay = &"start"
 
 [node name="1" type="AudioStreamPlayer" parent="sfx" unique_id=2140197758]
 stream = ExtResource("1_yysr6")
+volume_db = -10.0
 pitch_scale = 0.8
 bus = &"SFX"
 
 [node name="2" type="AudioStreamPlayer" parent="sfx" unique_id=1507833078]
 stream = ExtResource("2_xm2t2")
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="3" type="AudioStreamPlayer" parent="sfx" unique_id=1145466038]
 stream = ExtResource("3_2lnhk")
+volume_db = -5.0
 bus = &"SFX"

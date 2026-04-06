@@ -10,6 +10,7 @@ var cursor_move_mode : bool = true ## True = right, False = left
 var cursor_speed : float = base_speed
 var endpoints_x : Vector2
 var combo : int = 0
+var box_clicked : bool = false
 
 func _ready() -> void:
 	GlobalSignals.CombatStart.connect(_combat_done)
@@ -36,7 +37,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not Global.current_game_state == Global.game_states.FIGHT:
 		return
 	
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_just_pressed("click") and !box_clicked:
+		determin_box_click()
+		box_clicked = true
+	
+	if Input.is_action_just_released("click") and box_clicked:
+		box_clicked = false
+
+func determin_box_click() -> void:
 		var overlaps : Array = get_overlapping_areas()
 		var box_zorders_in_area : Array = []
 		for box in overlaps: if box is Box:
@@ -118,5 +126,5 @@ func _combat_done() -> void:
 	cursor_speed = base_speed
 
 func _crit() -> void:
-	%crit.pitch_scale = randf_range(1.2,1.5)
+	%crit.pitch_scale = randf_range(1.0,1.2)
 	%crit.play()

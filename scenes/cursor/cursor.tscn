@@ -60,6 +60,7 @@ bus = &"SFX"
 [node name="crit" type="AudioStreamPlayer" parent="sfx" unique_id=26864652]
 unique_name_in_owner = true
 stream = ExtResource("6_1fc3j")
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="block" type="AudioStreamPlayer" parent="sfx" unique_id=1890103036]
