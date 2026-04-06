@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not Global.current_game_state == Global.game_states.FIGHT:
+		box_clicked = false
 		return
 	
 	if Input.is_action_just_pressed("click") and !box_clicked:
