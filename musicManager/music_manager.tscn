@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4fcytjt1kh6b" path="res://musicManager/music_manager.gd" id="1_vsips"]
 [ext_resource type="AudioStream" uid="uid://bn0rjklavbakb" path="res://Audio/Music/bivezLoopShort.wav" id="2_tgltr"]
-[ext_resource type="AudioStream" uid="uid://hk23yqpl45ji" path="res://Audio/Music/DnB stuffs.wav" id="3_suc1c"]
+[ext_resource type="AudioStream" uid="uid://77s1uggawhi6" path="res://Audio/Music/bimbadim.mp3" id="3_suc1c"]
 
 [node name="MusicManager" type="Node" unique_id=1224638921]
 process_mode = 3

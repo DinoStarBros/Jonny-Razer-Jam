@@ -2,4 +2,7 @@ extends Upgrade
 class_name ItemEfficiency
 
 func _ready() -> void:
-	Global.item_efficiency += 1
+	if Global.item_efficiency < 3:
+		Global.item_efficiency += 1
+	else:
+		Global.luck += 5
