@@ -15,7 +15,7 @@ func _play_pressed() -> void:
 	SceneManager.change_scene("res://Screens/level_select/level_select.tscn")
 
 func _tutorial_pressed() -> void:
-	pass
+	%TutorialPanel.visible = !%TutorialPanel.visible
 
 func _settings_pressed() -> void:
 	%settingsMenu.visible = !%settingsMenu.visible
