@@ -92,17 +92,16 @@ label_settings = SubResource("LabelSettings_n23lg")
 
 [node name="settingsMenu" parent="." unique_id=68845947 instance=ExtResource("3_n23lg")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -274.0
-offset_top = -307.0
-offset_right = -274.0
-offset_bottom = -307.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 321.0
+offset_top = 33.0
+offset_right = 321.0
+offset_bottom = 33.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="close" type="Button" parent="settingsMenu" unique_id=1268277884]
 unique_name_in_owner = true
@@ -112,10 +111,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 220.99998
-offset_top = 552.0
-offset_right = 294.3241
-offset_bottom = 606.251
+offset_left = 15.9999695
+offset_top = 624.0
+offset_right = 89.3241
+offset_bottom = 678.251
 grow_horizontal = 2
 grow_vertical = 0
 text = "Close"

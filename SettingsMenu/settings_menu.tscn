@@ -1,9 +1,48 @@
-[gd_scene format=3 uid="uid://bqrd0srtdaksn"]
+[gd_scene format=4 uid="uid://bqrd0srtdaksn"]
 
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_hx8jy"]
 [ext_resource type="Script" uid="uid://bwvd8mbe7g6h8" path="res://SettingsMenu/settings_menu.gd" id="1_pbt7f"]
 [ext_resource type="AudioStream" uid="uid://dp3dtsiol0r0u" path="res://Audio/gunshot.wav" id="2_02yg4"]
 [ext_resource type="AudioStream" uid="uid://dlb0mt6s5iyxk" path="res://Audio/amalgun/beam.wav" id="3_276ht"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_hx8jy"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAQAwAAUklGRggDAABXRUJQVlA4TPsCAAAvX8AXEN/ANrJtJd+iPz9zgQ6omHJIPYfcXSOGNpgGAJhka+4NeYEj9GQeILrDB55ItLENALBMqtE2P9DYA/pLz+VkY+ro+Y/f/af30IFQbTkpfHz/KUKVE66aUlQVQEpdJMKZF8Nz0hYD/deaDlPrdPMbe1dPVZWKLlWKARsvdHfFXiIJVaEXgSQBYNu2Ycuo3gYFSfGo/v/PkAAIEOg8RfQfgts2kiS6KtvpqT72qkfs/0GSeNaa2AAOf3THTkL6RpJIF8n3H6wyJzKOwusERA5lwBMFaYa6XM7SK4xhaAzOY7WkweoBTXsDEzFjyTlfziEsNEx/BLActpbDoiptOHjUjqHz0GYdTEq1Y4N9pPkDECn2jW1LojbJYBJNkxKfl/PQfW9LHdu2LO06XtgUfoIsuym2Qu+3bJqSUu/EELoly87upMFPDBxj/u/Er12XEFgEbYaS+jMgTYJJSS3VjLXW6N5LHyJG9J/9TrJqEs2DJjKoCe5+j2AmCW6aZlsDEIFhCRGh8ViS92nO88j/qkS6deDpPGejaz+pdQNNVZ4nE+XoAXAE6ozbN140xIeQETT7nhE/gi+pcwCIgBXSDmmHI80trzbpWv4AAVCdOhYrZMUHuy4mHkc/rd5f3szbAhoEB+93frOwV+gvQRSAzjRNpiWllJxLKdID+I1QqEZTi+5G+tPjiNP4f9edzpTpTuE0/VYGN/b47EutxLauq4v1qsyqAQBRCXGijQ6sggj5Ja1/LqWbjqcyuzE6SPP7hkCDGBZdUBQ+lRlM7oeViHImJhIPQFMAtLIveoX2/06azpDeHVVyJtNdKRZtRsaObzdnNGApt+fNTaoBmtTSQY4pYTyHk6LU7snQuEAWjeczBrapgok0/RoAW5Gm52ki3r76KQXapt93ODxJrQ8gnQ9kUaqdUNs6F3yJkV/hqV91pM9Y8QOANk8u2hJ2X+rgybDkSfam1rHzAbUpVQ+ItYMWPb59uyK3iFoAENF4mvM7DSxN6H3vM5QdAA==")
+size_override = Vector2(96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fmqa"]
+atlas = SubResource("PortableCompressedTexture2D_hx8jy")
+region = Rect2(0, 0, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx8jy"]
+atlas = SubResource("PortableCompressedTexture2D_hx8jy")
+region = Rect2(32, 0, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7av7"]
+atlas = SubResource("PortableCompressedTexture2D_hx8jy")
+region = Rect2(0, 32, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljex6"]
+atlas = SubResource("PortableCompressedTexture2D_hx8jy")
+region = Rect2(32, 32, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqgjd"]
+atlas = SubResource("PortableCompressedTexture2D_hx8jy")
+region = Rect2(64, 32, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0dm2"]
+atlas = SubResource("PortableCompressedTexture2D_hx8jy")
+region = Rect2(0, 64, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni08m"]
+atlas = SubResource("PortableCompressedTexture2D_hx8jy")
+region = Rect2(32, 64, 32, 32)
+filter_clip = true
 
 [node name="settingsMenu" type="Control" unique_id=68845947]
 process_mode = 3
@@ -18,12 +57,12 @@ script = ExtResource("1_pbt7f")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=735984929]
 layout_mode = 0
-offset_right = 522.0
+offset_right = 640.0
 offset_bottom = 624.0
 
 [node name="Tabs" type="TabContainer" parent="PanelContainer" unique_id=917003247]
 layout_mode = 2
-current_tab = 1
+current_tab = 2
 
 [node name="Audio" type="VBoxContainer" parent="PanelContainer/Tabs" unique_id=1785194851]
 visible = false
@@ -64,6 +103,7 @@ step = 0.15
 tick_count = 11
 
 [node name="Accessiblity" type="VBoxContainer" parent="PanelContainer/Tabs" unique_id=1868874210]
+visible = false
 layout_mode = 2
 alignment = 1
 metadata/_tab_index = 1
@@ -85,6 +125,286 @@ text = "Frame Freeze:"
 unique_name_in_owner = true
 layout_mode = 2
 text = "On"
+
+[node name="Item Guide" type="ScrollContainer" parent="PanelContainer/Tabs" unique_id=1180991577]
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="vbox" type="VBoxContainer" parent="PanelContainer/Tabs/Item Guide" unique_id=1824496120]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=159209005]
+layout_mode = 2
+text = "Item Descriptions:"
+
+[node name="h1" type="HBoxContainer" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=2046026426]
+layout_mode = 2
+
+[node name="t1" type="TextureRect" parent="PanelContainer/Tabs/Item Guide/vbox/h1" unique_id=1124477441]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_7fmqa")
+stretch_mode = 4
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "PanelContainer/Tabs/Item Guide/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="desc" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox/h1" unique_id=1418076920]
+layout_mode = 2
+text = "Zarchivas Kicks: Kicks back enemy 
+attacks, dealing damage for each one."
+
+[node name="h2" type="HBoxContainer" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=1479675813]
+layout_mode = 2
+
+[node name="t2" type="TextureRect" parent="PanelContainer/Tabs/Item Guide/vbox/h2" unique_id=69816637]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_hx8jy")
+stretch_mode = 4
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "PanelContainer/Tabs/Item Guide/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="desc" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox/h2" unique_id=1097255846]
+layout_mode = 2
+text = "Kroflex: Slows down enemy attacks by a
+lot"
+
+[node name="h3" type="HBoxContainer" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=1099202783]
+layout_mode = 2
+
+[node name="t3" type="TextureRect" parent="PanelContainer/Tabs/Item Guide/vbox/h3" unique_id=1671082578]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_y7av7")
+stretch_mode = 4
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "PanelContainer/Tabs/Item Guide/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="desc" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox/h3" unique_id=1548172878]
+layout_mode = 2
+text = "CroakDonalds: Heals 30% of the player's
+HP"
+
+[node name="h4" type="HBoxContainer" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=1450365971]
+layout_mode = 2
+
+[node name="t4" type="TextureRect" parent="PanelContainer/Tabs/Item Guide/vbox/h4" unique_id=2106003716]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_ljex6")
+stretch_mode = 4
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "PanelContainer/Tabs/Item Guide/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="desc" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox/h4" unique_id=138475445]
+layout_mode = 2
+text = "Eau De Swamp: Increases crit chance for a
+limited time"
+
+[node name="h5" type="HBoxContainer" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=2071669577]
+layout_mode = 2
+
+[node name="t5" type="TextureRect" parent="PanelContainer/Tabs/Item Guide/vbox/h5" unique_id=1131162050]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_fqgjd")
+stretch_mode = 4
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "PanelContainer/Tabs/Item Guide/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="desc" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox/h5" unique_id=1269370079]
+layout_mode = 2
+text = "OPhone: Orders 3 random items"
+
+[node name="h6" type="HBoxContainer" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=1377994311]
+layout_mode = 2
+
+[node name="t6" type="TextureRect" parent="PanelContainer/Tabs/Item Guide/vbox/h6" unique_id=2065392754]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_c0dm2")
+stretch_mode = 4
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "PanelContainer/Tabs/Item Guide/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="desc" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox/h6" unique_id=1077597184]
+layout_mode = 2
+text = "Garry Energy Drink: Makes product boxes
+spawn faster"
+
+[node name="h7" type="HBoxContainer" parent="PanelContainer/Tabs/Item Guide/vbox" unique_id=1035492985]
+layout_mode = 2
+
+[node name="t7" type="TextureRect" parent="PanelContainer/Tabs/Item Guide/vbox/h7" unique_id=1552726091]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_ni08m")
+stretch_mode = 4
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "PanelContainer/Tabs/Item Guide/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Art/CrokDag/croakDagItemsPrototype.aseprite",
+"source_uid": 2903553389710257372
+}
+metadata/_aseprite_wizard_source_file_hash_ = "92b718e017da9f1f24706877673bcec1"
+
+[node name="desc" type="Label" parent="PanelContainer/Tabs/Item Guide/vbox/h7" unique_id=268453622]
+layout_mode = 2
+text = "Super Card Pack: Adds spells cards to the 
+belt
+Ice: Slows down Enemy Attacks
+Fire: Deals damage overtime
+Poison: ALSO Deals damage overtime"
 
 [node name="buttons" type="HBoxContainer" parent="." unique_id=360431369]
 unique_name_in_owner = true
@@ -114,6 +434,12 @@ Settings"
 [node name="back" type="Button" parent="buttons" unique_id=1165260062]
 layout_mode = 2
 text = "Back"
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=620910937]
+layout_mode = 0
+offset_top = 615.0
+offset_right = 640.0
+offset_bottom = 683.0
 
 [node name="sfx" type="Node" parent="." unique_id=457836230]
 
