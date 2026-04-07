@@ -3,6 +3,13 @@
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_1wflc"]
 [ext_resource type="Script" uid="uid://b08p74vxb4xqk" path="res://scenes/tutorial_panel/tutorial_panel.gd" id="1_xkt6d"]
 [ext_resource type="Texture2D" uid="uid://4gu855cmgak5" path="res://Art/CrokDag/redThin.png" id="3_62fg3"]
+[ext_resource type="VideoStream" uid="uid://cte6tf3rejqub" path="res://TutorialStuff/CDTut1-converted.ogv" id="3_xr8wi"]
+[ext_resource type="Texture2D" uid="uid://d2ou765snsglk" path="res://TutorialStuff/6.png" id="4_ui5pc"]
+[ext_resource type="VideoStream" uid="uid://df0e2gh70xhgg" path="res://TutorialStuff/CDTut2-converted.ogv" id="5_ofdyj"]
+[ext_resource type="VideoStream" uid="uid://hm83xrsp0u5t" path="res://TutorialStuff/CDTut3-converted.ogv" id="6_7c6s5"]
+[ext_resource type="VideoStream" uid="uid://txcuceceyb2o" path="res://TutorialStuff/CDTut4-converted.ogv" id="7_la10a"]
+[ext_resource type="VideoStream" uid="uid://bjq8r20hlpw0x" path="res://TutorialStuff/CDTut5-converted.ogv" id="8_nuqph"]
+[ext_resource type="Texture2D" uid="uid://c8ydwn4anjttd" path="res://TutorialStuff/5-1.png" id="9_la10a"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1wflc"]
 font_size = 30
@@ -52,6 +59,20 @@ presses when the cursor is on a box to deal damage or defend from
 enemy attacks."
 label_settings = SubResource("LabelSettings_1wflc")
 
+[node name="vid" type="Node2D" parent="PanelContainer/page1" unique_id=1438799622]
+position = Vector2(-596, 235)
+
+[node name="vid1" type="VideoStreamPlayer" parent="PanelContainer/page1/vid" unique_id=1273072982]
+offset_left = 659.0
+offset_top = -95.0
+offset_right = 1261.0
+offset_bottom = 219.0
+stream = ExtResource("3_xr8wi")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+
 [node name="page2" type="MarginContainer" parent="PanelContainer" unique_id=1238480738]
 unique_name_in_owner = true
 visible = false
@@ -61,7 +82,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 0
 text = "Timing your press with a \"product box\" slices it open and deals
- damage to the enemy, having a chance to drop an item"
+ damage to the enemy, having a chance to drop an item."
 label_settings = SubResource("LabelSettings_1wflc")
 
 [node name="box_sprites" type="Node2D" parent="PanelContainer/page2" unique_id=353491754]
@@ -297,6 +318,21 @@ texture = ExtResource("3_62fg3")
 hframes = 2
 frame = 1
 
+[node name="vid" type="Node2D" parent="PanelContainer/page2" unique_id=749730726]
+position = Vector2(-596, 235)
+
+[node name="vid2" type="VideoStreamPlayer" parent="PanelContainer/page2/vid" unique_id=1025297293]
+offset_left = 624.0
+offset_top = -28.0
+offset_right = 970.0
+offset_bottom = 219.0
+stream = ExtResource("5_ofdyj")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+buffering_msec = 1000
+
 [node name="page3" type="MarginContainer" parent="PanelContainer" unique_id=1457254621]
 unique_name_in_owner = true
 visible = false
@@ -308,6 +344,20 @@ size_flags_vertical = 0
 text = "Enemies send out red boxes that damage you when reaching the end
 of the belt. Time your press to delete them."
 label_settings = SubResource("LabelSettings_1wflc")
+
+[node name="vid" type="Node2D" parent="PanelContainer/page3" unique_id=1477277206]
+position = Vector2(-596, 235)
+
+[node name="vid3" type="VideoStreamPlayer" parent="PanelContainer/page3/vid" unique_id=447000745]
+offset_left = 659.0
+offset_top = -95.0
+offset_right = 1261.0
+offset_bottom = 219.0
+stream = ExtResource("6_7c6s5")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
 
 [node name="page4" type="MarginContainer" parent="PanelContainer" unique_id=1272471586]
 unique_name_in_owner = true
@@ -321,19 +371,66 @@ text = "Pressing when there isn't a box on the cursor also deals damage to
 you."
 label_settings = SubResource("LabelSettings_1wflc")
 
+[node name="vid" type="Node2D" parent="PanelContainer/page4" unique_id=2043534093]
+position = Vector2(-596, 235)
+
+[node name="vid4" type="VideoStreamPlayer" parent="PanelContainer/page4/vid" unique_id=1720192095]
+offset_left = 659.0
+offset_top = -95.0
+offset_right = 1261.0
+offset_bottom = 219.0
+stream = ExtResource("7_la10a")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+
 [node name="page5" type="MarginContainer" parent="PanelContainer" unique_id=1777105211]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 
 [node name="label" type="Label" parent="PanelContainer/page5" unique_id=49140214]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Consecutively pressing on boxes builds up combo and speed up your 
-cursor. You can spend your combo on items, their combo cost being 
-shown on their bottom left. 
-You can know what each item does in the settings/pause menu."
+text = "Consecutively pressing on boxes builds up combo and speeds up 
+your cursor. You can spend your combo on items by pressing them 
+or the number key, their combo cost being  shown on their bottom 
+left. You can know what each item does in the settings/pause menu."
 label_settings = SubResource("LabelSettings_1wflc")
+
+[node name="vid" type="Node2D" parent="PanelContainer/page5" unique_id=1626011007]
+position = Vector2(-596, 235)
+
+[node name="vid5" type="VideoStreamPlayer" parent="PanelContainer/page5/vid" unique_id=891541482]
+offset_left = 624.0
+offset_top = -95.0
+offset_right = 1226.0
+offset_bottom = 219.0
+stream = ExtResource("8_nuqph")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+
+[node name="51" type="Sprite2D" parent="PanelContainer/page5/vid" unique_id=801254660]
+position = Vector2(1184, 182)
+texture = ExtResource("9_la10a")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 128)
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer/page5/vid" unique_id=1347672602]
+position = Vector2(1163.0002, 265)
+rotation = 4.1887903
+texture = ExtResource("3_62fg3")
+hframes = 2
+frame = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="PanelContainer/page5/vid" unique_id=923391024]
+position = Vector2(1327, 265)
+rotation = 4.1887903
+texture = ExtResource("3_62fg3")
+hframes = 2
+frame = 1
 
 [node name="page6" type="MarginContainer" parent="PanelContainer" unique_id=298647707]
 unique_name_in_owner = true
@@ -345,6 +442,14 @@ layout_mode = 2
 size_flags_vertical = 0
 text = "After defeating an enemy, you get to choose a stat to upgrade."
 label_settings = SubResource("LabelSettings_1wflc")
+
+[node name="pic" type="Node2D" parent="PanelContainer/page6" unique_id=1413560067]
+position = Vector2(-596, 235)
+
+[node name="6" type="Sprite2D" parent="PanelContainer/page6" unique_id=101602577]
+position = Vector2(374.00006, 284.99994)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_ui5pc")
 
 [node name="page7" type="MarginContainer" parent="PanelContainer" unique_id=1896390128]
 unique_name_in_owner = true

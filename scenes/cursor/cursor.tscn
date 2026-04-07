@@ -13,6 +13,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8r5s"]
 radius = 18.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_1fc3j"]
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+
 [node name="cursor" type="Area2D" unique_id=1348747850]
 z_index = 100
 script = ExtResource("1_e5wmr")
@@ -92,10 +97,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -275.0
-offset_top = -42.0
-offset_right = -83.0
-offset_bottom = -25.0
+offset_left = -98.0
+offset_top = -60.0
+offset_right = 98.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(1.5, 1.5)
+text = "Combo: 67"
+label_settings = SubResource("LabelSettings_1fc3j")

@@ -564,6 +564,7 @@ text = "Luck: 67"
 
 [node name="debug" type="Label" parent="ui" unique_id=65773474]
 unique_name_in_owner = true
+visible = false
 offset_left = 276.0
 offset_top = 177.0
 offset_right = 316.0

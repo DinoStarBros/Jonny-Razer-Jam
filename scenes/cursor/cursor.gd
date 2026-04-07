@@ -28,8 +28,8 @@ func _process(delta: float) -> void:
 	#%text.text = str("Combo : ", combo)
 	
 	%debug.text = str(
-		"Speed: ", cursor_speed, 
-		" ",
+		#"Speed: ", cursor_speed, 
+		#" ",
 		"Combo: ", combo
 	)
 
