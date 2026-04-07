@@ -1,4 +1,5 @@
 extends Node2D
+class_name Level1
 
 @onready var bg_and_speeds : Dictionary = {
 	0: [%l1, 2.5],

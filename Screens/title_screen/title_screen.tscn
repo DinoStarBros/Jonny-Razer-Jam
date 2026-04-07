@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d26mt5m255s86" path="res://Screens/title_screen/title_screen.gd" id="1_4rvf0"]
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_dcgbb"]
 [ext_resource type="PackedScene" uid="uid://bqrd0srtdaksn" path="res://SettingsMenu/settings_menu.tscn" id="3_n23lg"]
+[ext_resource type="PackedScene" uid="uid://bwb7fwa8odqg3" path="res://scenes/tutorial_panel/tutorial_panel.tscn" id="4_8rn8n"]
 [ext_resource type="PackedScene" uid="uid://c15x2bc6j21vr" path="res://scenes/screen_unpauser/screen_unpauser.tscn" id="4_boh8m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dcgbb"]
@@ -53,6 +54,12 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Play"
+
+[node name="tutorial" type="Button" parent="buttons" unique_id=35024818]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Tutorial"
 
 [node name="settings" type="Button" parent="buttons" unique_id=1751415891]
 unique_name_in_owner = true
@@ -119,6 +126,9 @@ offset_bottom = 678.251
 grow_horizontal = 2
 grow_vertical = 0
 text = "Close"
+
+[node name="TutorialPanel" parent="." unique_id=1525012892 instance=ExtResource("4_8rn8n")]
+layout_mode = 1
 
 [node name="screen_unpauser" parent="." unique_id=518566030 instance=ExtResource("4_boh8m")]
 

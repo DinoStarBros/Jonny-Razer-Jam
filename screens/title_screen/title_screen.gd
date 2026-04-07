@@ -4,6 +4,7 @@ class_name TitleScreen
 func _ready() -> void:
 	Global.current_game_state = Global.game_states.TITLE
 	%play.pressed.connect(_play_pressed)
+	%tutorial.pressed.connect(_tutorial_pressed)
 	%settings.pressed.connect(_settings_pressed)
 	%credits.pressed.connect(_credits_pressed)
 	%quit.pressed.connect(_quit_pressed)
@@ -12,6 +13,9 @@ func _ready() -> void:
 
 func _play_pressed() -> void:
 	SceneManager.change_scene("res://Screens/level_select/level_select.tscn")
+
+func _tutorial_pressed() -> void:
+	pass
 
 func _settings_pressed() -> void:
 	%settingsMenu.visible = !%settingsMenu.visible

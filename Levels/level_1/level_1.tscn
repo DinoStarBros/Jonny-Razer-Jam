@@ -97,6 +97,7 @@ position = Vector2(320, 360)
 
 [node name="Label" type="Label" parent="." unique_id=762185603]
 unique_name_in_owner = true
+visible = false
 offset_left = 395.0
 offset_top = 218.0
 offset_right = 435.0
@@ -104,12 +105,6 @@ offset_bottom = 241.0
 
 [node name="belt" parent="." unique_id=1659621718 instance=ExtResource("4_y47bw")]
 position = Vector2(640, 619)
-
-[node name="spawnTimer" type="Timer" parent="." unique_id=1375991194]
-unique_name_in_owner = true
-wait_time = 2.0
-one_shot = true
-autostart = true
 
 [node name="items" type="HBoxContainer" parent="." unique_id=2105632098]
 offset_right = 40.0
