@@ -16,27 +16,28 @@ var upgrade_ids : Array
 ## 0-Description, 1-Texture, 2-UpgScene
 const ITEM_DATA : Dictionary = {
 	0: [
-		"Max Health",
+		"Max Health: Increases max hp",
 		preload("res://upgrade_icons/health_texture.tres"),
 		preload("res://upgrade_icons/health/health.tscn")
 	],
 	1: [
-		"Attack Damage",
+		"Attack Damage: Increases damage for the boxes",
 		preload("res://upgrade_icons/attack_damage_texture.tres"),
 		preload("res://upgrade_icons/attack_damage/attack_damage.tscn")
 	],
 	2: [
-		"Crit Chance",
+		"Crit Chance: Increases chance to do critical attack",
 		preload("res://upgrade_icons/crit_chance_texture.tres"),
 		preload("res://upgrade_icons/crit_chance/crit_chance.tscn")
 	],
 	3: [
-		"Luck",
+		"Luck: Increases chance of getting item",
 		preload("res://upgrade_icons/luck_texture.tres"),
 		preload("res://upgrade_icons/luck/luck.tscn")
 	],
 	4: [
-		"Item Efficiency",
+		"Item Efficiency: Reduces items combo cost by 1 \n
+		(max of 3, +5 luck after)",
 		preload("res://upgrade_icons/item_eff_texture.tres"),
 		preload("res://upgrade_icons/item_efficiency/item_efficiency.tscn")
 	],
