@@ -106,11 +106,14 @@ func _succesful_box_hit() -> void:
 	await get_tree().create_timer(0.05).timeout
 	%hit3.pitch_scale = randf_range(0.8, 1.1)
 	%hit3.play()
+	
+	Global.spawn_clickboom(Color.WHITE, global_position)
 
 func _failed_box_hit() -> void:
 	cursor_speed = base_speed
 	combo = 0
 	
+	Global.spawn_clickboom(Color.RED, global_position)
 	GlobalSignals.CursorMiss.emit()
 
 func _player_hurt(damage: float) -> void:

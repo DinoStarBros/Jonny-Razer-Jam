@@ -42,6 +42,7 @@ const ESPAWN_POS : Vector2 = Vector2(960, 360)
 ## The damage multiplier when you crit
 const CRIT_DMG_MULT : float = 1.5
 const txt_scn : PackedScene = preload("res://juices/DmgNum/dmg_num.tscn")
+const click_boom_scn : PackedScene = preload("res://juices/ClickBoom/click_boom.tscn")
 
 func _volume_handle() -> void:
 	AudioServer.set_bus_volume_db(
@@ -79,3 +80,9 @@ func spawn_txt(text: String, global_pos: Vector2, color: Color = Color.WHITE)->v
 	txt.global_position = global_pos
 	txt.modulate = color
 	entity_parent_spawner_comp.add_child(txt)
+
+func spawn_clickboom(color: Color, global_pos: Vector2) -> void:
+	var click_boom : ClickBoom = click_boom_scn.instantiate()
+	click_boom.global_position = global_pos
+	click_boom.modulate = color
+	entity_parent_spawner_comp.add_child(click_boom)
