@@ -9,11 +9,11 @@ resource_local_to_scene = true
 shader = ExtResource("2_ggje4")
 shader_parameter/resolution = Vector2(320, 180)
 shader_parameter/scan_line_amount = 0.050000002375
-shader_parameter/warp_amount = 0.05
-shader_parameter/vignette_amount = 0.30000001425
-shader_parameter/vignette_intensity = 0.10800000512999999
+shader_parameter/warp_amount = 0.010000000475
+shader_parameter/vignette_amount = 0.050000002375
+shader_parameter/vignette_intensity = 0.10000000475
 shader_parameter/grille_amount = 0.026000001235
-shader_parameter/brightness_boost = 1.0
+shader_parameter/brightness_boost = 1.10000000475
 
 [node name="ScreenFX" type="CanvasLayer" unique_id=2033169152]
 layer = 500
@@ -21,7 +21,7 @@ script = ExtResource("1_g84k2")
 
 [node name="crt" type="Sprite2D" parent="." unique_id=482705817]
 unique_name_in_owner = true
-visible = false
+z_index = 500
 material = SubResource("ShaderMaterial_s0pm0")
 position = Vector2(640, 355.5)
 scale = Vector2(11.234374, 6.5859375)
