@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="BaseEntityStats" format=3 uid="uid://btf7g5tbv53ae"]
 
-[ext_resource type="PackedScene" uid="uid://ck85ku5ckb68t" path="res://EnemyBoxes/TrapDefendBox/trap_defend_box.tscn" id="1_m0a37"]
+[ext_resource type="PackedScene" uid="uid://dolxx7718k6xh" path="res://EnemyBoxes/BaseDefendBox/base_defend_box.tscn" id="1_c71gj"]
 [ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="2_c71gj"]
 
 [resource]
 script = ExtResource("2_c71gj")
 max_hp = 100.0
-box_scenes = Array[PackedScene]([ExtResource("1_m0a37")])
+box_scenes = Array[PackedScene]([ExtResource("1_c71gj")])
 spawn_time_range = Vector2(2, 3)
 damage = 9.0
 crit_chance = 0.0
