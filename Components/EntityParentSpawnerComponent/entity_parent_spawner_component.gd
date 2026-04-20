@@ -33,6 +33,8 @@ func _upgrade_done() -> void:
 	
 	Global.current_game_state = Global.game_states.FIGHT
 	GlobalSignals.CombatStart.emit()
+	
+	print(level_resource.enemy_amount)
 
 func _combat_start() -> void:
 	_spawn_enemy()

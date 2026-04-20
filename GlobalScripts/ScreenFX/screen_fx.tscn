@@ -8,11 +8,11 @@
 resource_local_to_scene = true
 shader = ExtResource("2_ggje4")
 shader_parameter/resolution = Vector2(320, 180)
-shader_parameter/scan_line_amount = 0.050000002375
-shader_parameter/warp_amount = 0.010000000475
-shader_parameter/vignette_amount = 0.050000002375
+shader_parameter/scan_line_amount = 0.0750000035625
+shader_parameter/warp_amount = 0.02000000095
+shader_parameter/vignette_amount = 0.10000000475
 shader_parameter/vignette_intensity = 0.10000000475
-shader_parameter/grille_amount = 0.026000001235
+shader_parameter/grille_amount = 0.050000002375
 shader_parameter/brightness_boost = 1.10000000475
 
 [node name="ScreenFX" type="CanvasLayer" unique_id=2033169152]

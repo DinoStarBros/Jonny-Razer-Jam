@@ -530,11 +530,14 @@ icon = ExtResource("9_gx6sm")
 [node name="stat_upgrades" type="Node" parent="ui" unique_id=622475214]
 script = ExtResource("12_b2kln")
 
-[node name="upgrade_icons" type="HBoxContainer" parent="ui/stat_upgrades" unique_id=1741048231]
+[node name="upgrade_icons" type="GridContainer" parent="ui/stat_upgrades" unique_id=2008874724]
 unique_name_in_owner = true
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 74.0
+offset_bottom = 74.0
 scale = Vector2(0.5, 0.5)
+columns = 37
 
 [node name="stats_panel" type="VBoxContainer" parent="ui" unique_id=683005175]
 offset_left = 52.0
