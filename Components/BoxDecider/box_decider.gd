@@ -16,8 +16,6 @@ var enemy_stat_mult : float
 ## Damage value after going through scaling
 var final_damage : float
 
-#@export var final_damage_text : Label ## UI text that shows the final damage
-
 func _ready() -> void:
 	await get_tree().process_frame
 	
@@ -32,13 +30,13 @@ func _ready() -> void:
 	spawn_amount_range = stats.spawn_amount_range
 	
 	# Decreases spawn time, making the enemy spawn boxes faster
-	spawn_time_range = stats.spawn_time_range * scaling(enemy_stat_mult, 40, false)
+	spawn_time_range = stats.spawn_time_range * Scalings.scale(enemy_stat_mult, stats.box_spawn_time_scaling_strength, false, stats.box_spawn_time_scale_type)
 	
 	# Increases box speed, making defend boxes move faster to the left
-	box_speed_range = stats.box_speed_range * scaling(enemy_stat_mult, 50, true)
+	box_speed_range = stats.box_speed_range * Scalings.scale(enemy_stat_mult, stats.box_speed_scaling_strength, true, stats.box_speed_scale_type)
 	
 	final_damage = roundi(
-		stats.damage * scaling(enemy_stat_mult - 1, 5, true)
+		stats.damage * Scalings.scale(enemy_stat_mult - 1, stats.damage_scaling_strength, true, stats.damage_scale_type)
 		)
 	
 	%SpawnTimer.timeout.connect(_spawn_timer_timeout)

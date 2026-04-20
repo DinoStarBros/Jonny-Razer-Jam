@@ -60,7 +60,7 @@ func _ready() -> void:
 		enemy_stat_mult = 1
 	
 	max_hp = roundi(
-		stats.max_hp * scaling(enemy_stat_mult - 1, 4, true)
+		stats.max_hp * Scalings.scale(enemy_stat_mult - 1, stats.hp_scaling_strength, true, stats.hp_scale_type)
 		)
 	hp = roundi(max_hp)
 	
