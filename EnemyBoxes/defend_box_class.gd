@@ -1,11 +1,18 @@
 extends Box
 class_name DefendBox
 
-var damage : float
-var sliced : bool = false
-
 @export var icon_sprite : Sprite2D
 @export var move_spd_mult : float = 1.0 ## Can determine if the box is inherently faster or slower
+@export var max_hp : int = 1
+
+var damage : float
+var sliced : bool = false
+var leftward_velocity : Vector2
+var anim : AnimationPlayer
+var collider : CollisionShape2D
+var hp : int:
+	set(value):
+		hp = value
 
 func _init() -> void:
 	area_entered.connect(_area_entered)
@@ -14,13 +21,18 @@ func _ready() -> void:
 	boxes_amount += 1
 	id = boxes_amount
 	z_index = Global.MAX_BOXES + id
+	hp = max_hp
 	
-	var xcale : float = randf_range(0.5, 2)
+	var xcale : float = randf_range(0.8, 2)
 	scale.x *= xcale
 	icon_sprite.scale.x /= xcale
 	
+	for child in get_children(): if child is AnimationPlayer: anim = child
+	for child in get_children(): if child is CollisionShape2D: collider = child
+	
 	await get_tree().process_frame
 	velocity.x *= move_spd_mult
+	leftward_velocity.x = velocity.x # Leftward velocity just stays the same, while I can update velocity
 
 func _exit_tree() -> void:
 	boxes_amount -= 1
@@ -42,14 +54,23 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 
 func slice() -> void:
+	hp -= 1
+	if hp <= 0:
+		final_slice()
+	else:
+		velocity.x = 500
+		tween_velocity_back()
+
+func final_slice() -> void:
 	sliced = true
 	
-	for collider in get_children(): if collider is CollisionShape2D:
-		collider.disabled = true
-		break
+	collider.disabled = true
 	
-	for anim in get_children(): if anim is AnimationPlayer:
-		if anim.has_animation("break"):
-			anim.play("break")
-		else:
-			queue_free()
+	if anim.has_animation("break"):
+		anim.play("break")
+	else:
+		queue_free()
+
+func tween_velocity_back() -> void:
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "velocity", leftward_velocity, 0.25)

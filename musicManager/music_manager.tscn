@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b4fcytjt1kh6b" path="res://musicManager/music_manager.gd" id="1_vsips"]
 [ext_resource type="AudioStream" uid="uid://bn0rjklavbakb" path="res://Audio/Music/bivezLoopShort.wav" id="2_tgltr"]
 [ext_resource type="AudioStream" uid="uid://77s1uggawhi6" path="res://Audio/Music/bimbadim.mp3" id="3_suc1c"]
+[ext_resource type="AudioStream" uid="uid://daufwlnry6787" path="res://Audio/Music/luhIdea.mp3" id="4_b4b5v"]
 
 [node name="MusicManager" type="Node" unique_id=1224638921]
 process_mode = 3
@@ -13,8 +14,14 @@ unique_name_in_owner = true
 stream = ExtResource("2_tgltr")
 bus = &"Music"
 
-[node name="Combat" type="AudioStreamPlayer" parent="." unique_id=720435638]
+[node name="Combat1" type="AudioStreamPlayer" parent="." unique_id=720435638]
 unique_name_in_owner = true
 stream = ExtResource("3_suc1c")
-volume_db = -5.0
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Boss3" type="AudioStreamPlayer" parent="." unique_id=1462271381]
+unique_name_in_owner = true
+stream = ExtResource("4_b4b5v")
+volume_db = 10.0
 bus = &"Music"

@@ -72,7 +72,7 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("6_nghos")
 volume_db = -5.0
-pitch_scale = 0.8
+pitch_scale = 0.4
 bus = &"SFX"
 
 [node name="hurt1" type="AudioStreamPlayer" parent="sfx" unique_id=2115316130]

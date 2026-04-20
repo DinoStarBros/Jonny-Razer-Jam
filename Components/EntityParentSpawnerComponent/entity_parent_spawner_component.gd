@@ -15,7 +15,7 @@ func _ready() -> void:
 	GlobalSignals.UpgradeDone.connect(_upgrade_done)
 	GlobalSignals.CombatStart.connect(_combat_start)
 	
-	MusicManager.play_song("combat")
+	MusicManager.play_song("combat1")
 	
 	await get_tree().process_frame
 	GlobalSignals.UpgradeDone.emit()
@@ -46,6 +46,7 @@ func _spawn_enemy() -> void:
 	enemy.global_position = Global.ESPAWN_POS
 
 func _spawn_boss() -> void:
+	MusicManager.play_song("boss3")
 	
 	var boss : Enemy = level_resource.boss_scn.instantiate()
 	add_child(boss)

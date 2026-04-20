@@ -2,7 +2,9 @@ extends Node
 
 @onready var musics : Dictionary = {
 	"title": %Title,
-	"combat": %Combat,
+	"combat1": %Combat1,
+	
+	"boss3": %Boss3,
 	
 }
 

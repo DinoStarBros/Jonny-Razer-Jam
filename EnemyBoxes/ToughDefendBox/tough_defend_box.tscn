@@ -124,7 +124,8 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_krv51")
 icon_sprite = NodePath("box_base/icon")
-move_spd_mult = 0.6
+move_spd_mult = 0.5
+max_hp = 3
 
 [node name="cs" type="CollisionShape2D" parent="." unique_id=1416066805]
 unique_name_in_owner = true
