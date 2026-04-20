@@ -1,8 +1,15 @@
 [gd_resource type="Resource" script_class="BaseEntityStats" format=3 uid="uid://d16iobhf0py1v"]
 
+[ext_resource type="PackedScene" uid="uid://dolxx7718k6xh" path="res://EnemyBoxes/BaseDefendBox/base_defend_box.tscn" id="1_bxcsa"]
 [ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="1_vkdp2"]
+[ext_resource type="PackedScene" uid="uid://da5bvpmo66hyq" path="res://EnemyBoxes/ToughDefendBox/tough_defend_box.tscn" id="2_7e04s"]
 
 [resource]
 script = ExtResource("1_vkdp2")
 max_hp = 200.0
+box_scenes = Array[PackedScene]([ExtResource("1_bxcsa"), ExtResource("2_7e04s"), ExtResource("2_7e04s")])
+hp_scaling_strength = 0.4
+damage_scale_type = 3
+box_spawn_time_scaling_strength = 0.2
+box_speed_scaling_strength = 0.05
 metadata/_custom_type_script = "uid://chqad1x7kc28f"

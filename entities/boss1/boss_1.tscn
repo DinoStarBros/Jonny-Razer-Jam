@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3gi0n1ejmscl" path="res://entities/boss1/boss_1.gd" id="1_0rt1n"]
 [ext_resource type="PackedScene" uid="uid://c1qobuo6afwil" path="res://Components/StatsAllocator/stats_allocator.tscn" id="2_q8bsv"]
-[ext_resource type="Resource" uid="uid://btf7g5tbv53ae" path="res://Stats/Enemy1Stats.tres" id="3_27tnh"]
+[ext_resource type="Resource" uid="uid://d16iobhf0py1v" path="res://Stats/Boss1.tres" id="3_4evkx"]
 [ext_resource type="PackedScene" uid="uid://ih821u05qh4v" path="res://Components/HealthComponent/health_component.tscn" id="4_rl7tf"]
 [ext_resource type="PackedScene" uid="uid://dqqmdp3hyac81" path="res://Components/BoxDecider/box_decider.tscn" id="5_gj1dt"]
 [ext_resource type="PackedScene" uid="uid://0uair2p0ft75" path="res://Components/StatusComponent/status_component.tscn" id="6_51nmk"]
@@ -183,7 +183,7 @@ script = ExtResource("1_0rt1n")
 
 [node name="StatsAllocator" parent="." unique_id=437436460 node_paths=PackedStringArray("health_component", "box_decider") instance=ExtResource("2_q8bsv")]
 unique_name_in_owner = true
-stats = ExtResource("3_27tnh")
+stats = ExtResource("3_4evkx")
 health_component = NodePath("../HealthComponent")
 box_decider = NodePath("../BoxDecider")
 
@@ -235,3 +235,10 @@ offset_bottom = 177.0
 [node name="damage_txt" type="Label" parent="ui/stats_panel" unique_id=1925632547]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1472366335]
+offset_left = -48.0
+offset_top = -73.0
+offset_right = -8.0
+offset_bottom = -56.0
+text = "BOSS"
