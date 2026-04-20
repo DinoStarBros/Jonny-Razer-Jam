@@ -8,7 +8,7 @@ var max_hp : float = 100.0
 var hp : float:
 	set(value):
 		hp = clampi(value, 0.0, max_hp)
-var stats : EntityStats
+var stats : BaseEntityStats
 var died : bool = false
 var enemy_stat_mult : float
 

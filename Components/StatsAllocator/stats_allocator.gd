@@ -5,7 +5,7 @@ extends EntityComponentClass
 ## an entity
 class_name StatsAllocator
 
-@export var stats : EntityStats
+@export var stats : BaseEntityStats
 
 @export var health_component : HealthComponent
 @export var box_decider : BoxDecider

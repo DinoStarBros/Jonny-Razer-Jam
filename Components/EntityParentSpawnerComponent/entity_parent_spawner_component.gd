@@ -28,21 +28,28 @@ func _upgrade_done() -> void:
 	
 	Global.current_game_state = Global.game_states.TRANSITION_NEXT_COMBAT
 	
-	#await get_tree().create_timer(0).timeout
-	await get_tree().create_timer(Global.WAIT_TIME + randf_range(-0.2, 0.5)).timeout
+	await get_tree().create_timer(0).timeout
+	#await get_tree().create_timer(Global.WAIT_TIME + randf_range(-0.2, 0.5)).timeout
 	
 	Global.current_game_state = Global.game_states.FIGHT
 	GlobalSignals.CombatStart.emit()
-	
-	print(level_resource.enemy_amount)
 
 func _combat_start() -> void:
-	_spawn_enemy()
+	if curr_enemies_defeated < level_resource.enemy_amount - 1:
+		_spawn_enemy()
+	else:
+		_spawn_boss()
 
 func _spawn_enemy() -> void:
 	var enemy : Enemy = level_resource.enemy_scns.pick_random().instantiate()
 	add_child(enemy)
 	enemy.global_position = Global.ESPAWN_POS
+
+func _spawn_boss() -> void:
+	
+	var boss : Enemy = level_resource.boss_scn.instantiate()
+	add_child(boss)
+	boss.global_position = Global.ESPAWN_POS
 
 func _spawn_ene_defeated_popup(enemies_defeated: int, max_enemies: int) -> void:
 	var enemies_defeated_popup : EnemiesDefeatedPopup = References.enemies_def_scn.instantiate()

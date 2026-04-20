@@ -1,5 +1,5 @@
 extends Resource
-class_name EntityStats
+class_name BaseEntityStats
 
 @export var max_hp : float
 

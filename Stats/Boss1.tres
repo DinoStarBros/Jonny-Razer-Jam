@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BaseEntityStats" format=3 uid="uid://d16iobhf0py1v"]
+
+[ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="1_vkdp2"]
+
+[resource]
+script = ExtResource("1_vkdp2")
+max_hp = 200.0
+metadata/_custom_type_script = "uid://chqad1x7kc28f"

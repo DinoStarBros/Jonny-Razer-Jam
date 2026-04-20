@@ -7,6 +7,6 @@ var max_enemies : int = 69
 func _ready() -> void:
 	
 	%Text.text = str(
-		enemies, #"/", max_enemies,
+		enemies, "/", max_enemies,
 		" Scalpers Sabotaged!"
 	)

@@ -11,7 +11,7 @@ var box_scenes : Array[PackedScene]
 var spawn_amount_range : Vector2i
 var spawn_time_range : Vector2
 var box_speed_range : Vector2
-var stats : EntityStats
+var stats : BaseEntityStats
 var enemy_stat_mult : float
 ## Damage value after going through scaling
 var final_damage : float

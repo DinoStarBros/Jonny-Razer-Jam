@@ -12,7 +12,7 @@ class_name Player
 var died : bool = false ## A one time thingy
 #var current
 
-const stats : EntityStats = preload("res://Stats/BasePlayerStats.tres")
+const stats : BaseEntityStats = preload("res://Stats/BasePlayerStats.tres")
 
 func _ready() -> void:
 	
