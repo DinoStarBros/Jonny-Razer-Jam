@@ -83,6 +83,8 @@ func final_slice() -> void:
 	if self is TrapDefendBox:
 		GlobalSignals.DamagePlayer.emit(damage)
 
+var tween : Tween
 func tween_velocity_back(duration: float = 0.25) -> void:
-	var tween = get_tree().create_tween()
+	if tween: tween.kill()
+	tween = get_tree().create_tween()
 	tween.tween_property(self, "velocity", leftward_velocity, duration)

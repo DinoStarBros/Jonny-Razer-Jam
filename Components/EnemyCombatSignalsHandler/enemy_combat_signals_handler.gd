@@ -34,8 +34,7 @@ func death_anim() -> void:
 	await anim.animation_finished
 	# This means the death animation is done
 	GlobalSignals.StartUpgrade.emit()
-	print("UM")
-	free()
+	get_parent().queue_free()
 
 func attack_anim() -> void:
 	anim.stop()
