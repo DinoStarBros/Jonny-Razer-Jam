@@ -1,6 +1,8 @@
 extends Area2D
 class_name Cursor
 
+@onready var ctxt_pivot: Node2D = %ctxt_pivot
+
 const speed_increase : int = 50
 const base_speed : float = 300
 const max_speed : float = 1200
@@ -23,12 +25,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	cursor_speed = clamp(cursor_speed, 0, max_speed)
-	
+	ctxt_pivot.rotation = lerp_angle(ctxt_pivot.rotation, 0.0, 8.0 * delta)
+	ctxt_pivot.scale = lerp(ctxt_pivot.scale, Vector2.ONE, 12.0 * delta)
 	_move(delta)
 	
 	#%text.text = str("Combo : ", combo)
 	
-	%debug.text = str(
+	%combo_text.text = str(
 		#"Speed: ", cursor_speed, 
 		#" ",
 		"Combo: ", combo
@@ -112,6 +115,12 @@ func _succesful_box_hit() -> void:
 	%hit3.play()
 	
 	Global.spawn_clickboom(Color.WHITE, global_position)
+	
+	if randf() > 0.5:
+		ctxt_pivot.rotation_degrees = randf_range(20,40)
+	else:
+		ctxt_pivot.rotation_degrees = -randf_range(20,40)
+	ctxt_pivot.scale = Vector2(1.5, 1.5)
 
 func _failed_box_hit() -> void:
 	cursor_speed = base_speed

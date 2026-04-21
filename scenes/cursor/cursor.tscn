@@ -18,6 +18,44 @@ font_size = 60
 font_color = Color(0, 0, 0, 1)
 outline_size = 10
 
+[sub_resource type="Animation" id="Animation_dicen"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ctxt_pivot:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1fc3j"]
+resource_name = "comboUp"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ctxt_pivot:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(0.13869622, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dicen"]
+_data = {
+&"RESET": SubResource("Animation_dicen"),
+&"comboUp": SubResource("Animation_1fc3j")
+}
+
 [node name="cursor" type="Area2D" unique_id=1348747850]
 z_index = 100
 script = ExtResource("1_e5wmr")
@@ -90,7 +128,11 @@ bus = &"SFX"
 
 [node name="debug_ui" type="CanvasLayer" parent="." unique_id=57303251]
 
-[node name="debug" type="Label" parent="debug_ui" unique_id=1449697894]
+[node name="ctxt_pivot" type="Node2D" parent="debug_ui" unique_id=367487633]
+unique_name_in_owner = true
+position = Vector2(640, 560)
+
+[node name="combo_text" type="Label" parent="debug_ui/ctxt_pivot" unique_id=1449697894]
 unique_name_in_owner = true
 anchors_preset = 7
 anchor_left = 0.5
@@ -98,10 +140,14 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -98.0
-offset_top = -190.0
+offset_top = -30.0
 offset_right = 98.0
-offset_bottom = -130.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Combo: 67"
 label_settings = SubResource("LabelSettings_1fc3j")
+
+[node name="textAnim" type="AnimationPlayer" parent="debug_ui" unique_id=856913728]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_dicen")
