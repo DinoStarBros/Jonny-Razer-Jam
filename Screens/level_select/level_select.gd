@@ -7,7 +7,7 @@ extends Control
 		],
 	"L2": [
 		%l2, 
-		func():print("2")
+		func():SceneManager.change_scene(References.levels_arr[1])
 		],
 	"L3": [
 		%l3, 

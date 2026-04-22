@@ -9,7 +9,7 @@ var hp : float:
 		hp = clampi(value, 0.0, max_hp)
 var stats : BaseEntityStats
 var died : bool = false
-var enemy_stat_mult : float
+
 
 ## Enemy damaging the player
 func player_hurt(damage: float) -> void:
@@ -55,20 +55,15 @@ func _ready() -> void:
 	await get_tree().process_frame
 	
 	if get_parent() is Enemy:
-		enemy_stat_mult = (Global.enemy_idx + 1)
 		if health_bar:
 			health_bar.global_position = get_parent().HEALTHBAR_POSITION
 			health_bar.self_modulate = Color.RED
 			
-			
 			if health_bar is ProgressBar:
 				health_bar.fill_mode = health_bar.FillMode.FILL_END_TO_BEGIN
-			
-	else:
-		enemy_stat_mult = 1
 	
 	max_hp = roundi(
-		stats.max_hp * Scalings.scale(enemy_stat_mult - 1, stats.hp_scaling_strength, true, stats.hp_scale_type)
+		stats.max_hp * Scalings.scale(get_stat_value() - 1, stats.hp_scaling_strength, true, stats.hp_scale_type)
 		)
 	hp = roundi(max_hp)
 	

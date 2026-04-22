@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelResource" format=3 uid="uid://blkiflf1jegeb"]
+
+[ext_resource type="PackedScene" uid="uid://bpis22rrv0lxd" path="res://entities/boss1/boss_1.tscn" id="1_bvp6o"]
+[ext_resource type="PackedScene" uid="uid://bfmvl41xfvs85" path="res://entities/enemies/enemy1/enemy_1.tscn" id="2_ss7j2"]
+[ext_resource type="Script" uid="uid://cyx67cfta1dtm" path="res://LevelResources/LevelResource.gd" id="3_i0bgp"]
+
+[resource]
+script = ExtResource("3_i0bgp")
+enemy_scns = Array[PackedScene]([ExtResource("2_ss7j2")])
+enemy_amount = 6
+boss_scn = ExtResource("1_bvp6o")
+metadata/_custom_type_script = "uid://cyx67cfta1dtm"

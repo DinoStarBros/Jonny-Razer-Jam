@@ -81,8 +81,8 @@ horizontal_alignment = 1
 
 [node name="HpBarticle" type="GPUParticles2D" parent="." unique_id=916696418]
 unique_name_in_owner = true
-visible = false
 position = Vector2(0, 18)
+emitting = false
 amount = 10
 texture = ExtResource("2_qjbgn")
 lifetime = 0.2

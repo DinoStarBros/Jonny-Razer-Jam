@@ -276,9 +276,9 @@ layer = 0
 
 [node name="stats_panel" type="VBoxContainer" parent="ui" unique_id=60656746]
 offset_left = 1063.0
-offset_top = 137.0
+offset_top = 227.0
 offset_right = 1103.0
-offset_bottom = 177.0
+offset_bottom = 267.0
 
 [node name="damage_txt" type="Label" parent="ui/stats_panel" unique_id=1925632547]
 unique_name_in_owner = true

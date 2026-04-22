@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dda830yykqet8"]
-
-[ext_resource type="Script" uid="uid://2hdkosn3smf4" path="res://Components/PlayerCombatSignalsHandler/player_combat_signals_handler.gd" id="1_di7gv"]
-
-[node name="PlayerCombatSignalsHandler" type="Node2D" unique_id=12414593]
-script = ExtResource("1_di7gv")

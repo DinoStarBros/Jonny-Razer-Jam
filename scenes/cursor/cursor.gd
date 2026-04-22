@@ -128,7 +128,7 @@ func _succesful_box_hit() -> void:
 		ctxt_pivot.rotation_degrees += randf_range(15,30)
 	else:
 		ctxt_pivot.rotation_degrees += -randf_range(15,30)
-	ctxt_pivot.scale = ctxt_desire_scale + Vector2(.5, .5)
+	ctxt_pivot.scale = ctxt_desire_scale + Vector2(.2, .2)
 
 func _failed_box_hit() -> void:
 	cursor_speed = base_speed

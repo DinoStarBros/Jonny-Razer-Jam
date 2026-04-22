@@ -12,7 +12,6 @@ var spawn_amount_range : Vector2i
 var spawn_time_range : Vector2
 var box_speed_range : Vector2
 var stats : BaseEntityStats
-var enemy_stat_mult : float
 ## Damage value after going through scaling
 var final_damage : float
 
@@ -22,21 +21,16 @@ func _ready() -> void:
 	random_or_pattern = stats.random_or_pattern
 	box_scenes = stats.box_scenes
 	
-	if get_parent() is Enemy:
-		enemy_stat_mult = (Global.enemy_idx + 1)
-	else:
-		enemy_stat_mult = 1
-	
 	spawn_amount_range = stats.spawn_amount_range
 	
 	# Decreases spawn time, making the enemy spawn boxes faster
-	spawn_time_range = stats.spawn_time_range * Scalings.scale(enemy_stat_mult, stats.box_spawn_time_scaling_strength, false, stats.box_spawn_time_scale_type)
+	spawn_time_range = stats.spawn_time_range * Scalings.scale(get_stat_value(), stats.box_spawn_time_scaling_strength, false, stats.box_spawn_time_scale_type)
 	
 	# Increases box speed, making defend boxes move faster to the left
-	box_speed_range = stats.box_speed_range * Scalings.scale(enemy_stat_mult, stats.box_speed_scaling_strength, true, stats.box_speed_scale_type)
+	box_speed_range = stats.box_speed_range * Scalings.scale(get_stat_value(), stats.box_speed_scaling_strength, true, stats.box_speed_scale_type)
 	
 	final_damage = roundi(
-		stats.damage * Scalings.scale(enemy_stat_mult - 1, stats.damage_scaling_strength, true, stats.damage_scale_type)
+		stats.damage * Scalings.scale(get_stat_value() - 1, stats.damage_scaling_strength, true, stats.damage_scale_type)
 		)
 	
 	%SpawnTimer.timeout.connect(_spawn_timer_timeout)
