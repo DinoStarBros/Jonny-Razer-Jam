@@ -1,7 +1,7 @@
 extends EntityComponentClass
 class_name HealthComponent
 
-@export var health_bar : ProgressBar
+@export var health_bar : FancyHealthbar
 
 var max_hp : float = 100.0
 var hp : float:
@@ -53,6 +53,9 @@ func enemy_hurt(damage: float, allow_crit: bool = true) -> void:
 func _ready() -> void:
 	
 	await get_tree().process_frame
+	
+	if health_bar:
+		health_bar.the_name = stats.the_name
 	
 	if get_parent() is Enemy:
 		if health_bar:

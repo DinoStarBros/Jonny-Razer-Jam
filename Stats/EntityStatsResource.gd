@@ -5,6 +5,8 @@ enum scaling_function_types {
 	LINEAR, EXPONENTIAL, LOGARITHMIC, QUADRATIC
 }
 
+@export var the_name : String = "Enemy Chaser"
+
 @export var max_hp : float
 
 ## True = Chooses Boxes Randomly;

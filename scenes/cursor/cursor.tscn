@@ -63,6 +63,7 @@ z_index = 100
 script = ExtResource("1_e5wmr")
 
 [node name="cursor_sprite" type="Sprite2D" parent="." unique_id=1094641587]
+unique_name_in_owner = true
 z_index = 50
 rotation = 1.5707964
 scale = Vector2(2, 2)

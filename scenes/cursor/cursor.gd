@@ -2,6 +2,7 @@ extends Area2D
 class_name Cursor
 
 @onready var ctxt_pivot: Node2D = %ctxt_pivot
+@onready var cursor_sprite: Sprite2D = %cursor_sprite
 
 const speed_increase : int = 50
 const base_speed : float = 300
@@ -36,6 +37,9 @@ func _process(delta: float) -> void:
 	ctxt_pivot.rotation = lerp_angle(ctxt_pivot.rotation, 0.0, 8.0 * delta)
 	ctxt_pivot.scale = lerp(ctxt_pivot.scale, ctxt_desire_scale, 12.0 * delta)
 	ctxt_pivot.global_position = lerp(ctxt_pivot.global_position, Vector2(640,560), 6.0 * delta)
+	
+	cursor_sprite.position = lerp(cursor_sprite.position, Vector2(0, -5), 4.0 * delta)
+	cursor_sprite.rotation = lerp_angle(cursor_sprite.rotation, PI/2, 8.0 * delta)
 	
 	_move(delta)
 	
@@ -129,6 +133,8 @@ func _succesful_box_hit() -> void:
 	else:
 		ctxt_pivot.rotation_degrees += -randf_range(15,30)
 	ctxt_pivot.scale = ctxt_desire_scale + Vector2(.2, .2)
+	
+	cursor_sprite.position.y = 10
 
 func _failed_box_hit() -> void:
 	cursor_speed = base_speed
@@ -139,6 +145,11 @@ func _failed_box_hit() -> void:
 	
 	ctxt_pivot.global_position.y += randf_range(-20, 20)
 	ctxt_pivot.global_position.x += randf_range(-20, 20)
+	
+	if randf() > 0.5:
+		cursor_sprite.rotation_degrees = 90 + randf_range(5,10)
+	else:
+		cursor_sprite.rotation_degrees = 90 - randf_range(5,10)
 
 func _player_hurt(damage: float) -> void:
 	# Had to copy-paste instead of just calling

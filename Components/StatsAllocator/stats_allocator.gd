@@ -7,6 +7,7 @@ class_name StatsAllocator
 
 @export var stats : BaseEntityStats
 
+@export_category("The Entity Components")
 @export var health_component : HealthComponent
 @export var box_decider : BoxDecider
 @export var combat_signals : CombatSignalsHandler ## Just here for attendance lol

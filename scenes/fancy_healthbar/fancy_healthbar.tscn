@@ -28,6 +28,11 @@ font_size = 35
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_qjbgn"]
+font_size = 35
+outline_size = 11
+outline_color = Color(0, 0, 0, 1)
+
 [node name="FancyHealthbar" type="ProgressBar" unique_id=526919355]
 self_modulate = Color(0.36854124, 0.7507515, 3.85046e-07, 1)
 custom_minimum_size = Vector2(350, 35)
@@ -87,3 +92,12 @@ amount = 10
 texture = ExtResource("2_qjbgn")
 lifetime = 0.2
 process_material = ExtResource("2_l6s5o")
+
+[node name="name_text" type="Label" parent="." unique_id=965427874]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = -45.0
+offset_right = 117.0
+offset_bottom = -9.0
+text = "Player HP:"
+label_settings = SubResource("LabelSettings_qjbgn")

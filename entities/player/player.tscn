@@ -443,11 +443,6 @@ _data = {
 &"walk": SubResource("Animation_afbqv")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_t1t22"]
-font_size = 30
-outline_size = 11
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_50fht"]
 font_size = 20
 shadow_size = 3
@@ -516,15 +511,6 @@ offset_left = 50.0
 offset_top = 138.0
 offset_right = 400.0
 offset_bottom = 173.0
-
-[node name="Name" type="Label" parent="ui/FancyHealthbar" unique_id=1839763261]
-layout_mode = 0
-offset_left = 6.0
-offset_top = -37.0
-offset_right = 106.0
-offset_bottom = -7.0
-text = "Player HP:"
-label_settings = SubResource("LabelSettings_t1t22")
 
 [node name="pauseButton" type="Button" parent="ui" unique_id=1906936024]
 unique_name_in_owner = true

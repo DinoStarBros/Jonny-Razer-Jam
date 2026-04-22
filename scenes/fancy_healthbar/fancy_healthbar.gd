@@ -4,11 +4,16 @@ class_name FancyHealthbar
 @onready var white_bar: ProgressBar = %WhiteBar
 @onready var hp_barticle: GPUParticles2D = %HpBarticle
 @onready var hp_text: Label = %HPText
+@onready var name_text: Label = %name_text
 
 var wb_desiredVal : float
 var lerp_difference : float
 var white_bar_end_pos : float
 var bar_end_pos : float
+var the_name : String:
+	set(value):
+		the_name = value
+		name_text.text = the_name
 
 func _ready() -> void:
 	await get_tree().process_frame

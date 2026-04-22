@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("2_10gkr")
+the_name = "Balanced1"
 max_hp = 100.0
 box_scenes = Array[PackedScene]([ExtResource("1_effm1")])
 spawn_time_range = Vector2(2, 3)
@@ -12,5 +13,5 @@ damage = 9.0
 crit_chance = 0.0
 hp_scaling_strength = 0.3
 damage_scaling_strength = 0.3
-box_spawn_time_scaling_strength = 0.2
+box_spawn_time_scaling_strength = 0.15
 metadata/_custom_type_script = "uid://chqad1x7kc28f"
