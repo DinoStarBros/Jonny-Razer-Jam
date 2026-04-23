@@ -6,10 +6,10 @@ uid="uid://csqpyedqexby1"
 
 [deps]
 
-files=["res://CDLocalization/CDLoc.english.translation", "res://CDLocalization/CDLoc.filipino.translation"]
+files=["res://CDLocalization/CDLoc.English.translation", "res://CDLocalization/CDLoc.Filipino.translation"]
 
 source_file="res://CDLocalization/CDLoc.csv"
-dest_files=["res://CDLocalization/CDLoc.english.translation", "res://CDLocalization/CDLoc.filipino.translation"]
+dest_files=["res://CDLocalization/CDLoc.English.translation", "res://CDLocalization/CDLoc.Filipino.translation"]
 
 [params]
 

@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://d00ws7wljnit4" path="res://FlatUI4/UIpack_vector.svg" id="1"]
 [ext_resource type="FontFile" uid="uid://b37l2ofya7lsg" path="res://m6x11plus.ttf" id="1_tbjau"]
-[ext_resource type="FontFile" uid="uid://5m4nyunlya27" path="res://FlatUI4/kenvector_future.ttf" id="2"]
 
 [sub_resource type="StyleBoxTexture" id="1"]
 texture = ExtResource("1")
@@ -38,203 +37,7 @@ texture_margin_right = 8.78053
 texture_margin_bottom = 14.2161
 region_rect = Rect2(421, 244, 190, 45)
 
-[sub_resource type="FontFile" id="31"]
-fallbacks = Array[Font]([ExtResource("2")])
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/100/0/ascent = 0.0
-cache/0/100/0/descent = 0.0
-cache/0/100/0/underline_position = 0.0
-cache/0/100/0/underline_thickness = 0.0
-cache/0/100/0/scale = 1.0
-cache/0/40/0/ascent = 0.0
-cache/0/40/0/descent = 0.0
-cache/0/40/0/underline_position = 0.0
-cache/0/40/0/underline_thickness = 0.0
-cache/0/40/0/scale = 1.0
-cache/0/14/0/ascent = 0.0
-cache/0/14/0/descent = 0.0
-cache/0/14/0/underline_position = 0.0
-cache/0/14/0/underline_thickness = 0.0
-cache/0/14/0/scale = 1.0
-cache/0/19/0/ascent = 0.0
-cache/0/19/0/descent = 0.0
-cache/0/19/0/underline_position = 0.0
-cache/0/19/0/underline_thickness = 0.0
-cache/0/19/0/scale = 1.0
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/27/0/ascent = 0.0
-cache/0/27/0/descent = 0.0
-cache/0/27/0/underline_position = 0.0
-cache/0/27/0/underline_thickness = 0.0
-cache/0/27/0/scale = 1.0
-cache/0/36/0/ascent = 0.0
-cache/0/36/0/descent = 0.0
-cache/0/36/0/underline_position = 0.0
-cache/0/36/0/underline_thickness = 0.0
-cache/0/36/0/scale = 1.0
-cache/0/46/0/ascent = 0.0
-cache/0/46/0/descent = 0.0
-cache/0/46/0/underline_position = 0.0
-cache/0/46/0/underline_thickness = 0.0
-cache/0/46/0/scale = 1.0
-cache/0/52/0/ascent = 0.0
-cache/0/52/0/descent = 0.0
-cache/0/52/0/underline_position = 0.0
-cache/0/52/0/underline_thickness = 0.0
-cache/0/52/0/scale = 1.0
-cache/0/62/0/ascent = 0.0
-cache/0/62/0/descent = 0.0
-cache/0/62/0/underline_position = 0.0
-cache/0/62/0/underline_thickness = 0.0
-cache/0/62/0/scale = 1.0
-cache/0/67/0/ascent = 0.0
-cache/0/67/0/descent = 0.0
-cache/0/67/0/underline_position = 0.0
-cache/0/67/0/underline_thickness = 0.0
-cache/0/67/0/scale = 1.0
-cache/0/74/0/ascent = 0.0
-cache/0/74/0/descent = 0.0
-cache/0/74/0/underline_position = 0.0
-cache/0/74/0/underline_thickness = 0.0
-cache/0/74/0/scale = 1.0
-cache/0/84/0/ascent = 0.0
-cache/0/84/0/descent = 0.0
-cache/0/84/0/underline_position = 0.0
-cache/0/84/0/underline_thickness = 0.0
-cache/0/84/0/scale = 1.0
-cache/0/89/0/ascent = 0.0
-cache/0/89/0/descent = 0.0
-cache/0/89/0/underline_position = 0.0
-cache/0/89/0/underline_thickness = 0.0
-cache/0/89/0/scale = 1.0
-cache/0/92/0/ascent = 0.0
-cache/0/92/0/descent = 0.0
-cache/0/92/0/underline_position = 0.0
-cache/0/92/0/underline_thickness = 0.0
-cache/0/92/0/scale = 1.0
-cache/0/93/0/ascent = 0.0
-cache/0/93/0/descent = 0.0
-cache/0/93/0/underline_position = 0.0
-cache/0/93/0/underline_thickness = 0.0
-cache/0/93/0/scale = 1.0
-cache/0/95/0/ascent = 0.0
-cache/0/95/0/descent = 0.0
-cache/0/95/0/underline_position = 0.0
-cache/0/95/0/underline_thickness = 0.0
-cache/0/95/0/scale = 1.0
-cache/0/97/0/ascent = 0.0
-cache/0/97/0/descent = 0.0
-cache/0/97/0/underline_position = 0.0
-cache/0/97/0/underline_thickness = 0.0
-cache/0/97/0/scale = 1.0
-cache/0/91/0/ascent = 0.0
-cache/0/91/0/descent = 0.0
-cache/0/91/0/underline_position = 0.0
-cache/0/91/0/underline_thickness = 0.0
-cache/0/91/0/scale = 1.0
-cache/0/86/0/ascent = 0.0
-cache/0/86/0/descent = 0.0
-cache/0/86/0/underline_position = 0.0
-cache/0/86/0/underline_thickness = 0.0
-cache/0/86/0/scale = 1.0
-cache/0/78/0/ascent = 0.0
-cache/0/78/0/descent = 0.0
-cache/0/78/0/underline_position = 0.0
-cache/0/78/0/underline_thickness = 0.0
-cache/0/78/0/scale = 1.0
-cache/0/69/0/ascent = 0.0
-cache/0/69/0/descent = 0.0
-cache/0/69/0/underline_position = 0.0
-cache/0/69/0/underline_thickness = 0.0
-cache/0/69/0/scale = 1.0
-cache/0/65/0/ascent = 0.0
-cache/0/65/0/descent = 0.0
-cache/0/65/0/underline_position = 0.0
-cache/0/65/0/underline_thickness = 0.0
-cache/0/65/0/scale = 1.0
-cache/0/63/0/ascent = 0.0
-cache/0/63/0/descent = 0.0
-cache/0/63/0/underline_position = 0.0
-cache/0/63/0/underline_thickness = 0.0
-cache/0/63/0/scale = 1.0
-cache/0/61/0/ascent = 0.0
-cache/0/61/0/descent = 0.0
-cache/0/61/0/underline_position = 0.0
-cache/0/61/0/underline_thickness = 0.0
-cache/0/61/0/scale = 1.0
-cache/0/59/0/ascent = 0.0
-cache/0/59/0/descent = 0.0
-cache/0/59/0/underline_position = 0.0
-cache/0/59/0/underline_thickness = 0.0
-cache/0/59/0/scale = 1.0
-cache/0/58/0/ascent = 0.0
-cache/0/58/0/descent = 0.0
-cache/0/58/0/underline_position = 0.0
-cache/0/58/0/underline_thickness = 0.0
-cache/0/58/0/scale = 1.0
-cache/0/57/0/ascent = 0.0
-cache/0/57/0/descent = 0.0
-cache/0/57/0/underline_position = 0.0
-cache/0/57/0/underline_thickness = 0.0
-cache/0/57/0/scale = 1.0
-cache/0/56/0/ascent = 0.0
-cache/0/56/0/descent = 0.0
-cache/0/56/0/underline_position = 0.0
-cache/0/56/0/underline_thickness = 0.0
-cache/0/56/0/scale = 1.0
-cache/0/55/0/ascent = 0.0
-cache/0/55/0/descent = 0.0
-cache/0/55/0/underline_position = 0.0
-cache/0/55/0/underline_thickness = 0.0
-cache/0/55/0/scale = 1.0
-cache/0/54/0/ascent = 0.0
-cache/0/54/0/descent = 0.0
-cache/0/54/0/underline_position = 0.0
-cache/0/54/0/underline_thickness = 0.0
-cache/0/54/0/scale = 1.0
-cache/0/53/0/ascent = 0.0
-cache/0/53/0/descent = 0.0
-cache/0/53/0/underline_position = 0.0
-cache/0/53/0/underline_thickness = 0.0
-cache/0/53/0/scale = 1.0
-cache/0/51/0/ascent = 0.0
-cache/0/51/0/descent = 0.0
-cache/0/51/0/underline_position = 0.0
-cache/0/51/0/underline_thickness = 0.0
-cache/0/51/0/scale = 1.0
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
+[sub_resource type="SystemFont" id="SystemFont_uh2d2"]
 
 [sub_resource type="AtlasTexture" id="6"]
 atlas = ExtResource("1")
@@ -260,6 +63,8 @@ region = Rect2(0, 544, 36, 36)
 
 [sub_resource type="StyleBoxEmpty" id="13"]
 
+[sub_resource type="SystemFont" id="SystemFont_tbjau"]
+
 [sub_resource type="AtlasTexture" id="15"]
 atlas = ExtResource("1")
 region = Rect2(200, 544, 36, 36)
@@ -279,6 +84,8 @@ texture_margin_top = 2.0
 texture_margin_right = 2.0
 texture_margin_bottom = 2.0
 region_rect = Rect2(840, 316, 192, 6)
+
+[sub_resource type="SystemFont" id="SystemFont_r3xdp"]
 
 [sub_resource type="StyleBoxEmpty" id="18"]
 
@@ -301,6 +108,8 @@ texture_margin_top = 3.0
 texture_margin_right = 3.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(485, 310, 100, 100)
+
+[sub_resource type="SystemFont" id="SystemFont_algbb"]
 
 [sub_resource type="AtlasTexture" id="22"]
 atlas = ExtResource("1")
@@ -343,6 +152,8 @@ texture_margin_bottom = 13.9025
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 region_rect = Rect2(485, 310, 100, 100)
+
+[sub_resource type="SystemFont" id="SystemFont_sqhfm"]
 
 [sub_resource type="StyleBoxTexture" id="28"]
 content_margin_left = 12.0
@@ -399,7 +210,7 @@ CheckBox/colors/font_hover_color_pressed = Color(0.34902, 0.34902, 0.34902, 1)
 CheckBox/colors/font_pressed_color = Color(0.388235, 0.388235, 0.388235, 1)
 CheckBox/constants/check_v_offset = 0
 CheckBox/constants/h_separation = 4
-CheckBox/fonts/font = SubResource("31")
+CheckBox/fonts/font = SubResource("SystemFont_uh2d2")
 CheckBox/icons/checked = SubResource("6")
 CheckBox/icons/radio_checked = SubResource("7")
 CheckBox/icons/radio_unchecked = SubResource("8")
@@ -417,7 +228,7 @@ CheckButton/colors/font_hover_color_pressed = Color(0.388235, 0.388235, 0.388235
 CheckButton/colors/font_pressed_color = Color(0.388235, 0.388235, 0.388235, 1)
 CheckButton/constants/check_v_offset = 0
 CheckButton/constants/h_separation = 4
-CheckButton/fonts/font = SubResource("31")
+CheckButton/fonts/font = SubResource("SystemFont_tbjau")
 CheckButton/icons/checked = SubResource("15")
 CheckButton/icons/checked_disabled = SubResource("15")
 CheckButton/icons/unchecked = SubResource("14")
@@ -443,7 +254,7 @@ LineEdit/colors/font_color_uneditable = Color(0.88, 0.88, 0.88, 0.5)
 LineEdit/colors/font_selected_color = Color(0.894118, 0.894118, 0.894118, 1)
 LineEdit/colors/selection_color = Color(0.117647, 0.654902, 0.882353, 1)
 LineEdit/constants/minimum_spaces = 12
-LineEdit/fonts/font = SubResource("31")
+LineEdit/fonts/font = SubResource("SystemFont_r3xdp")
 LineEdit/icons/clear = null
 LineEdit/styles/focus = SubResource("18")
 LineEdit/styles/normal = SubResource("19")
@@ -468,7 +279,7 @@ PopupMenu/colors/font_disabled_color = Color(0.4, 0.4, 0.4, 0.8)
 PopupMenu/colors/font_hover_color = Color(0.388235, 0.388235, 0.388235, 1)
 PopupMenu/constants/h_separation = 4
 PopupMenu/constants/vseparation = 32
-PopupMenu/fonts/font = SubResource("31")
+PopupMenu/fonts/font = SubResource("SystemFont_algbb")
 PopupMenu/icons/checked = SubResource("22")
 PopupMenu/icons/radio_checked = SubResource("23")
 PopupMenu/icons/radio_unchecked = SubResource("24")
@@ -513,7 +324,7 @@ TextEdit/constants/completion_lines = 7
 TextEdit/constants/completion_max_width = 50
 TextEdit/constants/completion_scroll_width = 3
 TextEdit/constants/line_spacing = 4
-TextEdit/fonts/font = SubResource("31")
+TextEdit/fonts/font = SubResource("SystemFont_sqhfm")
 TextEdit/icons/fold = null
 TextEdit/icons/folded = null
 TextEdit/icons/space = null

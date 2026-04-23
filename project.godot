@@ -196,6 +196,10 @@ item9={
 
 pointing/emulate_touch_from_mouse=true
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://CDLocalization/CDLoc.english.translation", "res://CDLocalization/CDLoc.filipino.translation")
+
 [layer_names]
 
 2d_physics/layer_1="Cursor - Box"

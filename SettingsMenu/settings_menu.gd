@@ -5,6 +5,9 @@ class_name Settings
 @onready var screen_shake: Button = %screen_shake
 @onready var frame_freeze: Button = %frame_freeze
 @onready var crt_effect: Button = %crt_effect
+@onready var master_vol_slider: HSlider = %master_volume
+@onready var music_vol_slider: HSlider = %music_volume
+@onready var sfx_vol_slider: HSlider = %sfx_volume
 @onready var translations: OptionButton = %Translations
 
 var resolutions : Array[Vector2i] = [
@@ -18,6 +21,7 @@ var allow_audios_play: bool = false
 func _ready()->void:
 	
 	crt_effect.pressed.connect(_on_crt_effect_pressed)
+	translations.item_selected.connect(_on_translations_selected)
 	
 	await get_tree().process_frame
 	_load()
@@ -27,7 +31,7 @@ func on_pause() -> void:
 	sure_quit = false
 
 func on_resume() -> void:
-	get_tree().paused=false
+	get_tree().paused = false
 	_save()
 
 func _save()->void: ## Saves the settings stuff
@@ -37,9 +41,9 @@ func _load()->void: ## Loads the settings stuff
 	SaveLoad.load_settings_stuff()
 	
 	# Updates the visuals and sliders in the settings menu
-	%master_volume.value = SaveLoad.settings.master_volume
-	%music_volume.value = SaveLoad.settings.music_volume
-	%sfx_vol.value = SaveLoad.settings.sfx_volume
+	master_vol_slider.value = SaveLoad.settings.master_volume
+	music_vol_slider.value = SaveLoad.settings.music_volume
+	sfx_vol_slider.value = SaveLoad.settings.sfx_volume
 	
 	if SaveLoad.settings.screen_shake_value:
 		screen_shake.text = str("On")
@@ -55,6 +59,9 @@ func _load()->void: ## Loads the settings stuff
 		crt_effect.text = str("On")
 	else:
 		crt_effect.text = str("Off")
+	
+	translations.select(SaveLoad.settings.language_idx)
+	TranslationServer.set_locale(translations.get_item_text(SaveLoad.settings.language_idx))
 
 func _on_reset_pressed()->void:
 	SaveLoad._reset_save_file()
@@ -62,21 +69,21 @@ func _on_reset_pressed()->void:
 
 func _on_master_volume_value_changed(value: float)->void:
 	if allow_audios_play:
-		%vol_change_master.pitch_scale = value
+		%vol_change_master.pitch_scale = max(value, 0.01)
 		%vol_change_master.play(0.005)
 	
 	SaveLoad.settings.master_volume = value
 
 func _on_music_volume_value_changed(value: float)->void:
 	if allow_audios_play:
-		%vol_change_music.pitch_scale = value
+		%vol_change_music.pitch_scale = max(value, 0.01)
 		%vol_change_music.play(0.005)
 	
 	SaveLoad.settings.music_volume = value
 
 func _on_sfx_vol_value_changed(value: float)->void:
 	if allow_audios_play:
-		%vol_change_sfx.pitch_scale = value
+		%vol_change_sfx.pitch_scale = max(value, 0.01)
 		%vol_change_sfx.play(0.005)
 	
 	SaveLoad.settings.sfx_volume = value
@@ -114,7 +121,5 @@ func _on_crt_effect_pressed() -> void:
 func _on_translations_selected(index: int) -> void:
 	SaveLoad.settings.language_idx = index
 	
-	var item_string : String = (
-		translations.get_item_text(index)
-	)
+	var item_string : String = (translations.get_item_text(index))
 	TranslationServer.set_locale(item_string)

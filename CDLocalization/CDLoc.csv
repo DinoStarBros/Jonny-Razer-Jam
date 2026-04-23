@@ -1,6 +1,23 @@
-key,english,filipino
-play,Play,Maglaro
-options,Options,Opsyon
-about,About,Tungkol
-credits,Credits,Kredito
-quit,Quit,Aalis
+key,English,Filipino
+Play,Play,Maglaro
+Tutorial,Tutorial,Tutoryal
+Settings,Settings,Settingo
+Credits,Credits,Kredito
+Quit,Quit,Aalis
+,,
+zarch_desc,"Zarchivas Kicks: Kicks back enemy
+attacks, dealing damage for each one.",
+krof_desc,Kroflex: Slows down enemy attacks by a lot.,
+burger_desc,"CroakDonalds: Heals 30% of the player's
+HP.",
+perfume_desc,"Eau De Swamp: Increases crit chance for a 
+limited time.",
+phone_desc,OPhone: Orders 3 random items,
+energy_desc,"Garry Energy Drink: Makes product boxes 
+spawn faster
+",
+cards_desc,"Super Card Pack: Adds spells cards to the 
+belt
+Ice: Slows down Enemy Attacks
+Fire: Deals damage overtime
+Poison: ALSO Deals damage overtime",
