@@ -18,6 +18,8 @@ static func scale(
 			return log_scaling(level, scaling_strength, increase_or_decrease)
 		BaseEntityStats.scaling_function_types.QUADRATIC:
 			return quad_scaling(level, scaling_strength, increase_or_decrease)
+		BaseEntityStats.scaling_function_types.LINEAR:
+			return linear_scaling(level, scaling_strength, increase_or_decrease)
 		_:
 			return linear_scaling(level, scaling_strength, increase_or_decrease)
 
@@ -30,9 +32,9 @@ static func linear_scaling(
 	) -> float:
 	
 	if increase_or_decrease:
-		return (1 + (level * scaling_strength))
+		return (1 + (level * scaling_strength) / (10))
 	else:
-		return (1 - (level * scaling_strength))
+		return (1 - (level * scaling_strength) / (10))
 
 ## Exponential scaling function, just multiply it with a value you want scaled
 ## with a value and strength

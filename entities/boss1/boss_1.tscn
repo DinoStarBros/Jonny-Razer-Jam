@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dryipx6eo8d1y" path="res://scenes/fancy_healthbar/fancy_healthbar.tscn" id="8_l7728"]
 [ext_resource type="Shader" uid="uid://cne6u584nd6e4" path="res://shaders/hitFlash.gdshader" id="9_5a0cs"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_llvsp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hlv0q"]
 resource_local_to_scene = true
 shader = ExtResource("9_5a0cs")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
@@ -45,7 +45,7 @@ z_index = 1
 health_component = NodePath("../HealthComponent")
 
 [node name="AnimComponent" parent="." unique_id=1857692537 instance=ExtResource("8_hlv0q")]
-material = SubResource("ShaderMaterial_llvsp")
+material = SubResource("ShaderMaterial_hlv0q")
 attack_frame_idx = 4
 hurt_frame_idx = 1
 

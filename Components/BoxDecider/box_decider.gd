@@ -25,6 +25,7 @@ func _ready() -> void:
 	
 	# Decreases spawn time, making the enemy spawn boxes faster
 	spawn_time_range = stats.spawn_time_range * Scalings.scale(get_stat_value(), stats.box_spawn_time_scaling_strength, false, stats.box_spawn_time_scale_type)
+	print(spawn_time_range)
 	
 	# Increases box speed, making defend boxes move faster to the left
 	box_speed_range = stats.box_speed_range * Scalings.scale(get_stat_value(), stats.box_speed_scaling_strength, true, stats.box_speed_scale_type)
