@@ -16,5 +16,5 @@ damage = 8.0
 crit_chance = 0.0
 hp_scaling_strength = 0.5
 damage_scaling_strength = 0.2
-box_spawn_time_scaling_strength = 0.2
+box_spawn_time_scaling_strength = 0.08
 metadata/_custom_type_script = "uid://chqad1x7kc28f"
