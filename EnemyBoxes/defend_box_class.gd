@@ -46,7 +46,7 @@ func _exit_tree() -> void:
 	boxes_amount -= 1
 
 func _area_entered(area : Area2D) -> void:
-	if area.name == "left_endpoint_area":
+	if area.name == "left_endpoint_area" and !(self is TrapDefendBox):
 		deal_damage_to_player()
 
 func deal_damage_to_player() -> void:

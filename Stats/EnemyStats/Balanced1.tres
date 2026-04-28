@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BaseEntityStats" format=3 uid="uid://btf7g5tbv53ae"]
 
-[ext_resource type="PackedScene" uid="uid://dolxx7718k6xh" path="res://EnemyBoxes/BaseDefendBox/base_defend_box.tscn" id="1_effm1"]
-[ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="2_10gkr"]
+[ext_resource type="PackedScene" uid="uid://dolxx7718k6xh" path="res://EnemyBoxes/BaseDefendBox/base_defend_box.tscn" id="1_ym1ww"]
+[ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="2_ldsf1"]
 
 [resource]
-script = ExtResource("2_10gkr")
+script = ExtResource("2_ldsf1")
 the_name = "Balanced1"
 max_hp = 100.0
-box_scenes = Array[PackedScene]([ExtResource("1_effm1")])
+box_scenes = Array[PackedScene]([ExtResource("1_ym1ww")])
 spawn_time_range = Vector2(2, 3)
 damage = 9.0
 crit_chance = 0.0

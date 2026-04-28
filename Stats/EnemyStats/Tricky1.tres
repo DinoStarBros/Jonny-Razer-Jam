@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BaseEntityStats" format=3 uid="uid://cnqswfmym8tox"]
+
+[ext_resource type="PackedScene" uid="uid://dolxx7718k6xh" path="res://EnemyBoxes/BaseDefendBox/base_defend_box.tscn" id="1_oilt3"]
+[ext_resource type="PackedScene" uid="uid://ck85ku5ckb68t" path="res://EnemyBoxes/TrapDefendBox/trap_defend_box.tscn" id="2_oilt3"]
+[ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="3_6uo0l"]
+
+[resource]
+script = ExtResource("3_6uo0l")
+the_name = "Tricky1"
+max_hp = 80.0
+box_scenes = Array[PackedScene]([ExtResource("1_oilt3"), ExtResource("2_oilt3"), ExtResource("1_oilt3")])
+spawn_time_range = Vector2(1.5, 2.5)
+damage = 9.0
+crit_chance = 0.0
+hp_scaling_strength = 2.5
+damage_scaling_strength = 3.5
+box_spawn_time_scaling_strength = 0.25
+box_speed_scaling_strength = 0.2
+metadata/_custom_type_script = "uid://chqad1x7kc28f"

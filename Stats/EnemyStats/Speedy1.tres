@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="BaseEntityStats" format=3 uid="uid://ymov7p2htmg0"]
+
+[ext_resource type="PackedScene" uid="uid://dolxx7718k6xh" path="res://EnemyBoxes/BaseDefendBox/base_defend_box.tscn" id="1_ieohf"]
+[ext_resource type="PackedScene" uid="uid://cnbe03b7glwod" path="res://EnemyBoxes/FastDefendBox/fast_defend_box.tscn" id="2_c5t4c"]
+[ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="2_eyrsu"]
+
+[resource]
+script = ExtResource("2_eyrsu")
+the_name = "Speedy1"
+max_hp = 80.0
+box_scenes = Array[PackedScene]([ExtResource("1_ieohf"), ExtResource("2_c5t4c")])
+spawn_amount_range = Vector2i(1, 1)
+spawn_time_range = Vector2(0.75, 1.5)
+box_speed_range = Vector2(150, 250)
+damage = 9.0
+crit_chance = 0.0
+hp_scaling_strength = 2.4
+damage_scaling_strength = 3.7
+box_spawn_time_scaling_strength = 0.35
+box_speed_scaling_strength = 0.3
+metadata/_custom_type_script = "uid://chqad1x7kc28f"

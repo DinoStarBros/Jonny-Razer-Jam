@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BaseEntityStats" format=3 uid="uid://pb2gl8slx6ww"]
+
+[ext_resource type="PackedScene" uid="uid://dolxx7718k6xh" path="res://EnemyBoxes/BaseDefendBox/base_defend_box.tscn" id="1_dokdd"]
+[ext_resource type="Script" uid="uid://chqad1x7kc28f" path="res://Stats/EntityStatsResource.gd" id="2_6xrik"]
+
+[resource]
+script = ExtResource("2_6xrik")
+the_name = "Damagey1"
+max_hp = 80.0
+box_scenes = Array[PackedScene]([ExtResource("1_dokdd")])
+spawn_time_range = Vector2(2, 3)
+damage = 11.0
+crit_chance = 0.0
+hp_scaling_strength = 2.4
+damage_scaling_strength = 4.0
+box_spawn_time_scaling_strength = 0.2
+box_speed_scaling_strength = 0.2
+metadata/_custom_type_script = "uid://chqad1x7kc28f"
