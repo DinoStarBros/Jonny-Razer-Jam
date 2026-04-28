@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://FlatUI4/kenneyUI-blue.tres" id="1_37umd"]
 [ext_resource type="Script" uid="uid://3fhlu1k4ylcl" path="res://Screens/level_select/level_select.gd" id="1_swvou"]
 [ext_resource type="PackedScene" uid="uid://c15x2bc6j21vr" path="res://scenes/screen_unpauser/screen_unpauser.tscn" id="3_lqllq"]
+[ext_resource type="PackedScene" uid="uid://dtdyqh3tdo3pw" path="res://UIPopups/toolShop/tool_shop.tscn" id="4_emk17"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lqllq"]
 font_size = 40
@@ -62,4 +63,21 @@ offset_right = 119.32413
 offset_bottom = 78.251
 text = "Quit"
 
+[node name="Tools Shop" type="Button" parent="." unique_id=562730254]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -180.32397
+offset_top = 36.0
+offset_right = -51.999756
+offset_bottom = 90.251
+grow_horizontal = 0
+text = "Tools Shop"
+
 [node name="screen_unpauser" parent="." unique_id=518566030 instance=ExtResource("3_lqllq")]
+
+[node name="ToolShop" parent="." unique_id=1317889739 instance=ExtResource("4_emk17")]
+visible = false
+layout_mode = 1

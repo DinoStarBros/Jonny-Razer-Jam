@@ -10,6 +10,6 @@ func _zarchivas_kick() -> void:
 	
 	get_parent().position.x += kick_strength #* (get_parent().move_spd_mult * 0.2)
 	
-	GlobalSignals.DamageEnemy.emit(Global.player_final_damage / 3, true)
+	GlobalSignals.DamageEnemy.emit(Global.player_final_damage / 1.5, true)
 	if get_parent().global_position.x > Global.endpoints_x.y:
 		get_parent().queue_free()
