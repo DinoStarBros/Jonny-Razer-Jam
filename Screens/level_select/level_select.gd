@@ -3,17 +3,64 @@ extends Control
 @onready var button_and_level : Dictionary = {
 	"L1": [
 		%l1, 
-		func():SceneManager.change_scene(References.levels_arr[0])
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 0
 		],
 	"L2": [
 		%l2, 
-		func():SceneManager.change_scene(References.levels_arr[1])
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 1
 		],
 	"L3": [
 		%l3, 
-		func():print("3")
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 2
 		],
-	
+	"L4": [
+		%l4, 
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 3
+		],
+	"L5": [
+		%l5, 
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 4
+		],
+	"L6": [
+		%l6, 
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 5
+		],
+	"L7": [
+		%l7, 
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 6
+		],
+	"L8": [
+		%l8, 
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 7
+		],
+	"L9": [
+		%l9, 
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 8
+		],
+	"L10": [
+		%l10, 
+		func():
+		SceneManager.change_scene(References.world_1_lvl)
+		Global.current_level_idx = 9
+		],
 }
 
 func _ready() -> void:

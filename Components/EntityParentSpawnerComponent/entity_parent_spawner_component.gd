@@ -8,7 +8,15 @@ class_name EntityParentSpawnerComponent
 
 var curr_enemies_defeated: int = -1
 
+func _init() -> void:
+	match Global.current_world_idx:
+		0: # World 1
+			level_resource = References.world1_levels_res[Global.current_level_idx]
+		_: # Just load world 1 I guess lmao
+			level_resource = References.world1_levels_res[Global.current_level_idx]
+
 func _ready() -> void:
+	
 	Global.enemy_idx = curr_enemies_defeated
 	Global.entity_parent_spawner_comp = self
 	Global.boss_spawned = false

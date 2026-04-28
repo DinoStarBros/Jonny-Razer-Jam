@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c1uijg6426lut"]
+
+[ext_resource type="Script" uid="uid://odb48s2fetj0" path="res://Levels/World1Lvl/world_1_lvl.gd" id="1_54wmt"]
+[ext_resource type="PackedScene" uid="uid://c6gugda7ns177" path="res://Backgrounds/Background1/background_1.tscn" id="1_uft7w"]
+[ext_resource type="PackedScene" uid="uid://clqb3v33yj3ol" path="res://Components/EntityParentSpawnerComponent/entity_parent_spawner_component.tscn" id="2_rfwee"]
+[ext_resource type="PackedScene" uid="uid://0mt44wimyda" path="res://entities/player/player.tscn" id="4_0v1u5"]
+[ext_resource type="PackedScene" uid="uid://cio8dkdlh1ofh" path="res://scenes/belt/belt.tscn" id="5_euwow"]
+
+[node name="World1Lvl" type="Node2D" unique_id=1226450776]
+script = ExtResource("1_54wmt")
+metadata/_edit_vertical_guides_ = [-778.0]
+
+[node name="Background1" parent="." unique_id=1646486462 instance=ExtResource("1_uft7w")]
+follow_viewport_enabled = true
+
+[node name="EntityParentSpawnerComponent" parent="." unique_id=2034184696 instance=ExtResource("2_rfwee")]
+
+[node name="player" parent="EntityParentSpawnerComponent" unique_id=1225601102 instance=ExtResource("4_0v1u5")]
+position = Vector2(320, 360)
+
+[node name="Label" type="Label" parent="." unique_id=762185603]
+unique_name_in_owner = true
+visible = false
+offset_left = 395.0
+offset_top = 218.0
+offset_right = 435.0
+offset_bottom = 241.0
+
+[node name="belt" parent="." unique_id=1659621718 instance=ExtResource("5_euwow")]
+position = Vector2(640, 619)
+
+[node name="items" type="HBoxContainer" parent="." unique_id=2105632098]
+offset_right = 40.0
+offset_bottom = 40.0

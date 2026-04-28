@@ -22,11 +22,18 @@ theme = ExtResource("1_37umd")
 script = ExtResource("1_swvou")
 
 [node name="levelsV" type="VBoxContainer" parent="." unique_id=1533378547]
-layout_mode = 0
-offset_left = 119.0
-offset_top = 139.0
-offset_right = 528.0
-offset_bottom = 249.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -232.0
+offset_right = 547.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 25
 
 [node name="Label" type="Label" parent="levelsV" unique_id=799038044]
@@ -36,7 +43,7 @@ label_settings = SubResource("LabelSettings_lqllq")
 
 [node name="levelsH" type="HBoxContainer" parent="levelsV" unique_id=830235627]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 31
 alignment = 1
 
 [node name="l1" type="Button" parent="levelsV/levelsH" unique_id=1237886498]
@@ -53,6 +60,41 @@ text = "Level 2"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Level 3"
+
+[node name="l4" type="Button" parent="levelsV/levelsH" unique_id=1634742031]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 4"
+
+[node name="l5" type="Button" parent="levelsV/levelsH" unique_id=555829040]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 5"
+
+[node name="l6" type="Button" parent="levelsV/levelsH" unique_id=1938013459]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 6"
+
+[node name="l7" type="Button" parent="levelsV/levelsH" unique_id=1858914027]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 7"
+
+[node name="l8" type="Button" parent="levelsV/levelsH" unique_id=1141315985]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 8"
+
+[node name="l9" type="Button" parent="levelsV/levelsH" unique_id=643332186]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 9"
+
+[node name="l10" type="Button" parent="levelsV/levelsH" unique_id=1118337193]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level 10"
 
 [node name="Quit" type="Button" parent="." unique_id=48565553]
 unique_name_in_owner = true

@@ -33,6 +33,8 @@ var entity_parent_spawner_comp : EntityParentSpawnerComponent
 var camera : Camera
 var luck : float = 0
 var boss_spawned : bool = false
+var current_level_idx : int = -1 ## Which level it is. Level 1 == Lvl1 resource is loaded, 2 == Lvl2 resource, etc.
+var current_world_idx : int = -1 ## For the level to know what resource array to use
 
 ## The maximum amount of boxes that can be on screen 
 const MAX_BOXES : int = 17
