@@ -1,5 +1,13 @@
 extends Node
 
+#const levels_arr : Array = [
+	#"res://Levels/World1/level_1-1.tscn",
+	#"res://Levels/World1/level_1-2.tscn",
+	#
+	#
+#]
+
+
 const world_1_lvl : String = "res://Levels/World1Lvl/world1lvl.tscn"
 
 var world1_levels_res : Array = [
