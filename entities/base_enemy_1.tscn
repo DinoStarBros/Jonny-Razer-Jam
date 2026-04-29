@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://00dwl4jcdsab"]
+
+[ext_resource type="Script" uid="uid://bsmb3ir6ou4kt" path="res://entities/enemies/extends_enemy.gd" id="1_je5y3"]
+[ext_resource type="PackedScene" uid="uid://c1qobuo6afwil" path="res://Components/StatsAllocator/stats_allocator.tscn" id="2_cuwmv"]
+[ext_resource type="Resource" uid="uid://btf7g5tbv53ae" path="res://Stats/EnemyStats/Balanced1.tres" id="3_5h7pm"]
+[ext_resource type="PackedScene" uid="uid://j3miyhd54t2j" path="res://Components/EnemyCombatSignalsHandler/enemy_combat_signals_handler.tscn" id="4_vqkkp"]
+[ext_resource type="PackedScene" uid="uid://ih821u05qh4v" path="res://Components/HealthComponent/health_component.tscn" id="5_g61tp"]
+[ext_resource type="PackedScene" uid="uid://dqqmdp3hyac81" path="res://Components/BoxDecider/box_decider.tscn" id="6_u4uai"]
+[ext_resource type="PackedScene" uid="uid://0uair2p0ft75" path="res://Components/StatusComponent/status_component.tscn" id="7_q0nyh"]
+[ext_resource type="PackedScene" uid="uid://dj0y2bcorvn42" path="res://Components/AnimComponent/anim_component.tscn" id="8_yokox"]
+[ext_resource type="Shader" uid="uid://cne6u584nd6e4" path="res://shaders/hitFlash.gdshader" id="9_47qah"]
+[ext_resource type="Texture2D" uid="uid://bn200tim80d5i" path="res://Art/Placeholder/Eneme.png" id="10_iv7sl"]
+[ext_resource type="PackedScene" uid="uid://dryipx6eo8d1y" path="res://scenes/fancy_healthbar/fancy_healthbar.tscn" id="11_872w3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2hvny"]
+resource_local_to_scene = true
+shader = ExtResource("9_47qah")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/mix_value = 0.0
+shader_parameter/opacity = 1.0
+
+[node name="BaseEnemy1" type="Node2D" unique_id=1657567192]
+script = ExtResource("1_je5y3")
+
+[node name="StatsAllocator" parent="." unique_id=437436460 node_paths=PackedStringArray("health_component", "box_decider", "combat_signals", "anim_component") instance=ExtResource("2_cuwmv")]
+unique_name_in_owner = true
+stats = ExtResource("3_5h7pm")
+health_component = NodePath("../HealthComponent")
+box_decider = NodePath("../BoxDecider")
+combat_signals = NodePath("../EnemyCombatSignalsHandler")
+anim_component = NodePath("../AnimComponent")
+
+[node name="EnemyCombatSignalsHandler" parent="." unique_id=12414593 node_paths=PackedStringArray("anim_component", "box_decider") instance=ExtResource("4_vqkkp")]
+anim_component = NodePath("../AnimComponent")
+box_decider = NodePath("../BoxDecider")
+
+[node name="HealthComponent" parent="." unique_id=971455295 node_paths=PackedStringArray("health_bar") instance=ExtResource("5_g61tp")]
+unique_name_in_owner = true
+health_bar = NodePath("../ui/FancyHealthbar")
+
+[node name="BoxDecider" parent="." unique_id=448822901 node_paths=PackedStringArray("hp_bar") instance=ExtResource("6_u4uai")]
+unique_name_in_owner = true
+hp_bar = NodePath("../ui/FancyHealthbar")
+
+[node name="DebuffsComponent" parent="." unique_id=1285624151 node_paths=PackedStringArray("health_component") instance=ExtResource("7_q0nyh")]
+z_index = 1
+health_component = NodePath("../HealthComponent")
+
+[node name="AnimComponent" parent="." unique_id=1857692537 instance=ExtResource("8_yokox")]
+material = SubResource("ShaderMaterial_2hvny")
+attack_frame_idx = 4
+hurt_frame_idx = 1
+
+[node name="Eneme" type="Sprite2D" parent="AnimComponent" unique_id=211008156]
+scale = Vector2(4, 4)
+texture = ExtResource("10_iv7sl")
+flip_h = true
+hframes = 5
+frame = 1
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=1586263448]
+
+[node name="FancyHealthbar" parent="ui" unique_id=526919355 instance=ExtResource("11_872w3")]
+offset_left = 880.0
+offset_top = 180.0
+offset_right = 1230.0
+offset_bottom = 215.0
