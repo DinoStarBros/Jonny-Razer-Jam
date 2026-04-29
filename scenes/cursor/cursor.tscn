@@ -11,7 +11,6 @@
 [ext_resource type="AudioStream" uid="uid://c05eac572q51" path="res://Audio/amalgun/MissileExplode.wav" id="6_vq56n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8r5s"]
-radius = 18.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_1fc3j"]
 font_size = 60

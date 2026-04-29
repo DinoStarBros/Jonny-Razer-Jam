@@ -4,7 +4,7 @@ class_name Cursor
 @onready var ctxt_pivot: Node2D = %ctxt_pivot
 @onready var cursor_sprite: Sprite2D = %cursor_sprite
 
-const speed_increase : int = 50
+const speed_increase : int = 40
 const base_speed : float = 300
 const max_speed : float = 1200
 const base_combo : int = 0
