@@ -5,7 +5,7 @@ class_name LevelResource
 @export var enemy_scns : Array[PackedScene]
 ## The amount of enemies that finna be in that level
 @export var enemy_amount : int = 1
-## The boss that you fight as the last enemy in the level
-@export var boss_scn : PackedScene
+## The boss/es that you fight as the last enemy in the level
+@export var boss_scns : Array[PackedScene]
 ## The extra inherehnt stat buff/scaling that enemies have in the level
 @export var inherent_stat_headstart : float = 0

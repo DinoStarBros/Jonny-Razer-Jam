@@ -9,5 +9,5 @@
 script = ExtResource("4_jx73v")
 enemy_scns = Array[PackedScene]([ExtResource("2_2uoe5"), ExtResource("3_bnvpf"), ExtResource("2_2uoe5")])
 enemy_amount = 10
-boss_scn = ExtResource("1_2q3fv")
+boss_scns = Array[PackedScene]([ExtResource("1_2q3fv")])
 metadata/_custom_type_script = "uid://cyx67cfta1dtm"

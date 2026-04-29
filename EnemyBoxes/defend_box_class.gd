@@ -36,8 +36,8 @@ func _ready() -> void:
 	leftward_velocity.x = velocity.x # Leftward velocity just stays the same, while I can update velocity
 	
 	if self is FastDefendBox:
-		velocity.x *= 0.1
-		tween_velocity_back(0.5)
+		velocity.x = 0
+		tween_velocity_back(1)
 	elif self is TrapDefendBox:
 		scale.x /= xcale
 		icon_sprite.scale.x *= xcale

@@ -58,9 +58,9 @@ func _spawn_enemy() -> void:
 
 func _spawn_boss() -> void:
 	Global.boss_spawned = true
-	MusicManager.play_song("boss3")
+	_boss_music()
 	
-	var boss : Enemy = level_resource.boss_scn.instantiate()
+	var boss : Enemy = level_resource.boss_scns.pick_random().instantiate()
 	boss.stat_headstart = level_resource.inherent_stat_headstart
 	add_child(boss)
 	boss.global_position = Global.ESPAWN_POS
@@ -73,3 +73,10 @@ func _spawn_ene_defeated_popup(enemies_defeated: int, max_enemies: int) -> void:
 
 func _fight_win() -> void:
 	pass
+
+func _boss_music() -> void:
+	match Global.current_world_idx:
+		0:
+			MusicManager.play_song("boss3")
+		_:
+			MusicManager.play_song("boss3")
